@@ -3,40 +3,62 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-$for(author-meta)$
-  <meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
-  <meta name="date" content="$date-meta$" />
-$endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$if(pagetitle)$$pagetitle$$endif$</title>
-$if(highlighting-css)$
-  <style type="text/css">
-$highlighting-css$
-  </style>
-$endif$
-  <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="$slidy-url$/styles/slidy.css" />
-$for(css)$
-  <link rel="stylesheet" type="text/css" media="screen, projection, print"
-   href="$css$" />
-$endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
-  $header-includes$
-$endfor$
-  <script src="$slidy-url$/scripts/slidy.js.gz"
-    charset="utf-8" type="text/javascript"></script>
-$if(duration)$
-  <meta name="duration" content="$duration$" />
-$endif$
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="generator" content="pandoc" />
+	$for(author-meta)$
+		<meta name="author" content="$author-meta$" />
+	$endfor$
+	$if(date-meta)$
+		<meta name="date" content="$date-meta$" />
+	$endif$
+
+	<meta name="copyright" 
+		content="Copyright &#169; 2005-2013 INASP, under CC-BY-SA license"/>
+
+	<title>$if(title-prefix)$$title-prefix$ - $endif$$if(pagetitle)$$pagetitle$$endif$</title>
+	
+	$if(highlighting-css)$
+		<style type="text/css">
+			$highlighting-css$
+		</style>
+	$endif$
+	
+	<link rel="stylesheet" type="text/css" media="screen, projection, print"
+		href="$slidy-url$/styles/slidy.css" />
+	
+	<link rel="stylesheet" type="text/css"
+		href="$static-url$/CharisSIL-4.112-web/web/CharisSIL-webfont-example.css" />
+	
+	$for(css)$
+		<link rel="stylesheet" type="text/css" media="screen, projection, print"
+			href="$css$" />
+	$endfor$
+	
+	$if(math)$
+		$math$
+	$endif$
+	
+	$for(header-includes)$
+		$header-includes$
+	$endfor$
+	
+	<script src="$slidy-url$/scripts/slidy.js.gz"
+		charset="utf-8" type="text/javascript"></script>
+	
+	$if(duration)$
+	<meta name="duration" content="$duration$" />
+	$endif$
 </head>
 <body>
+
+<div class="background">
+	<div style="position: absolute; top: 0; height: 10%;">
+		<img src="$static-url$/INASPlogo2colfull600.jpg"
+			style="height: 80%; margin: 10%" alt="INASP Logo" />
+	</div>
+</div>
+
 $for(include-before)$
 $include-before$
 $endfor$

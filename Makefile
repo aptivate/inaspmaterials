@@ -5,7 +5,7 @@ clean:
 	find output -type f | xargs -r rm
 
 template_dir = templates
-pandoc = pandoc --data-dir=.
+pandoc = pandoc --data-dir=. --variable static-url=$(base_path)/static
 
 remove_trailing_slash = $(patsubst %/,%,$(1))
 invert_path = $(shell echo $(call remove_trailing_slash,$(1)) | sed -e 's|[^/]*|..|g')
@@ -30,7 +30,7 @@ $(s5_dstdir)/%.html: %.mkd
 slidy_dstdir = output/slidy
 slidy_files = $(sources_mkd:%.mkd=$(slidy_dstdir)/%.html)
 slidy: $(slidy_files)
-$(slidy_dstdir)/%.html: %.mkd
+$(slidy_dstdir)/%.html: %.mkd $(template_dir)/default.slidy
 	mkdir -p $(dir $@)
 	# $(pandoc) -f markdown -t slidy --variable slidy-url=$(base_template_dir)/slidy -o $@ -s $<
 	$(pandoc) -f markdown -t slidy -o $@ -s $<
