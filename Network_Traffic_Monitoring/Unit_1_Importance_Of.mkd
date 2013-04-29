@@ -1,0 +1,32 @@
+% INASP BMO<br />
+  Network traffic monitoring workshop<br />
+  Unit 1 - Why Monitor
+% Dick Elleray - AfriConnect (delleray@africonnect.com);
+  Chris Wilson - Aptivate (chris+inaspbmo2013@aptivate.org)
+% 2013-04-29
+
+### Objectives
+
+* Identify key reasons why network traffic should be monitored
+* Discuss why continuous traffic monitoring is important
+* See if / how network traffic monitoring is being done in representative institutions
+
+### But firstly
+
+* What is the challenge being faced:
+ 
+ * Not enough bandwidth?
+ * Too costly?
+ * Need for more?
+  
+* In reality ... in Africa ... in Universities
+
+### What is the bandwidth challenge?
+
+* Available bandwidth is limited and not enough to meet demand;
+* The current bandwidth is often running at near permanent capacity;
+  * As a result is sometimes/often unusable.
+* The cost of bandwidth is high;
+* Potential expansion is limited due to finances, supply, technology;
+* This limited bandwidth is often not managed.
+
