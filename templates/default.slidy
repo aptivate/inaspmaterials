@@ -30,6 +30,9 @@
 	<link rel="stylesheet" type="text/css"
 		href="$static-url$/CharisSIL-4.112-web/web/CharisSIL-webfont-example.css" />
 	
+	<link rel="stylesheet" type="text/css"
+		href="$static-url$/slides.css" />
+	
 	$for(css)$
 		<link rel="stylesheet" type="text/css" media="screen, projection, print"
 			href="$css$" />
@@ -42,8 +45,12 @@
 	$for(header-includes)$
 		$header-includes$
 	$endfor$
-	
+
+	<!--	
 	<script src="$slidy-url$/scripts/slidy.js.gz"
+		charset="utf-8" type="text/javascript"></script>
+	-->
+	<script src="$static-url$/Slidy2/scripts/slidy.js"
 		charset="utf-8" type="text/javascript"></script>
 	
 	$if(duration)$
@@ -53,9 +60,10 @@
 <body>
 
 <div class="background">
-	<div style="position: absolute; top: 0; height: 10%;">
-		<img src="$static-url$/INASPlogo2colfull600.jpg"
-			style="height: 80%; margin: 10%" alt="INASP Logo" />
+	<div class="header">
+		<img src="$static-url$/inasp-new-logo-262-100.png" />
+		<img src="$static-url$/aptivate-logo.png" />
+		<img src="$static-url$/afrilogo.jpg" />
 	</div>
 </div>
 
