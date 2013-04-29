@@ -24,14 +24,59 @@
 		</style>
 	$endif$
 	
+	<base href='$static-url$/' />
+	
+	<!--	
+	<script src="$slidy-url$/scripts/slidy.js.gz"
+		charset="utf-8" type="text/javascript"></script>
+	-->
+	<script src="Slidy2/scripts/slidy.js"
+		charset="utf-8" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	w3c_slidy.set_location = function ()
+	{
+		var uri = w3c_slidy.page_address(location.href);
+		var hash = "#(" + (w3c_slidy.slide_number+1) + ")";
+
+		if (w3c_slidy.slide_number >= 0)
+			uri = uri + hash;
+
+		// disabled due to problems with javascript security:
+		// http://stackoverflow.com/q/6351447/648162
+		if (false && typeof(history.pushState) != "undefined")
+		{
+			document.title = w3c_slidy.title + " (" + (w3c_slidy.slide_number+1) + ")";
+			history.pushState(0, document.title, hash);
+			w3c_slidy.show_slide_number();
+			return;
+		}
+
+		if (w3c_slidy.ie && (w3c_slidy.ie6 || w3c_slidy.ie7))
+			w3c_slidy.push_hash(hash);
+
+		if (uri != location.href) // && !khtml
+			location.href = uri;
+
+		if (this.khtml)
+			hash = "(" + (w3c_slidy.slide_number+1) + ")";
+
+		if (!this.ie && location.hash != hash && location.hash != "")
+			location.hash = hash;
+
+		document.title = w3c_slidy.title + " (" + (w3c_slidy.slide_number+1) + ")";
+		w3c_slidy.show_slide_number();
+	};
+	</script>
+	
 	<link rel="stylesheet" type="text/css" media="screen, projection, print"
-		href="$slidy-url$/styles/slidy.css" />
+		href="Slidy2/styles/slidy.css" />
 	
 	<link rel="stylesheet" type="text/css"
-		href="$static-url$/CharisSIL-4.112-web/web/CharisSIL-webfont-example.css" />
+		href="CharisSIL-4.112-web/web/CharisSIL-webfont-example.css" />
 	
 	<link rel="stylesheet" type="text/css"
-		href="$static-url$/slides.css" />
+		href="slides.css" />
 	
 	$for(css)$
 		<link rel="stylesheet" type="text/css" media="screen, projection, print"
@@ -46,12 +91,6 @@
 		$header-includes$
 	$endfor$
 
-	<!--	
-	<script src="$slidy-url$/scripts/slidy.js.gz"
-		charset="utf-8" type="text/javascript"></script>
-	-->
-	<script src="$static-url$/Slidy2/scripts/slidy.js"
-		charset="utf-8" type="text/javascript"></script>
 	
 	$if(duration)$
 	<meta name="duration" content="$duration$" />
@@ -61,9 +100,9 @@
 
 <div class="background">
 	<div class="header">
-		<img src="$static-url$/inasp-new-logo-262-100.png" />
-		<img src="$static-url$/aptivate-logo.png" class="aptivate-logo" />
-		<img src="$static-url$/afrilogo.jpg" />
+		<img src="inasp-new-logo-262-100.png" />
+		<img src="aptivate-logo.png" class="aptivate-logo" />
+		<img src="afrilogo.jpg" />
 		<span class="title">Bandwidth Management</span>
 	</div>
 </div>
