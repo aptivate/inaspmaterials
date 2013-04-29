@@ -1,6 +1,6 @@
 sources_mkd = $(wildcard */*.mkd)
 
-all: html s5 slidy
+all: html s5 slidy epub
 clean:
 	find output -type f | xargs -r rm
 
@@ -34,3 +34,9 @@ $(slidy_dstdir)/%.html: %.mkd $(template_dir)/default.slidy
 	mkdir -p $(dir $@)
 	# $(pandoc) -f markdown -t slidy --variable slidy-url=$(base_template_dir)/slidy -o $@ -s $<
 	$(pandoc) -f markdown -t slidy -o $@ -s $<
+
+epub_dstdir = output/epub
+epub: $(epub_dstdir)/Network_Traffic_Monitoring.epub
+$(epub_dstdir)/%.epub: %/*.mkd
+	mkdir -p $(dir $@)
+	$(pandoc) -f markdown -o $@ -s $^
