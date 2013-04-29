@@ -62,8 +62,9 @@
 <div class="background">
 	<div class="header">
 		<img src="$static-url$/inasp-new-logo-262-100.png" />
-		<img src="$static-url$/aptivate-logo.png" />
+		<img src="$static-url$/aptivate-logo.png" class="aptivate-logo" />
 		<img src="$static-url$/afrilogo.jpg" />
+		<span class="title">Bandwidth Management</span>
 	</div>
 </div>
 
