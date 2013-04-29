@@ -49,3 +49,21 @@ div.toolbar
 {
 	height: auto;
 }
+
+h2, h3, h4, p
+{
+	margin-left: 0;
+}
+
+.figure
+{
+	background: #e5e5ef;
+	padding: 1em;
+	border: 1px solid #008080;
+}
+
+.figure p
+{
+	margin-bottom: 0;
+	font-size: 80%;
+}
