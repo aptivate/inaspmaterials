@@ -2,3 +2,7 @@
 *~
 output
 inaspsite
+tools/benchmark/httperf-*
+tools/benchmark/iperf-*
+tools/benchmark/old
+src/presentations/*/images
