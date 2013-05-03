@@ -67,3 +67,23 @@ h2, h3, h4, p
 	margin-bottom: 0;
 	font-size: 80%;
 }
+
+.column
+{
+	width: 50%;
+}
+
+.column.left
+{
+	float: left;
+}
+
+.column.right
+{
+	float: right;
+}
+
+.column ul
+{
+	margin: 0 1.5em;
+}
