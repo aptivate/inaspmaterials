@@ -7,3 +7,6 @@
 [submodule "tools/rst2odp"]
 	path = tools/rst2odp
 	url = git://github.com/aptivate/rst2odp.git
+[submodule "tools/fontspec"]
+	path = tools/fontspec
+	url = git://github.com/wspr/fontspec.git
