@@ -1,46 +1,37 @@
 .. include:: <s5defs.txt>
 
+.. include:: Series.rst.inc
+
 Unit 1: The Bandwidth Challenge
 ===============================
 
-INASP Network Monitoring Workshops
-----------------------------------
-
-:Authors:
-	- Dick Elleray, AfriConnect (delleray@africonnect.com);
-	- Chris Wilson, Aptivate (chris+inaspbmo2013@aptivate.org)
-:Date:   2013-04-29
-
-.. class:: handout
-
-  Everything that is in this block will only be in the notes.
-  You can put these on each slide.
-
-.. slide-layout:: AL2T1
-  
 Objectives
 ----------
 
--  Identify key reasons why network traffic should be monitored
--  Discuss why continuous traffic monitoring is important
--  See if / how network traffic monitoring is being done in
-   representative institutions
+On completion of this session, we hope you will:
 
-But firstly
------------
+* Understand how and why African universities face challenges with:
 
--  What is the challenge being faced:
+    * available bandwidth
+    * network performance
+    * effectiveness of IT spending
+    * resulting impact on academic objectives
 
-   -  Not enough bandwidth?
-   -  Too costly?
-   -  Need for more?
+* Understand the benefits of excellent network management.
 
--  In reality ... in Africa ... in Universities
+* Know how these issues are currently being addressed in your own and other
+  organisations and institutions.
 
 What is the bandwidth challenge?
 --------------------------------
 
 -  Available bandwidth is very low compared to Western universities;
+
+    "While a university in Germany might pay about US $4000 per month
+    for 1 gigabit per second of bandwidth, a school in Kenya can expect to
+    pay $200 000 for the same service." `IEEE Spectrum, Feb 2013
+    <http://spectrum.ieee.org/telecom/internet/how-bad-is-africas-internet>`_.
+
 -  Western online culture drives demand for more bandwidth;
 -  Users' abuse of shared resource hurts others more than themselves.
 
@@ -60,37 +51,39 @@ How did this happen?
     -  Homes, businesses and universities all need bandwidth management
     -  Hence the number of expensive products on the market!
 
-Key findings from ATICS survey 2006
+Key findings from ATICS survey
 -----------------------------------
 
 * African university = European home
 * Pays 50x more than European home
-* Limited bandwidth per computer (average was 3.36Kbps)
+* Limited bandwidth per computer
 * Always congested (over 60% of the time)
 * 59% of institutions do not monitor or manage bandwidth
+
+Note: this survey was in 2006, the results may be outdated.
 
 Effects of bandwidth challenges
 -------------------------------
 
 * Difficulties in using Internet based information resources and communication tools
 
--  Digital library resources are under utilised
--  Resource license costs can be less effective
--  Free or low cost resources are difficult to take advantage of
--  The digital library revolution is difficult to participate in
--  Continued digital divide
+    - Digital library resources are under utilised
+    - Resource license costs can be less effective
+    - Free or low cost resources are difficult to take advantage of
+    - The digital library revolution is difficult to participate in
+    - Continued digital divide
 
 * Under utilisation of ICT capacities and investments
 
--  Bandwidth charges of $5,000 per month that result in an unusable link –
-   is that money well spent?
--  Infrastructure costs e.g. PC computer labs that users spend most
-	of their time sitting around waiting for pages to display – is
-	that money well spent?
+    - Bandwidth charges of $5,000 per month that result in an unusable link –
+      is that money well spent?
+    - Infrastructure costs e.g. PC computer labs that users spend most
+      of their time sitting around waiting for pages to display – is
+      that money well spent?
 
 * Impacts on a university’s core activities, especially
-   those that require up to date and a wide range of information
-   resources e.g. teaching and research.
+  those that require up to date and a wide range of information
+  resources e.g. teaching and research.
 
 Possible solutions
 ------------------
@@ -100,55 +93,92 @@ Possible solutions
 -  Better management of existing resource
 -  Combination of the above
 
-   -  Better management and optimisation of bandwidth is essential
-   -  Even if bandwidth is doubled, it will still need managing to
+    - Better management and optimisation of bandwidth is essential
+    - Even if bandwidth is doubled, it will still need managing to
       ensure maximum efficiency
 
+Network Management
+------------------
+
+Other factors that affect the efficiency of IT services:
+
+* How do you deal with complaints?
+
+    * Can you detect and fix problems before users complain?
+    * Do you have a support/complaints policy?
+    * How do you escalate problems?
+    * How quickly are problems handled?
+
+* Who are your most important users?
+
+.. class:: handout
+
+    The objective of a support policy is to make it clear:
+    
+    * what is supported,
+    * who is entitled to support,
+    * how much they are entitled to,
+    * and what they can do if they don't get it.
+    
+    It helps to reduce arguments between support staff and other staff
+    members and students, and increase satisfaction with support.
+    
+    Escalation means passing on a complaint that you can't resolve yourself
+    to somebody who can. That might include:
+    
+    * your ISP (if your connection is broken),
+    * a senior executive (if someone asks for something you have no budget
+      for, or feels badly treated).
+    
+    Identifying important users and proactively talking to them helps to
+    solve problems before the user realises that there is a problem.
+    
+Who is responsible?
+-------------------
+
+Who needs to be involved in network management, and why?
+
+-  Executive management
+-  Senior implementation management
+-  Technical staff involved in the day-to-day implementation
+-  Academics, librarians and other legitimate Internet users
+
 Group Discussion
 ----------------
 
-Can you identify the challenges your institution faces with respect to BMO?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What challenges does your institution face with network management?
 
--  What impact are they having on user satisfaction?
--  What impact are they having on the perception of how good an I.T.
-   team your institution has?
--  What impact are they having on the outside world view of the
-   institution?
+What impact are they having on:
 
-Group Discussion
-----------------
+-  User satisfaction?
+-  User perception of IT staff performance?
+-  How the outside world sees your institution?
 
-Are these being addressed within your institution?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How are these issues being addressed within your institution?
 
 -  Technically?
 -  With policies?
 -  With both?
 -  If not, why not?
 
-Bandwidth management – some comments
-------------------------------------
+	* Time? Resources? Money? Wrong incentives?
 
--  Monitoring and management of the available resource
--  Optimisation of the resource to ensure value for money and fitness of
-   purpose
+You may want to nominate a group representative to capture the key points
+of the discussion on a flipchart sheet.
 
-For example:
+Plenary Discussion
+------------------
 
--  Monitoring of bandwidth to know how it is being used
--  Implementation of policies to guide effective use
--  Technical tools and resources to optimise use
+Please present the results of your group discussions.
 
-Who is responsible?
--------------------
+* One representative, 5 minutes per group.
+* Please focus on your top three-five challenges/solutions.
 
-Different people need to be involved in this:
+During the discussion of other groups’ results, please consider:
 
--  Executive management
--  Senior implementation management
--  Technical staff involved in the day-to-day implementation
--  Academics, librarians and other legitimate Internet users
+* Are there similarities with your institution?
+* Are there differences?
+* Are there lessons that you can learn?
 
 Can you help?
 -------------
