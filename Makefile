@@ -75,7 +75,8 @@ $(epub_dstdir)/%.epub: $(presentations_dir)/%/*.rst
 	mkdir -p $(dir $@)
 	$(pandoc_cmd) -o $@ -s $^
 
-# TEXINPUTS="templates/beamer:tools/fontspec"
+# TEXINPUTS="$(shell pwd)/templates/beamer"
+# TEXMFHOME="$(shell pwd)/templates/beamer"
 
 pdf_dstdir = output/pdf
 pdf_guides = $(call one_output_file_per_guide,$(pdf_dstdir)/guides,pdf)
@@ -85,7 +86,8 @@ pdf_clean:
 	rm -f $(pdf_files)
 pdf_force: pdf_clean pdf
 pdf: $(pdf_files)
-pandoc_beamer = $(pandoc_cmd) -t beamer --latex-engine=xelatex --toc
+pandoc_beamer = $(pandoc_cmd) -t beamer --latex-engine=xelatex --toc \
+	--variable handout=1 --toc-depth=4 --template=templates/beamer.tex
 $(pdf_dstdir)/presentations/%.pdf: $(presentations_dir)/%/*.rst
 	mkdir -p $(dir $@)
 	ln -sf static images
