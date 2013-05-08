@@ -142,7 +142,7 @@ next time:
 * How would you check the printer status? Remotely?
 * How would you tell if the user's computer is running slowly? Remotely?
 * How would you tell if the user's computer is connected to the network?
-Remotely?
+  Remotely?
 * How would you tell if the Internet connection is OK? Remotely?
 
 Faster diagnosis of faults means a higher level of user satisfaction and
@@ -379,7 +379,7 @@ Recording changes to configuration of network devices such as:
 * software management.
 
 Why use Configuration Management?
---------------------------------
+---------------------------------
 
 * What changed?
 * When did it change?
@@ -530,12 +530,15 @@ Graphs are really useful for quickly analysing large quantities of performance
 data that would otherwise be useless, to pick out correlations and trends
 by engaging the brain's visual circuitry.
 
-Why be careful with Performance Management?
--------------------------------------------
+Careful with Performance Management!
+------------------------------------
 
 * It's possible to measure everything;
 * Everything has a cost;
-* The benefits are limited: post-mortem analysis and early warning of problems.
+* The benefits are limited:
+
+	* post-mortem analysis,
+	* early warning of problems.
 
 .. class:: handout
 
