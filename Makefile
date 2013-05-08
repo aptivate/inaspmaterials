@@ -1,7 +1,7 @@
 presentations_dir = src/presentations
 guides_dir        = src/guides
 
-presentations_sources = $(wildcard $(presentations_dir)/*/*.rst)
+presentations_sources = $(wildcard $(presentations_dir)/*/Presentation.rst)
 guides_sources        = $(wildcard $(guides_dir)/*.rst)
 
 all: html s5 slidy epub odp pdf
@@ -80,7 +80,8 @@ $(epub_dstdir)/%.epub: $(presentations_dir)/%/*.rst
 
 pdf_dstdir = output/pdf
 pdf_guides = $(call one_output_file_per_guide,$(pdf_dstdir)/guides,pdf)
-pdf_presentations = $(pdf_dstdir)/presentations/Network_Traffic_Monitoring.pdf
+# pdf_presentations = $(pdf_dstdir)/presentations/Network_Traffic_Monitoring.pdf
+pdf_presentations = $(call one_output_file_per_presentation,$(pdf_dstdir)/presentations,pdf)
 pdf_files = $(pdf_guides) $(pdf_presentations)
 pdf_clean:
 	rm -f $(pdf_files)
@@ -88,16 +89,20 @@ pdf_force: pdf_clean pdf
 pdf: $(pdf_files)
 pandoc_beamer = $(pandoc_cmd) -t beamer --latex-engine=xelatex --toc \
 	--variable handout=1 --toc-depth=4 --template=templates/beamer.tex
-$(pdf_dstdir)/presentations/%.pdf: $(presentations_dir)/%/*.rst
+# ".. include::" doesn't work, so work around it with the -B option:
+# https://groups.google.com/forum/?fromgroups=#!topic/pandoc-discuss/75zqDF9ZMkg
+pandoc_readable = $(pandoc_cmd) -t latex --latex-engine=xelatex --toc \
+	-B src/includes/Series.rst \
+	-B src/includes/Authors.rst \
+	--variable handout=1 --toc-depth=4 --template=templates/readable.tex
+$(pdf_dstdir)/presentations/%.pdf: $(presentations_dir)/%
 	mkdir -p $(dir $@)
 	ln -sf static images
-	# $(pandoc_cmd) -t beamer -V theme:foo -o $@ $^
-	echo ${TEXINPUTS}
-	$(pandoc_beamer) -o $@ $^
+	$(pandoc_readable) -o $@ $^
 	rm images
 $(pdf_dstdir)/guides/%.pdf: $(guides_dir)/%
 	mkdir -p $(dir $@)
-	$(pandoc_cmd) -o $@ $^
+	$(pandoc_readable) -o $@ $^
 
 test:
 	echo $(odp_files)
