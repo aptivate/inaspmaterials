@@ -1,3 +1,5 @@
+.. include:: ../includes/Series.rst
+
 Effective Network Management
 ============================
 
@@ -8,7 +10,7 @@ A series of workshops by INASP, Africonnect and Aptivate to help
 IT staff to develop advanced network management skills, including
 Bandwidth Management and Optimisation.
 
-.. include:: ../Authors.rst.inc
+.. include:: ../includes/Authors.rst
 
 At the end of each unit, participants may want to reflect individually on
 what they have learned so far and document any point to remember and/or
@@ -26,21 +28,34 @@ workshops for future participants. Thank you!
 Course Structure
 ----------------
 
-* Why network management
+0. Introductions
+
+	* Introduce yourself to the participants
+	* Introduce them to each other
+	* Set some ground rules
+	* Review the timetable
+
+#. Why network management
 
 	* What do you want to get from this course?
 	* What do we want you to do with it?
 	* Importance of the network to academic institutions
 	* Benefits of good network management
 	
-* The bandwidth challenge
+#. `Network design <https://nsrc.org/workshops/2009/summer/detailed.html>`_
 
-	* Why is Internet bandwidth particularly scarce?
-	* Why is that a problem?
-	* How does it relate to IT/network management?
-	* How can we fix it? What can we change?
-
-* How best to manage networks
+	* Network design goals
+	* Complexity versus simplicity
+	* Hierarchical design building blocks
+	* Network addressing strategies
+	* Quality of Service (QoS)
+	* Service Level Agreements (SLAs)
+	* Network topologies
+	* Virtual LANs (VLANs)
+	* Fault Tolerance
+	* Switching and security considerations (e.g. Rogue DHCP server and ARP spoofing prevention)
+	
+#. Network management basics
 
 	* What is regarded as Good Practice?
 	* What problems do you need to solve?
@@ -49,8 +64,15 @@ Course Structure
 	* How to predict them before they occur
 	* What disasters might happen? How can we prepare for them?
 	* Role of policy in guiding/changing behaviour
+	
+#. The bandwidth challenge
 
-* Network monitoring
+	* Why is Internet bandwidth particularly scarce?
+	* Why is that a problem?
+	* How does it relate to IT/network management?
+	* How can we fix it? What can we change?
+
+#. Network monitoring
 
 	* Objective: to understand, monitor and manage bandwidth use
 	* Why is monitoring essential?
@@ -58,24 +80,32 @@ Course Structure
 	* What questions do we want to answer?
 	* How do we answer them?
 
-* Making a difference
+#. Making a difference
 
 	* Changing user behaviour
 	* The role of policy
 	
-* Policy development
+#. Policy development
 
 	* Importance of policies in network management
 	* Policy development framework
 	* Examples of good and bad policy documents
 	* Creating a policy development action plan
 
-* Making it happen
+#. Technical measures
+
+	* Firewalls
+	* Antivirus
+	* Proxy caches
+	* 
+	
+#. Making it happen
 
 	* Why does it not happen already?
 	* Aligning incentives
 	* Propaganda and persuasion
-	
+	* Justifying budget increases
+	* Keep your best people
 
 Unit 0 – Introductions
 ----------------------

@@ -1,9 +1,13 @@
 .. include:: <s5defs.txt>
 
-.. include:: Series.rst.inc
+.. include:: ../../includes/Series.rst
 
-Unit 1: The Bandwidth Challenge
+Unit 2: The Bandwidth Challenge
 ===============================
+
+.. include:: ../../includes/Authors.rst
+
+.. class:: handout
 
 Objectives
 ----------
@@ -22,18 +26,55 @@ On completion of this session, we hope you will:
 * Know how these issues are currently being addressed in your own and other
   organisations and institutions.
 
-What is the bandwidth challenge?
---------------------------------
+African universities pay 50x more for the same bandwidth
+--------------------------------------------------------
 
--  Available bandwidth is very low compared to Western universities;
+	"While a university in Germany might pay about US $4000 per month
+	for 1 gigabit per second of bandwidth, a school in Kenya can expect to
+	pay $200 000 for the same service." `IEEE Spectrum, Feb 2013
+	<http://spectrum.ieee.org/telecom/internet/how-bad-is-africas-internet>`_.
 
-    "While a university in Germany might pay about US $4000 per month
-    for 1 gigabit per second of bandwidth, a school in Kenya can expect to
-    pay $200 000 for the same service." `IEEE Spectrum, Feb 2013
-    <http://spectrum.ieee.org/telecom/internet/how-bad-is-africas-internet>`_.
+.. class:: handout
 
--  Western online culture drives demand for more bandwidth;
--  Users' abuse of shared resource hurts others more than themselves.
+How did this happen?
+
+*	Lack of infrastructure, especially copper and fibre networks
+*	Lack of competitive service providers
+*	High costs of installing infrastructure
+*	Long delay in investment and deregulation
+
+Demand for bandwidth is increasing everywhere
+---------------------------------------------
+	
+.. image:: images/used_intl_bw_for_ars_technica-4f9a9cf-intro.png
+
+Abuse of shared resource hurts others
+-------------------------------------
+
+.. class:: handout
+
+In economics, the tragedy of the commons is:
+
+*	the depletion of a shared resource by individuals,
+*	acting independently and rationally according to each one's self-interest,
+*	despite their understanding that depleting the common resource is
+	contrary to the group's long-term best interests.
+	
+This happens on a network when:
+
+*	there is no incentive for users to limit their use of bandwidth
+
+	* for example, financial cost, punishment, self-harm
+
+*	users are allowed to use bandwidth to the point that it affects others
+*	network or bandwidth management is not used (the default)
+
+Shared resources always need management. More users -> more management.
+
+Network management requires advanced skills and equipment
+---------------------------------------------------------
+
+
 
 How did this happen?
 --------------------
