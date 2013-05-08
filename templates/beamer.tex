@@ -1,4 +1,25 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$]{$documentclass$}
+
+\usepackage{pgfpages}
+\setbeamertemplate{note page}[plain]
+\setbeameroption{show notes on second screen=right}
+
+\AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+\usepackage{bookmark}
+\usepackage{etoolbox}
+\makeatletter
+\apptocmd{\beamer@@frametitle}{
+  % keep this line to add the frame title to the TOC at the "subsection level"
+  \addtocontents{toc}{\protect\beamer@subsectionintoc{\the\c@section}{0}{#1}{\the\c@page}{\the\c@part}%
+        {\the\beamer@tocsectionnumber}}%
+  % keep this line to add a bookmark that shows up in the PDF TOC at the subsection level
+  \bookmark[page=\the\c@page,level=3]{#1}
+  }%
+  {\message{** patching of \string\beamer@@frametitle succeeded **}}%
+  {\message{** patching of \string\beamer@@frametitle failed **}}%
+\makeatother
+
 $if(theme)$
 \usetheme{$theme$}
 $endif$
@@ -19,6 +40,9 @@ $endif$
   \fi
 \fi
 
+% Override the font to Charis SIL, as specified by INASP style guide.
+% http://tex.stackexchange.com/questions/11888/finding-a-font-for-xetex/11889#11889
+% http://tex.stackexchange.com/questions/13335/fontspec-example-tex-on-texlive-2010-and-ubuntu
 \setsansfont[
 	ExternalLocation=$static-dir$/CharisSIL-4.112-web/,
 	UprightFont=*-R,
@@ -29,6 +53,9 @@ $endif$
 
 % \setromanfont[ExternalLocation=$static-dir$/CharisSIL-4.112-web/,UprightFont=*-R]{CharisSIL}
 % \setsansfont[ExternalLocation=$static-dir$/CharisSIL-4.112-web/,UprightFont=*-R]{CharisSIL}
+
+% \useoutertheme{inasp}
+\setbeamertemplate{sidebar canvas left}[horizontal shading][left=white!40!black,right=black]
 
 $if(natbib)$
 \usepackage{natbib}
@@ -70,6 +97,12 @@ $if(url)$
 $endif$
 $if(graphics)$
 \usepackage{graphicx}
+
+% set the default size of images to something sensible:
+% http://tex.stackexchange.com/a/83025/30110
+% http://latex-beamer-hclass.10966.n7.nabble.com/Default-page-size-td1039.html#a1040
+\setkeys{Gin}{keepaspectratio,width=\textwidth, height=.8\textheight}
+
 $endif$
 % Comment these out if you don't want a slide with just the
 % part/section/subsection/subsubsection title:
@@ -119,14 +152,24 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
 $if(toc)$
 \begin{frame}
 \tableofcontents[hideallsubsections]
 \end{frame}
-
 $endif$
+
+% include an image on every page:
+% http://tex.stackexchange.com/questions/27906/positioning-logo-in-the-front-page-as-well-as-slides
+\addtobeamertemplate{frametitle}{}{%
+Hello
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+\includegraphics[keepaspectratio,height=.1\textheight ]{$static-dir$/INASPlogo2colfull600.jpg}
+\includegraphics[keepaspectratio,height=.08\textheight]{$static-dir$/aptivate-logo.png}
+\includegraphics[keepaspectratio,height=.1\textheight ]{$static-dir$/afrilogo.jpg}
+\end{textblock*}}
+
 $body$
 
 $if(natbib)$
