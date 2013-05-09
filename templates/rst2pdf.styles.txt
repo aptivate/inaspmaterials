@@ -11,8 +11,8 @@
     height: null
     margin-top: 2cm
     margin-bottom: 2cm
-    margin-left: 2cm
-    margin-right: 2cm
+    margin-left: 3cm
+    margin-right: 3cm
     margin-gutter: 0cm
     spacing-header: 5mm
     spacing-footer: 5mm
@@ -219,6 +219,8 @@
     image:
       parent: bodytext
       alignment: TA_CENTER
+      spaceBefore: 12
+      spaceAfter: 12
 
     figure:
       parent: bodytext
