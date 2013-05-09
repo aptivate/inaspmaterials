@@ -9,7 +9,7 @@ clean:
 	find output -type f | xargs -r rm
 
 HIDE        = $(if $(V),,@)
-HIDDEN      = $(if $(V), $2, @ printf "  [%.8s] $<\n" $1 && $2)
+HIDDEN      = $(if $(V), $2, @ printf "  [%.8s] $@\n" $1 && $2)
 HIDDEN_ARGS = $(if $(V), $3, @ printf "  [%.8s] $2\n" $1 && $3)
 
 template_dir = templates
