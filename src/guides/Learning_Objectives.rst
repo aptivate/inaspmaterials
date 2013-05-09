@@ -1,16 +1,13 @@
 .. include:: ../includes/Series.rst
 
-Effective Network Management
-============================
-
 Study Guide
------------
-
-A series of workshops by INASP, Africonnect and Aptivate to help
-IT staff to develop advanced network management skills, including
-Bandwidth Management and Optimisation.
+===========
 
 .. include:: ../includes/Authors.rst
+
+This is a series of workshops by INASP, Africonnect and Aptivate to help
+IT staff to develop advanced, effective network management skills, including
+Bandwidth Management and Optimisation.
 
 At the end of each unit, participants may want to reflect individually on
 what they have learned so far and document any point to remember and/or
@@ -44,6 +41,7 @@ Course Structure
 	
 #. `Network design <https://nsrc.org/workshops/2009/summer/detailed.html>`_
 
+	* Importance of good design in network management
 	* Network design goals
 	* Complexity versus simplicity
 	* Hierarchical design building blocks
@@ -67,21 +65,37 @@ Course Structure
 	
 #. The bandwidth challenge
 
+	* Importance of Internet in network management
 	* Why is Internet bandwidth particularly scarce?
 	* Why is that a problem?
 	* How does it relate to IT/network management?
 	* How can we fix it? What can we change?
 
+#. Solving network problems
+
+	* Importance of troubleshooting in network management
+	* Good troubleshooting technique
+	* Example: Rogue DHCP server
+	* Example: Internet connection is slow
+
 #. Network monitoring
 
-	* Objective: to understand, monitor and manage bandwidth use
-	* Why is monitoring essential?
+	* Importance of monitoring in network management
 	* What problem do we want to solve?
 	* What questions do we want to answer?
 	* How do we answer them?
+	* What tools are available?
+
+#. Hands-on practical
+
+	* Use common inbuilt network monitoring tools for simple network checks
+	* Install / use the ‘ethereal’ software packet probe on PC and Linux systems
+	* Install / use a typical more complex monitoring tool on a Linux system.
+	* Explore the facilities available on a Linux-based self-contained monitoring toolkit.
 
 #. Making a difference
 
+	* Importance of user behaviour in network management
 	* Changing user behaviour
 	* The role of policy
 	
@@ -94,10 +108,12 @@ Course Structure
 
 #. Technical measures
 
+	* Importance of technical measures in network management
 	* Firewalls
 	* Antivirus
 	* Proxy caches
-	* 
+	* Intrusion Detection
+	* Penetration/scanning (Nessus, Inprotect, NMap)
 	
 #. Making it happen
 
@@ -106,100 +122,3 @@ Course Structure
 	* Propaganda and persuasion
 	* Justifying budget increases
 	* Keep your best people
-
-Unit 0 – Introductions
-----------------------
-
-Summary: introduce the facilitator, the participants and the course.
-
-Unit 1 – The Bandwidth Challenge
---------------------------------
-
-======================= --------------------------------------------------------------------------
-Course title            Network Monitoring
-======================= --------------------------------------------------------------------------
-Module Title            The Bandwidth Challenge
-======================= --------------------------------------------------------------------------
-No. of unit             1 of 6
-======================= --------------------------------------------------------------------------
-Session time/day        *[fill in here]*
-======================= --------------------------------------------------------------------------
-Objective               To introduce understanding of bandwidth challenges in African universities
-======================= --------------------------------------------------------------------------
-Participant Profile     IT staff, especially network managers
-======================= --------------------------------------------------------------------------
-Pre-workshop activities None
-======================= --------------------------------------------------------------------------
-Room Layout             Café style, 4 tables with chairs
-======================= --------------------------------------------------------------------------
-Number of Participants  Maximum 20 participants
-======================= --------------------------------------------------------------------------
-Files and Materials     Presentation powerpoint; print copies of group discussions
-======================= --------------------------------------------------------------------------
-Equipment needed        Flipchart, powerpoint
-======================= --------------------------------------------------------------------------
-
-Summary: We present and discuss some of the challenges that are faced in
-university network management.
-
-On completion of this session, we hope you will:
-
-* Understand how and why African universities face challenges with:
-
-    * available bandwidth
-    * network performance
-    * effectiveness of IT spending
-    * resulting impact on academic objectives
-
-* Understand the benefits of excellent network management.
-
-* Know how these issues are currently being addressed in your own and other
-  organisations and institutions.
-
-Expected time to go through all the parts of the discussion is around 1 hour,
-plus 5 minutes to write down any points you wish to remember or follow up.
-
-Unit 2 – Why Monitor
---------------------
-
-Summary: we try to identify why we should monitor network traffic.
-
-Participants examine how the network management challenge has been dealt
-with within their institutions (expected time: 10 minutes). Results of this
-group discussion are shared with all the workshop participants (expected
-time: 25 minutes).
-
-On completion of this session, we hope you will:
-
-* Understand why congestion happens, and causes slow page loading.
-
-* Understand how to change users behaviour by providing the right
-  incentives.
-  
-* Understand how monitoring helps you to create those incentives.
-
-* Understand how monitoring can help you to improve and repair your
-  network and Internet connection.
-  
-Advice on how to carry out monitoring is given in Unit 3.
-
-Personal Reflection
--------------------
-
-Please reflect on YOUR learning experience so far. You might want to focus
-on the points below and make some notes for yourself.
-
-# What have you learnt?
-# What appear to be the advantages of technology-based solutions to bandwidth management and optimization?
-# What appear to be the advantages of policy-based solutions to bandwidth management and optimization?
-# What else would you like to know about bandwidth management and optimization?
-# What resources would you need and who can provide them?
-# Were there experiences in other institutions you would like to know more about? How can you follow-up?
-
-We will be returning to thinking about and possibly addressing these points throughout the workshop so it might be advisable to keep some space per point.
-
-
-
-Identified key reasons why network traffic should be monitored
-Discussed why continuous traffic monitoring is important
-

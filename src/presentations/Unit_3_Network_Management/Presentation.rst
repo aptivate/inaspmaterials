@@ -367,6 +367,9 @@ Tell people about what you do. Write an organisational blog about the
 changes you've made to improve service. If users believe that you can
 change, they are likely to try to change you. *This is an excellent thing*.
 
+Your users know what the biggest problems are. Who are your most important
+users? Do you talk to them?
+
 What is Configuration Management?
 ---------------------------------
 
@@ -435,6 +438,7 @@ Some problems with this scope:
 * How do you backup devices that don't have an automated interface?
 * How do you cope with encrypted, binary or unreadable configuration files?
 * How do you deal with dynamic configuration, such as IP addresses?
+* What happens if you forget to document a change, or don't have time?
 
 Some possible solutions:
 
@@ -442,6 +446,8 @@ Some possible solutions:
   `RANCID <http://www.shrubbery.net/rancid/>`_: Cisco routers, Juniper
   routers, Catalyst switches, Foundry switches, Alteon switches, and HP
   Procurve switches among others.
+* `Netdot <https://osl.uoregon.edu/redmine/projects/netdot/wiki>`_ can
+  automatically generate network maps for you.
 * Can configure Linux and FreeBSD servers using Puppet or Chef to make
   initial configuration easier.
 * Can standardise and automate installation of servers.
@@ -712,6 +718,32 @@ It's been said that "5% of users use 50% of the traffic, so 95% should be
 on your side." Do you agree? How many people abuse your network or cause
 problems for you? Do the others understand the problem and the benefits
 of reasonable, fair use? If not, how would you show them?
+
+Who is responsible?
+-------------------
+
+Who needs to be involved in network management, and why?
+
+-  Executive management
+-  Senior IT management
+-  Technical staff involved in the day-to-day implementation
+-  Academics, librarians and other legitimate Internet users
+
+.. class:: handout
+
+What roles do they play in managing a network?
+
+Executive management
+	have the power to create or change policy and budgets.
+Senior IT management
+	bridge the gap between staff on the ground, executives and the rest
+	of the university.
+Technical staff
+	have the skills to understand the problem, implement changes, and
+	identify policy violations.
+Legitimate Internet users
+	are the reason why the University pays so much for its Internet
+	connection and the IT department. They are your customers!
 
 Summary
 -------

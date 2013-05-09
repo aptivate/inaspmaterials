@@ -71,5 +71,5 @@ Problems caused by poor network management:
   those that require up to date and a wide range of information
   resources e.g. teaching and research.
 
-Skilled staff leaving the university makes life very difficult for them -
-do everything possible to reduce/avoid it!
+Skilled staff leaving the university makes life very difficult for them.
+Do everything possible to reduce/avoid it!
