@@ -1,7 +1,7 @@
 .. image:: https://raw.github.com/aptivate/inaspmaterials/master/static/inasp-new-logo-262-100.png
 
-INASP: Effective Network Management Workshops
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Network Management Workshops
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 This is a series of workshops by
 `INASP <http://www.inasp.info/>`_, `Africonnect <http://africonnect.com/>`_
