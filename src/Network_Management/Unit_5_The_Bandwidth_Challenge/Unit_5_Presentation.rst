@@ -1,11 +1,11 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
 Unit 2: The Bandwidth Challenge
 ===============================
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 Objectives
 ----------

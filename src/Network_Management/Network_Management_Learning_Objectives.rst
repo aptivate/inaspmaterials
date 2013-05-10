@@ -86,7 +86,7 @@ Course Structure
 	* How do we answer them?
 	* What tools are available?
 
-#. Hands-on practical
+#. Hands-on practical experience
 
 	* Use common inbuilt network monitoring tools for simple network checks
 	* Install / use the ‘ethereal’ software packet probe on PC and Linux systems

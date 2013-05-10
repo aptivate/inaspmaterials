@@ -1,11 +1,11 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
 Unit 7: Hands-on Practical Experience
 =====================================
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 Objectives
 ----------

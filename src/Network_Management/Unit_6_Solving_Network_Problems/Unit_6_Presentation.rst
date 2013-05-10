@@ -1,11 +1,11 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
 Unit 5: Solving Network Problems
 ================================
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 Portions of this chapter reused from the e-book `How to Accelerate your
 Internet <http://bwmo.net/>`_ under the Creative Commons
@@ -44,7 +44,7 @@ Next unit is about monitoring.
 For example, if you can't access your mail server, what would you do?
 
 * You troubleshoot, and discover that the mail server has crashed.
-* You set up monitoring (Nagios) to alert you if the mail server crashes
+* You set up monitoring (Nagios_) to alert you if the mail server crashes
   again, before your users complain, so that you can fix it faster.
 * You set up monitoring to find out why the mail server is crashing, for
   example you enable crash dumps and CPU and memory use logging.
@@ -371,7 +371,7 @@ appearing on your network. But there are some steps you can take:
   are allowed to transmit DHCP responses (the ones connected to your DHCP
   servers). Apply these to server access ports and all uplink ports on your
   switch fabric.
-* Use a network monitor such as `Nagios`_ to detect unexpected DHCP server
+* Use a network monitor such as Nagios_ to detect unexpected DHCP server
   replies on your network and raise the alarm.
   
 Example: Slow Internet connection
@@ -418,7 +418,7 @@ Standard are arbitrary, but `Jakob Nielsen argues
 So if web pages load in 0.1 seconds that's really good; less than 1 second
 is OK, and over 1 second is bad (annoying).
 
-You can automate this test using `Nagios`_ and receive an alert by email
+You can automate this test using Nagios_ and receive an alert by email
 whenever the speed of web page loading becomes too slow.
 
 What influences page loading speed?
@@ -489,7 +489,7 @@ will cause random, slow page loading. It may mean that:
 * one of the upstream servers has crashed; or
 * your Internet connection is down or overloaded.
 
-You can configure a network monitor such as `Nagios`_ to warn you if a
+You can configure a network monitor such as Nagios_ to warn you if a
 DNS server stops responding, or takes too long.
 
 Check the proxy server
@@ -520,7 +520,7 @@ allows you to bypass the proxy server, which is not recommended for network
 security. You may want to temporarily allow direct access, and disable it
 after testing.
 
-You can configure a network monitor such as `Nagios`_ to warn you if the
+You can configure a network monitor such as Nagios_ to warn you if the
 proxy server stops working.
 
 Check ping times (latency)
@@ -548,7 +548,7 @@ So based on Jakob Nielsen's results above, the ping time should be:
 From a broadband connection in the UK, ping time to ``www.bbc.co.uk``
 would normally be under 30 ms.
 
-You can configure `Nagios`_ to warn you if the ping time goes over this
+You can configure Nagios_ to warn you if the ping time goes over this
 threshold.
 
 Interactive applications

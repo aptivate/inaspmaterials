@@ -1,8 +1,8 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
-Unit 0: Introductions
+Unit 1: Introductions
 =====================
 
 .. class:: handout
@@ -17,7 +17,7 @@ On completion of this session, we hope you will:
 *	know a little about each other;
 *	feel comfortable with what this workshop is about.
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 .. class:: handout
 

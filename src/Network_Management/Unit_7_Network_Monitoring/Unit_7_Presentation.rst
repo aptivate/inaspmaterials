@@ -1,11 +1,11 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
 Unit 6: Network Monitoring
 ==========================
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 Objectives
 ----------
@@ -326,8 +326,8 @@ monitor for Unix:
 Monitoring routers and switches
 -------------------------------
 
-`Cacti <http://www.cacti.net/>`_ is an open source tool to monitor devices
-on the network via web browser.
+Cacti_ is an open source tool to monitor devices on the network via web
+browser.
 
 .. image:: images/cacti-screenshot.png
    :width: 70%
@@ -384,7 +384,7 @@ real-time diagnostic tool.
 Service monitoring
 ------------------
 
-`Nagios`_ is a network host and service monitor.
+Nagios_ is a network host and service monitor.
 
 .. image:: images/nagios-screenshot-service-problems.png
    :width: 70%
@@ -492,8 +492,3 @@ Monitor/measure – Example
 -  Microsoft ds
 -  Non business browsing
 -  Amount of bandwidth (per user if poss)
-
-References
-----------
-
-.. _Nagios: http://www.nagios.org/

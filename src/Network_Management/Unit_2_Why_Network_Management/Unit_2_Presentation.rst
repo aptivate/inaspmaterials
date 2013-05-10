@@ -1,11 +1,11 @@
 .. include:: <s5defs.txt>
 
-.. include:: ../../includes/Series.rst
+.. include:: ../includes/Series.rst
 
 Unit 1: Why Network Management
 ==============================
 
-.. include:: ../../includes/Authors.rst
+.. include:: ../includes/Authors.rst
 
 .. class:: handout
 
