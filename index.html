@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<img alt="https://raw.github.com/aptivate/inaspmaterials/master/static/inasp-new-logo-262-100.png" src="https://raw.github.com/aptivate/inaspmaterials/master/static/inasp-new-logo-262-100.png" />
+<div class="section" id="network-management-workshops">
+<h1>Network Management Workshops</h1>
+<p>This is a series of workshops by
+<a class="reference external" href="http://www.inasp.info/">INASP</a>, <a class="reference external" href="http://africonnect.com/">Africonnect</a>
+and <a class="reference external" href="http://www.aptivate.org/">Aptivate</a> to help IT staff to develop
+advanced, effective network management skills, including Bandwidth
+Management and Optimisation.</p>
+<p>The series is divided into workshop units. The units should make sense
+individually, although they may occasionally refer to other units.
+Each unit is available in several formats, for different learning approaches.
+All formats are automatically generated from the same source code, written
+in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">ReStructuredText</a>.</p>
+<ul class="simple">
+<li><strong>Presentations</strong> are intended to be shown on a projector to a large
+audience. We provide them as
+<a class="reference external" href="http://www.openoffice.org/product/impress.html">OpenOffice Impress</a>-compatible
+ODP files, which you can <a class="reference external" href="http://superuser.com/q/84480/116323">use</a> with
+Microsoft PowerPoint 2007, or older versions with a
+<a class="reference external" href="http://odf-converter.sourceforge.net/">plugin</a>. Many slides have
+speaker notes giving more details and references to help the presenter.
+(In future we might provide Slidy or similar HTML presentations instead.
+PDF does not appear to properly support speaker notes, losing much of the
+value of the presentations.)</li>
+<li><strong>Chapters</strong> are intended to be read, like chapters of a book, for
+self-study or by the presenter or facilitator of a training course. We
+provide them as PDF files, and HTML rendered by Github.</li>
+</ul>
+<p>Please submit comments on our website, or create
+<a class="reference external" href="https://github.com/aptivate/inaspmaterials/issues">issues</a>, or fork and
+modify these resources on <a class="reference external" href="https://github.com/aptivate/inaspmaterials">Github</a>,
+to help us improve them for future participants. Thank you! These materials
+are licensed as <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
+and your contributions must be as well.</p>
+<div class="section" id="workshop-units">
+<h2>Workshop Units</h2>
+<ol class="arabic">
+<li><p class="first">Introductions (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst#unit-1-introductions">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Introduce yourself to the participants</li>
+<li>Introduce them to each other</li>
+<li>Set some ground rules</li>
+<li>Review the timetable</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id1">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>Why network management (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>What do you want to get from this course?</li>
+<li>What do we want you to do with it?</li>
+<li>Importance of the network to academic institutions</li>
+<li>Benefits of good network management</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Network design (<a class="reference external" href="https://nsrc.org/workshops/2009/summer/detailed.html">NSRC website</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of good design in network management</li>
+<li>Network design goals</li>
+<li>Complexity versus simplicity</li>
+<li>Hierarchical design building blocks</li>
+<li>Network addressing strategies</li>
+<li>Quality of Service (QoS)</li>
+<li>Service Level Agreements (SLAs)</li>
+<li>Network topologies</li>
+<li>Virtual LANs (VLANs)</li>
+<li>Fault Tolerance</li>
+<li>Switching and security considerations (e.g. Rogue DHCP server and ARP spoofing prevention)</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id2">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>Network management basics (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst#unit-4-network-management">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>What is regarded as Good Practice?</li>
+<li>What problems do you need to solve?</li>
+<li>How best to solve them?</li>
+<li>How to detect them before users do</li>
+<li>How to predict them before they occur</li>
+<li>What disasters might happen? How can we prepare for them?</li>
+<li>Role of policy in guiding/changing behaviour</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id3">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>The bandwidth challenge (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of Internet in network management</li>
+<li>Why is Internet bandwidth particularly scarce?</li>
+<li>Why is that a problem?</li>
+<li>How does it relate to IT/network management?</li>
+<li>How can we fix it? What can we change?</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id4">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>Solving network problems (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#unit-6-solving-network-problems">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of troubleshooting in network management</li>
+<li>Good troubleshooting technique</li>
+<li>Example: Rogue DHCP server</li>
+<li>Example: Internet connection is slow</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id5">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>Network monitoring (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#unit-7-network-monitoring">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of monitoring in network management</li>
+<li>What problem do we want to solve?</li>
+<li>What questions do we want to answer?</li>
+<li>How do we answer them?</li>
+<li>What tools are available?</li>
+</ul>
+</blockquote>
+</li>
+<li><div class="first system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">master/README.rst</tt>, line 4); <em><a href="#id6">backlink</a></em></p>
+<p>Duplicate explicit target name: &quot;online html&quot;.</p>
+</div>
+<p>Hands-on practical experience (<a class="reference external" href="https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst#unit-8-hands-on-practical-experience">online HTML</a>)</p>
+<blockquote>
+<ul class="simple">
+<li>Use common inbuilt network monitoring tools for simple network checks</li>
+<li>Install / use the ‘ethereal’ software packet probe on PC and Linux systems</li>
+<li>Install / use a typical more complex monitoring tool on a Linux system.</li>
+<li>Explore the facilities available on a Linux-based self-contained monitoring toolkit.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Making a difference</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of user behaviour in network management</li>
+<li>Changing user behaviour</li>
+<li>The role of policy</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Policy development</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of policies in network management</li>
+<li>Policy development framework</li>
+<li>Examples of good and bad policy documents</li>
+<li>Creating a policy development action plan</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Technical measures</p>
+<blockquote>
+<ul class="simple">
+<li>Importance of technical measures in network management</li>
+<li>Firewalls</li>
+<li>Antivirus</li>
+<li>Proxy caches</li>
+<li>Intrusion Detection</li>
+<li>Penetration/scanning (Nessus, Inprotect, NMap)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Making it happen</p>
+<blockquote>
+<ul class="simple">
+<li>Why does it not happen already?</li>
+<li>Aligning incentives</li>
+<li>Propaganda and persuasion</li>
+<li>Justifying budget increases</li>
+<li>Keep your best people</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>
