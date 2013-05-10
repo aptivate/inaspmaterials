@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 7: Hands-on Practical Experience
+Unit 8: Hands-on Practical Experience
 =====================================
 
 .. include:: ../includes/Authors.rst

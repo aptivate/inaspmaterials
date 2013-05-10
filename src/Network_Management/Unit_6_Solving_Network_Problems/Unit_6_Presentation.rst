@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 5: Solving Network Problems
+Unit 6: Solving Network Problems
 ================================
 
 .. include:: ../includes/Authors.rst

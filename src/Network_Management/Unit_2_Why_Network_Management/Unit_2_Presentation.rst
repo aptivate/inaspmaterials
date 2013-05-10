@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 1: Why Network Management
+Unit 2: Why Network Management
 ==============================
 
 .. include:: ../includes/Authors.rst

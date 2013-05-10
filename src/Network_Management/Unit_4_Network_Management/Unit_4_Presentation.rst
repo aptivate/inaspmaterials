@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 3: Network Management
+Unit 4: Network Management
 ==========================
 
 .. include:: ../includes/Authors.rst

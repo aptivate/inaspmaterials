@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 2: The Bandwidth Challenge
+Unit 5: The Bandwidth Challenge
 ===============================
 
 .. include:: ../includes/Authors.rst

@@ -2,7 +2,7 @@
 
 .. include:: ../includes/Series.rst
 
-Unit 6: Network Monitoring
+Unit 7: Network Monitoring
 ==========================
 
 .. include:: ../includes/Authors.rst
