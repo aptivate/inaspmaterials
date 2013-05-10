@@ -31,7 +31,7 @@ in `ReStructuredText <http://docutils.sourceforge.net/rst.html>`_.
   provide them as PDF files, and HTML rendered by Github.
 
 Please submit comments on our website, or create issues, or fork and modify
-these resources on `Github <https://github.com/aptivate/inaspmaterials>`,
+these resources on `Github <https://github.com/aptivate/inaspmaterials>`_,
 to help us improve them for future participants. Thank you! These materials
 are licensed as `CC-BY-SA <http://creativecommons.org/licenses/by-sa/3.0/>`_
 and your contributions must be as well.
