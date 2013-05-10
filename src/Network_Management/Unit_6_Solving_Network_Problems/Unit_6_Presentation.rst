@@ -817,6 +817,7 @@ Effect of congestion
 What happens when a link becomes full?
 
 .. image:: images/congestion-vs-latency.png
+   :width: 70%
 
 .. class:: handout
 
@@ -890,6 +891,9 @@ What causes congestion
 * backoff only on packet loss
 * ability to saturate connection
 * excessive queue length
+
+.. image:: images/tcp-congestion-response-graphic.png
+   :width: 70%
 
 .. class:: handout
 

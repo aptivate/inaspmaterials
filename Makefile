@@ -83,8 +83,8 @@ MKDIR_V   = $(SILENT) mkdir -p $1
 
 # Commands that are used in multiple rules
 CREATE_DESTDIR = $(call MKDIR_V, $(dir $@))
-LINK_IMAGES    = $(SILENT) ln -sf $(STATIC_DIR_ABS) $(dir $^)/images
-UNLINK_IMAGES  = $(SILENT) rm -f $(dir $^)/images
+LINK_IMAGES    = $(SILENT) # ln -sf $(STATIC_DIR_ABS) $(dir $^)/images
+UNLINK_IMAGES  = $(SILENT) # rm -f $(dir $^)/images
 
 # Make is target-driven, so we need to provide target filenames and
 # rules to generate each target filename from a source filename (we
