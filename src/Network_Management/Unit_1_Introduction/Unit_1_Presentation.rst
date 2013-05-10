@@ -42,7 +42,7 @@ Please introduce yourself (the participants):
 Get participants to introduce themselves using the questions above,
 or other suitable ones.
 
-We will revisit the expectations later, in Unit 1, **Why network management**.
+We will revisit the expectations later, in Unit 2, **Why network management**.
 
 Do's and Don'ts
 ---------------

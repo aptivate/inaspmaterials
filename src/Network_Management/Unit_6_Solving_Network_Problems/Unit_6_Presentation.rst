@@ -64,7 +64,7 @@ But it's a necessary part:
 Proper troubleshooting technique
 --------------------------------
 
-* Prepare for problems (see Unit 3/Disaster Response)
+* Prepare for problems (see Unit 4/Disaster Response)
 * Responding to a problem
 * Identify possible causes
 * Eliminate causes
@@ -738,7 +738,7 @@ with the ``load-interval 30`` command, for example to 30 seconds or 10,
 which is less accurate but more responsive.
 
 You can also set up `Cacti`_ yourself, if your router supports SNMP. This
-is covered in Unit 6, Network Monitoring.
+is covered in Unit 7, Network Monitoring.
 
 The symptoms of contention are just a reduction in available bandwidth.
 

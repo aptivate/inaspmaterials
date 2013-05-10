@@ -36,10 +36,9 @@ How can you monitor this long-term?
 
 .. class:: handout
 
-We covered how to measure speed instantaneously in Unit 5. But you want
-a long-term solution, and manual speed tests take a lot of time.
-
-You can use `Nagios`_ to check for contention at your ISP:
+We covered how to measure speed instantaneously in Unit 6. But you want
+a long-term solution, and manual speed tests take a lot of time. You can use
+`Nagios`_ to check for contention at your ISP:
 
 * packet loss
 * latency
@@ -93,7 +92,7 @@ The characteristic *flat top* between 0800 and 1900 on the graph
 indicates that the network is fully utilised, which means it's very likely
 to be congested. The graph cannot prove this, because it doesn't measure
 latency, packet loss or available bandwidth (the signs of congestion; see
-*Unit 5/Is my network congested?*).
+*Unit 6/Is my network congested?*).
 
 Why is it likely to be congested? Normally a flat top means that at least
 one TCP connection is running, since TCP tries to use all available
