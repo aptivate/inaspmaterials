@@ -45,14 +45,18 @@ and your contributions must be as well.
 Workshop Units
 --------------
 
-#.	Introductions (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst#unit-1-introductions>`__)
+#.	Introductions
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst#unit-1-introductions>`__ 
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst.odp>`__)
 
 	* Introduce yourself to the participants
 	* Introduce them to each other
 	* Set some ground rules
 	* Review the timetable
 
-#.	Why network management (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management>`__)
+#.	Why network management 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management>`__ 
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst.odp`__)
 
 	* What do you want to get from this course?
 	* What do we want you to do with it?
@@ -73,7 +77,9 @@ Workshop Units
 	* Fault Tolerance
 	* Switching and security considerations (e.g. Rogue DHCP server and ARP spoofing prevention)
 	
-#.	Network management basics (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst#unit-4-network-management>`__)
+#.	Network management basics 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst#unit-4-network-management>`__ 
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst.odp`__)
 
 	* What is regarded as Good Practice?
 	* What problems do you need to solve?
@@ -83,7 +89,9 @@ Workshop Units
 	* What disasters might happen? How can we prepare for them?
 	* Role of policy in guiding/changing behaviour
 	
-#.	The bandwidth challenge (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge>`__)
+#.	The bandwidth challenge 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge>`__ 
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst.odp`__)
 
 	* Importance of Internet in network management
 	* Why is Internet bandwidth particularly scarce?
@@ -91,14 +99,18 @@ Workshop Units
 	* How does it relate to IT/network management?
 	* How can we fix it? What can we change?
 
-#.	Solving network problems (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#unit-6-solving-network-problems>`__)
+#.	Solving network problems 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#unit-6-solving-network-problems>`__ 
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst.odp`__)
 
 	* Importance of troubleshooting in network management
 	* Good troubleshooting technique
 	* Example: Rogue DHCP server
 	* Example: Internet connection is slow
 
-#.	Network monitoring (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#unit-7-network-monitoring>`__)
+#.	Network monitoring 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#unit-7-network-monitoring>`__
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst.odp`__)
 
 	* Importance of monitoring in network management
 	* What problem do we want to solve?
@@ -106,7 +118,9 @@ Workshop Units
 	* How do we answer them?
 	* What tools are available?
 
-#.	Hands-on practical experience (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst#unit-8-hands-on-practical-experience>`__)
+#.	Hands-on practical experience 
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst#unit-8-hands-on-practical-experience>`__
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst.odp`__)
 
 	* Use common inbuilt network monitoring tools for simple network checks
 	* Install / use the ‘ethereal’ software packet probe on PC and Linux systems
