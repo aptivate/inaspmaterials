@@ -24,7 +24,6 @@ in `ReStructuredText <http://docutils.sourceforge.net/rst.html>`_.
 	Microsoft PowerPoint 2007, or older versions with a
 	`plugin <http://odf-converter.sourceforge.net/>`_. Many slides have
 	speaker notes giving more details and references to help the presenter.
-	
 	In future we might provide Slidy or similar HTML presentations as well.
 	PDF does not appear to properly support speaker notes, losing much of the
 	value of the presentations.
@@ -56,7 +55,7 @@ Workshop Units
 
 #.	Why network management 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management>`__ 
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst.odp>`__)
 
 	* What do you want to get from this course?
 	* What do we want you to do with it?
@@ -79,7 +78,7 @@ Workshop Units
 	
 #.	Network management basics 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst#unit-4-network-management>`__ 
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst.odp>`__)
 
 	* What is regarded as Good Practice?
 	* What problems do you need to solve?
@@ -91,7 +90,7 @@ Workshop Units
 	
 #.	The bandwidth challenge 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge>`__ 
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst.odp>`__)
 
 	* Importance of Internet in network management
 	* Why is Internet bandwidth particularly scarce?
@@ -101,7 +100,7 @@ Workshop Units
 
 #.	Solving network problems 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#unit-6-solving-network-problems>`__ 
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst.odp>`__)
 
 	* Importance of troubleshooting in network management
 	* Good troubleshooting technique
@@ -110,7 +109,7 @@ Workshop Units
 
 #.	Network monitoring 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#unit-7-network-monitoring>`__
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst.odp>`__)
 
 	* Importance of monitoring in network management
 	* What problem do we want to solve?
@@ -120,7 +119,7 @@ Workshop Units
 
 #.	Hands-on practical experience 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst#unit-8-hands-on-practical-experience>`__
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst.odp`__)
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst.odp>`__)
 
 	* Use common inbuilt network monitoring tools for simple network checks
 	* Install / use the ‘ethereal’ software packet probe on PC and Linux systems
