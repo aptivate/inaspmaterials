@@ -12,12 +12,12 @@ Unit 2: Why Network Management
 Objectives
 ----------
 
-On completion of this session, we hope you will:
+On completion of this session, we hope you will know:
 
-*	Know want to get from this course
-*	Know why we are running this course
-*	Understand why network management is important in academic institutions
-*	Know the benefits and value of good network management
+*	What you can get from this course
+*	Why we are running this course
+*	Why network management is important in academic institutions
+*	The benefits and value of good network management
 
 .. class:: handout
 
