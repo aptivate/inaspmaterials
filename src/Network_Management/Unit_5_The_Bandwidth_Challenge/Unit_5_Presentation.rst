@@ -102,6 +102,12 @@ Demand for bandwidth is increasing everywhere
 	
 .. image:: images/used_intl_bw_for_ars_technica-4f9a9cf-intro.png
 
+Effects of higher demand than supply
+------------------------------------
+
+.. image:: images/congestion-queueing.png
+   :width: 50%
+
 Abuse of shared resource hurts others
 -------------------------------------
 
@@ -168,7 +174,7 @@ Possible solutions?
 
 .. class:: handout
 
-What would happen if we doubled your bandwidth?
+What would happen if we doubled our bandwidth?
 
 * It will always need managing to ensure maximum efficiency
     

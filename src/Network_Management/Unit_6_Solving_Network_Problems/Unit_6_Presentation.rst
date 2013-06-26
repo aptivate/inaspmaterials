@@ -37,7 +37,7 @@ Once the network is working well, we set up monitoring to:
 * warn us if it stops working well
 * help us troubleshoot more quickly
 
-Next unit is about monitoring.
+The next unit is about monitoring.
 
 .. class:: handout
 
