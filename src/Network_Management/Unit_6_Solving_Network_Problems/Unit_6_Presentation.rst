@@ -53,7 +53,6 @@ Troubleshooting is not management
 ---------------------------------
 
 Emergency quick fixes (fire-fighting) will not keep the network running well!
-
 But it's a necessary part:
 
 * unexpected things will happen
