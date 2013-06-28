@@ -918,74 +918,19 @@ If available bandwidth is the main problem:
 * slow page loading
 * slow downloads
 * high latency or packet loss
-* connection is full
+* connection is full (congestion)
 
 Then you need to increase *supply* of bandwidth and/or reduce *demand*.
+See Unit 9, Making a Difference.
 
-Monetary Options
-----------------
+Example: Denial of Service Attack
+---------------------------------
 
-* Buy more bandwidth
-* Charge for bandwidth used
+.. image:: images/flow-traffic-dos-attack-ex2.png
+   :width: 70%
 
-.. class:: handout
-
-Buying more bandwidth may be difficult:
-
-* Expensive
-* Often only a short-term solution
-* Can make things worse (encourage bad behaviour)
-* Important to benchmark costs
-* How can you justify the cost?
-
-Perhaps the only way to justify the cost is to show that it's **all**
-being used for the intended purpose, which requires monitoring.
-
-Charging for bandwidth used is controversial:
-
-* Very effective at dampening demand
-* Can fund growth of the circuit
-* *Highly damaging* to educational and research objectives
-* Requires monitoring to know how much each person/department has used.
-
-Other incentives for good behaviour
------------------------------------
-
-* Understand how your connection is being used (requires monitoring)
-* Try to change user behaviour (requires policy)
-
-Changing user behaviour
------------------------
-
-Change in behaviour must be *voluntary*.
-
-.. class:: handout
-
-* You need an Acceptable Use Policy (AUP);
-* It must allow you to take some kind of action (including monitoring);
-* All users must have read it, and agreed to follow it.
-
-It will be more effective if users understand how and why it benefits them.
-Otherwise, the users will be fighting against you instead of for you. And
-there are more of them.
-
-* Give users feedback about how much bandwidth they're using.
-* Give each users a limited bandwidth quota.
-* Ensure that abusive users hurt themselves, not others.
-* Engage with highest bandwidth users.
-
-	* "Have a chat" with them, or
-	* Name and shame them
-
-* Block access to some resources.
-
-	* Unpopular with users - they want Facebook and Youtube!
-	* Least preferred option! But technically easiest.
-	* How much impact will it have? Is it worth the cost?
-	* Reduce bandwidth available at peak times instead of blocking?
-
-All of these require monitoring to implement them, except "Ensure that
-abusive users hurt themselves, not others" which can be automatic.
+Graphical tools can spot unusual changes in traffic levels, which may
+indicate an attack, and pinpoint start and stop times.
 
 Summary
 -------

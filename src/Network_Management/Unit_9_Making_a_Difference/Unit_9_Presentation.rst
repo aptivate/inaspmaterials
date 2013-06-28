@@ -1,0 +1,227 @@
+.. include:: <s5defs.txt>
+
+.. include:: ../includes/Series.rst
+
+Unit 9: Making a Difference
+===========================
+
+.. include:: ../includes/Authors.rst
+
+Solving the problem
+-------------------
+
+If available bandwidth is the main problem:
+
+* slow page loading
+* slow downloads
+* high latency or packet loss
+* connection is full
+
+Then you need to increase *supply* of bandwidth and/or reduce *demand*.
+
+* Congestion is not usually your ISP's fault!
+	* unless it occurs in their network!
+
+Solving congestion problems
+---------------------------
+
+* Buy more bandwidth
+* Optimise the efficiency of the circuit
+* Reduce wasting of bandwidth (botnets, worms, packet loss)
+* Charge by usage (tolls)
+* Censor/block some websites or types of traffic
+* Shift "undesirable" traffic out of business hours
+* Limit the damage caused by undesirable traffic
+* Need to understand (investigate) traffic patterns for all of this!
+* How can you block/reduce popular traffic and not be blamed for it?
+
+.. class:: handout
+
+Affecting "popular" traffic (entertainment such as Facebook, YouTube and
+other videos, sports and fashion websites) will always be unpopular. The
+only ways to avoid being blamed are:
+
+*	If people understand the higher good that is being served (faster
+	Internet access for their work).
+*	If the traffic is blocked or affected following a policy set by
+	someone higher up (e.g. organisation management).
+*	If you have no choice, for example it is blocked by your ISP.
+
+Better management of existing resources
+---------------------------------------
+
+Optimisation to ensure value for money and fitness of purpose. For example:
+
+*	Monitoring of bandwidth to know how it is being used
+*	Implementation of policies to guide effective use
+*	Technical tools and resources to optimise use
+
+Different people need to be involved in this:
+
+*	Executive management
+*	Senior implementation management
+*	Technical staff involved in the day-to-day implementation
+
+Monetary Options
+----------------
+
+* Buy more bandwidth
+* Charge for bandwidth used
+
+Buying more bandwidth
+---------------------
+
+May be difficult:
+
+* Expensive
+* Often only a short-term solution
+* Can make things worse (encourage bad behaviour)
+* Important to benchmark costs
+* How can you justify the cost?
+
+Perhaps the only way to justify the cost is to show that it's **all**
+being used for the intended purpose, which requires monitoring.
+
+Charging for bandwidth used
+---------------------------
+
+Controversial:
+
+* Very effective at dampening demand
+* Can fund growth of the circuit
+* *Highly damaging* to educational and research objectives
+* Requires monitoring to know how much each person/department has used.
+
+Perhaps the only way to justify the bill is to show *what* traffic each
+department has caused to incur the bill, which requires monitoring.
+
+Other incentives for good behaviour
+-----------------------------------
+
+* Understand how your connection is being used (requires monitoring)
+* Try to change user behaviour (requires policy)
+
+Monitoring summary
+------------------
+
+You need to monitor in detail to:
+
+* Justify an increase in capacity (expense)
+* Bill users or departments for their usage
+* Inform policy development and maintenance
+* Enforce policy (however softly)
+
+.. class:: handout
+
+Basically you *must* monitor the use of your connection in detail. There
+is no excuse or alternative.
+
+Changing user behaviour
+-----------------------
+
+Change in behaviour must be *voluntary*.
+
+* You need an Acceptable Use Policy (AUP);
+* It must allow you to take some kind of action (including monitoring);
+* All users must have read it, and agreed to follow it.
+	* They must understand how and why it benefits them to follow it.
+* It must be fairly and consistently used (enforced).
+
+Otherwise, the users will be fighting against you instead of for you. And
+there are more of them.
+
+Behaviour changing tactics
+--------------------------
+
+* Give users feedback about how much bandwidth they're using.
+* Give each users a limited bandwidth quota.
+* Ensure that abusive users hurt themselves, not others.
+* Engage with highest bandwidth users.
+	* "Have a chat" with them, or name and shame them
+* Block or deter access to some sites or services.
+
+Which of these require monitoring to implement them?
+
+.. class:: handout
+
+All of these require monitoring, except "Ensure that abusive users hurt
+themselves, not others" which can be automatic.
+
+Blocking access to resources
+----------------------------
+
+* Unpopular with users - they want Facebook and Youtube!
+* Least preferred option! But technically easiest.
+* How much impact will it have? Is it worth the cost?
+* Reduce bandwidth available at peak times instead of blocking?
+
+Actually blocking access to resources
+-------------------------------------
+
+* Block by protocol
+	* But you can't really block all websites (port 80 and 443)
+* Block by IP address
+	* IP addresses change, e.g. Facebook, Google, Dropbox
+	* Normally done on a firewall using a packet filter
+* Block by hostname
+	* Requires intercepting HTTP proxy (or DNS tricks)
+	* Can sometimes be evaded by using IP address instead of hostname
+
+Both blocking by IP and by hostname can be evaded using proxy servers,
+VPN tunnels.
+
+Alternatives to blocking
+------------------------
+
+Because blocking is so unpopular, you may wish to:
+
+* Reduce speed instead of blocking
+* Offer an alternative such as a "commodity" wireless network, with less
+  bandwidth allocated to it, or mobile dongles
+* Allow during certain hours, e.g. out of business hours
+
+Technical solutions
+-------------------
+
+* Technical optimisation
+	* Critically important
+	* Often provides a basis for further action
+	* Almost never the complete solution
+* Control/Censor
+	* Technically possible
+	* Policy driven, Political
+* Benchmark (continually)
+* Monitor (continually)
+* Audit (frequently)
+
+Packet filtering
+----------------
+
+Depending where you want to apply the filtering:
+
+* On a Cisco router: use Cisco ACLs.
+* On a Linux transparent bridge or firewall: use iptables.
+* On a FreeBSD transparent bridge or firewall: use ipfw or pf.
+* On a Windows firewall: use Microsoft ISA Server.
+
+TODO: describe Cisco ACLs and FreeBSD firewalls.
+
+iptables
+--------
+
+.. image:: images/nf-packet-flow.png
+   :width: 70%
+
+* Multiple tables (nat, filter, mangle)
+* Multiple chains in each table (INPUT, FORWARD, OUTPUT)
+* Rules live in a table and chain (e.g. filter FORWARD)
+* Each rule contains a match (e.g. protocol, port) and a target (action)
+* Each matching rule applied in turn
+* Some targets are terminating (ACCEPT, DROP), others are not (LOG)
+* First rule applied with a terminating target ends processing for that packet.
+
+Example iptables rule to block all port 8080 traffic::
+
+	iptables -t filter -A FORWARD -p tcp --dport 8080 -j DROP
+
+
