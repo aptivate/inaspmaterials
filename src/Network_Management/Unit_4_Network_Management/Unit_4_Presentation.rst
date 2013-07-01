@@ -492,6 +492,18 @@ pmacct, pmgraph, argus and nfsen
 squid cache manager, webalizer and Google Analytics
 	collect web traffic logs for analysis.
 
+Diagnosis using baseline data
+-----------------------------
+
+Useful questions for diagnosing performance-related problems:
+
+* What is "normal"?
+* Are we within a "normal" range?
+* When did it change?
+* What happened at the same time?
+
+All of these require collecting and storing historical data (a baseline).
+
 Why use Performance Management?
 -------------------------------
 

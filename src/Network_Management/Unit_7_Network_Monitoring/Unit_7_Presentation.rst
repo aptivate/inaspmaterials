@@ -26,8 +26,19 @@ Do you have the information you need:
 * Is it being used for the purpose intended?
 * Is it being used efficiently?
 * What will you need in future?
-* Can you troubleshoot problems quickly?
+* Can you detect and troubleshoot problems quickly?
 * Can you enforce and improve the Acceptable Use Policy?
+* Can you explain what you are doing and why?
+
+.. class:: handout
+
+Monitoring with historical data collection leads to better service, because
+it allows to:
+
+* detect problems (changes from normal) before users notice and complain (Unit 4);
+* identify that some use complaints are not caused by a change in performance;
+* identify when two things are related, because they happened at the same time;
+* explain what we are doing to management and network users.
 
 Are you getting what you paid for?
 ----------------------------------
@@ -71,6 +82,11 @@ To answer these questions:
 * Is it being used efficiently?
 
 We need to analyse the traffic on the link.
+
+When to measure
+---------------
+
+
 
 Overall traffic level
 ---------------------
