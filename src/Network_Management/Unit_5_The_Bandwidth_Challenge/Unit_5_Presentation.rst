@@ -27,7 +27,7 @@ What is your Internet connection used for?
 
 .. image:: images/JANET-installed-bandwidth-growth.gif
 
-Why else do you have a campus network?
+Why else do you have a campus network? What if you didn't have one?
 
 What is it used for? Do you know? (Monitoring can tell you)
 
@@ -102,6 +102,12 @@ Demand for bandwidth is increasing everywhere
 	
 .. image:: images/used_intl_bw_for_ars_technica-4f9a9cf-intro.png
 
+Effects of higher demand than supply
+------------------------------------
+
+.. image:: images/congestion-queueing.png
+   :width: 50%
+
 Abuse of shared resource hurts others
 -------------------------------------
 
@@ -161,17 +167,10 @@ research.
 Possible solutions?
 -------------------
 
--  Doing nothing
--  More bandwidth and at lower cost
--  Better management of existing resource
--  Combination of the above
+* First be sure that this is affecting you!
+* Collect the data to back you up (Units 6 and 7).
+* Negotiate more bandwidth and/or a change of policy (Units 9 and 10).
 
-.. class:: handout
-
-What would happen if we doubled your bandwidth?
-
-* It will always need managing to ensure maximum efficiency
-    
 Group Discussion
 ----------------
 
@@ -185,14 +184,12 @@ What impact are they having on:
 
 How are these issues being addressed within your institution?
 
-.. class:: handout
-
 * Technically?
 * With policies?
 * With both?
 * If not, why not?
 
-	* Time? Resources? Money? Wrong incentives?
+.. class:: handout
 
 You may want to nominate a group representative to capture the key points
 of the discussion on a flipchart sheet.
@@ -219,4 +216,4 @@ Can you help?
 * Give us the benefit of your experience: especially with a successful
   problem resolution!
 * Share your knowledge with others, don't hide or sell it.
-* Build a community in your country.
+* Build a community in your country, or online.

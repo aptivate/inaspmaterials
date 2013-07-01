@@ -33,7 +33,7 @@ INVERT_PATH = $(shell echo $(call REMOVE_TRAILING_SLASH,$(1)) | sed -e 's|[^/]*|
 RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 
 # Automatically find all the presentation and guide input files.
-PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation.rst)
+PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
 GUIDES = $(wildcard $(SRC_DIR)/*/*.rst)
 
 # Ways of hiding commands. Show the full command when you run "make V=1",
