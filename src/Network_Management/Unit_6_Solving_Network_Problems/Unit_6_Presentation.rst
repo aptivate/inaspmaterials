@@ -423,15 +423,12 @@ whenever the speed of web page loading becomes too slow.
 What influences page loading speed?
 -----------------------------------
 
-*Both* the available bandwidth *and* the latency are lower bounds:
+DNS resolution, the available bandwidth *and* the latency are lower bounds:
 
-* a link with 1 Mbps free cannot load a 1 MB page in less than 8 seconds,
-  however low the latency;
-* a link with 3 second latency cannot load the page in less than 9 seconds,
-  however much bandwidth is free.
+* if a DNS lookup takes 1 second, the page cannot load in less than 1 second.
+* a link with 1 Mbps free cannot load a 1 MB page in less than 8 seconds.
+* a link with 3 second latency cannot load any page in less than 9 seconds.
 
-Don't forget DNS server and proxy latency.
-  
 .. class:: handout
 
 Keep **link latency** and **free bandwidth** under control to ensure
@@ -455,6 +452,11 @@ tool, for example::
 
 The reply may take a second if you haven't looked up the site before.
 After that it should be immediate, because the DNS server should cache it.
+Try different sites, particularly ones that you haven't visited recently.
+Try inventing random nonexistent hostnames to test this::
+
+	$ host ldigvtliyh.google.com
+	Host ldigvtliyh.google.com not found: 3(NXDOMAIN)
 
 If not, which DNS server are you using? The command ``ipconfig /all`` should
 tell you:
@@ -818,6 +820,9 @@ What happens when a link becomes full?
 .. image:: images/congestion-vs-latency.png
    :width: 70%
 
+.. image:: images/tcp-load-throughput.png
+   :width: 50%
+
 .. class:: handout
 
 Tests with a simulated (throttled) link with 1 Mbps bandwidth and 100 ms
@@ -845,6 +850,29 @@ The symptoms of congestion are:
 Packet loss and duplicate packets can also be caused by faulty network
 equipment, or radio interference on a wireless link, so they are not enough
 to identify congestion by themselves unless you can rule these causes out.
+
+Theoretical predictions show that:
+
+* Actual throughput falls off rapidly as the network becomes congested
+  (packet loss increases)
+* Latency/delay climbs exponentially when the load is slightly higher
+  than capacity.
+
+(Credit: Lancaster University, Vasileios Asloglou, Advanced Networking and
+the Internet Coursework. Tutorial Topic: Congestion Control techniques.
+http://www.lancs.ac.uk/postgrad/asloglou/ (dead link))
+
+Note that I could not find the source paper, and I found evidence that
+contradicts these models, in a paper called `The End-to-End Performance
+Effects of Parallel TCP Sockets on a Lossy Wide-Area Network
+<http://www-personal.umich.edu/~hacker/IPDPS.pdf‎>`_. This paper appears to
+show that under some assumptions, multiple simultaneous TCP streams
+experiencing random fair packet loss will all back off together, and
+aggregate flow neither increases nor decreases as the number of connections
+rises:
+
+.. image:: images/tcp-multiple-streams-throughput.png
+   :width: 70%
 
 Is my network congested?
 ------------------------

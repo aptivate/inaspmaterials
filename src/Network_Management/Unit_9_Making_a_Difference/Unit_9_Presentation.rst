@@ -69,9 +69,9 @@ Then you need to increase *supply* of bandwidth and/or reduce *demand*.
 Solving congestion problems
 ---------------------------
 
+* Reduce waste (botnets, worms, updates, packet loss)
 * Buy more bandwidth
 * Optimise the efficiency of the circuit
-* Reduce wasting of bandwidth (botnets, worms, packet loss)
 * Charge by usage (tolls)
 * Censor/block some websites or types of traffic
 * Shift "undesirable" traffic out of business hours
@@ -85,26 +85,46 @@ Affecting "popular" traffic (entertainment such as Facebook, YouTube and
 other videos, sports and fashion websites) will always be unpopular. The
 only ways to avoid being blamed are:
 
-*	If people understand the higher good that is being served (faster
-	Internet access for their work).
-*	If the traffic is blocked or affected following a policy set by
-	someone higher up (e.g. organisation management).
-*	If you have no choice, for example it is blocked by your ISP.
+* If people understand the higher good that is being served (faster
+  Internet access for their work).
+* If the traffic is blocked or affected following a policy set by
+  someone higher up (e.g. organisation management).
+* If you have no choice, for example it is blocked by your ISP.
 
 Better management of existing resources
 ---------------------------------------
 
 Optimisation to ensure value for money and fitness of purpose. For example:
 
-*	Monitoring of bandwidth to know how it is being used
-*	Implementation of policies to guide effective use
-*	Technical tools and resources to optimise use
+* Monitoring of bandwidth to know how it is being used
+* Implementation of policies to guide effective use
+* Technical tools and resources to optimise use
 
 Different people need to be involved in this:
 
-*	Executive management
-*	Senior implementation management
-*	Technical staff involved in the day-to-day implementation
+* Executive management
+* Senior implementation management
+* Technical staff involved in the day-to-day implementation
+
+Reducing waste of bandwidth
+---------------------------
+
+* Can make a big difference
+  * Use monitoring to identify whether it's needed or not
+* Often provides a basis for further action
+* Almost never a complete solution
+* What kind of technical issues?
+
+Examples of reducing waste
+--------------------------
+
+* House-keeping
+  * Microsoft updates, virus definition files, automated patches of all kinds
+* Spam, virus and worm outbreaks
+  * valueless traffic that might be eating bandwidth
+* Caching
+  * DNS caching can make a huge difference to page loading speed
+  * web caching can speed up some pages, and reduce bandwidth use by 40%
 
 Monetary Options
 ----------------
@@ -204,6 +224,17 @@ Change in behaviour must be *voluntary*.
 
 Otherwise, the users will be fighting against you instead of for you. And
 there are more of them.
+
+Policy health warning
+---------------------
+
+If you take action *without* a policy, who is responsible for the
+consequences?
+
+If you take action *within* a policy, who is responsible?
+
+It's much safer to follow a policy! See Unit 10 for assistance with policy
+development.
 
 Behaviour changing tactics
 --------------------------
