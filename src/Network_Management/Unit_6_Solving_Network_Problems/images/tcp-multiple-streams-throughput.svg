@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 1.2013_07_02_15_48_57.0.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3948"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3950"
+         d="m 0,0 1000,0 0,1000 L 0,1000 0,0 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4376082"
+     inkscape:cx="343.72744"
+     inkscape:cy="564.64159"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1615"
+     inkscape:window-height="1026"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g5481"
+       transform="translate(408.74146,669.75077)">
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -112.83429,-207.69767 0,103.94125 m -3,0 3,0 m -3,-20.8475 3,0 m -3,-20.69875 3,0 m -3,-20.84875 3,0 m -3,-20.6975 3,0 m -3,-20.84875 3,0 m 0,103.94125 209.382505,0 m -209.382505,3 0,-3 m 10.49875,3 0,-3 m 10.498752,3 0,-3 m 10.35,3 0,-3 m 10.49875,3 0,-3 m 10.498753,3 0,-3 m 10.5,3 0,-3 m 10.49875,3 0,-3 m 10.34875,3 0,-3 m 10.5,3 0,-3 m 10.4987501,3 0,-3 m 10.49875,3 0,-3 m 10.4987499,3 0,-3 m 10.35,3 0,-3 m 10.49875,3 0,-3 m 10.49875,3 0,-3 m 10.5,3 0,-3 m 10.49875,3 0,-3 m 10.34875,3 0,-3 m 10.5,3 0,-3 m 10.49875,3 0,-3"
+         style="fill:none;stroke:#000000;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3092" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -108.18554,-111.25517 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3094" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -108.18554,-111.25517 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3096" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -97.685538,-118.75517 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3098" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -97.685538,-118.75517 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3100" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -87.186788,-125.80392 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3102" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -87.186788,-125.80392 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3104" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -76.838038,-133.30392 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3106" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -76.838038,-133.30392 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3108" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -66.338035,-142.00267 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3110" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -66.338035,-142.00267 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3112" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -55.839285,-156.55142 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3114" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -55.839285,-156.55142 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3116" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -45.340535,-168.55142 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3118" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -45.340535,-168.55142 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3120" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -34.840535,-176.50017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3122" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -34.840535,-176.50017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3124" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -24.491785,-180.25017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3126" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -24.491785,-180.25017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3128" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -13.993035,-183.85017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3130" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -13.993035,-183.85017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3132" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -3.4930349,-185.34892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3134" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -3.4930349,-185.34892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3136" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 7.0057151,-187.14892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3138" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 7.0057151,-187.14892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3140" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 17.504465,-187.29892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3142" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 17.504465,-187.29892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3144" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 27.853215,-188.49892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3146" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 27.853215,-188.49892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3148" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 38.353215,-189.09892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3150" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 38.353215,-189.09892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3152" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 48.851965,-189.24892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3154" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 48.851965,-189.24892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3156" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 59.350715,-182.20017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3158" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 59.350715,-182.20017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3160" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 69.850715,-183.55017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3162" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 69.850715,-183.55017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3164" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 80.199465,-182.95017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3166" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 80.199465,-182.95017 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3168" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 90.698215,-186.99892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3170" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 90.698215,-186.99892 1.2,0 0,1.2 -1.2,0 0,-1.2 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3172" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -105.48554,-110.80517 0,0.15 -4.19875,0 0,-0.15 0,0.15 4.19875,0 0,-0.15 m 10.500002,-7.5 0,0.15 -4.2,0 0,-0.15 0,0.15 4.2,0 0,-0.15 m 10.34875,-7.79875 0,0.9 -4.05,0 0,-0.9 0,0.9 4.05,0 0,-0.9 m 10.49875,-7.5 0,0.9 -4.19875,0 0,-0.9 0,0.9 4.19875,0 0,-0.9 m 10.500003,-8.24875 0,0.45 -4.2,0 0,-0.45 0,0.45 4.2,0 0,-0.45 m 10.49875,-15.14875 0,1.05 -4.2,0 0,-1.05 0,1.05 4.2,0 0,-1.05 m 10.49875,-12.44875 0,1.49875 -4.2,0 0,-1.49875 0,1.49875 4.2,0 0,-1.49875 m 10.34875,-6.6 0,0.15 -4.04875,0 0,-0.15 0,0.15 4.04875,0 0,-0.15 m 10.5,-4.35 0,0.75 -4.2,0 0,-0.75 0,0.75 4.2,0 0,-0.75 m 10.49875,-3.15 0,0.3 -4.2,0 0,-0.3 0,0.3 4.2,0 0,-0.3 m 10.49875014,-1.34875 0,0.15 -4.19875004,0 0,-0.15 0,0.15 4.19875004,0 0,-0.15 m 10.49999996,-1.65 -4.2,0 4.2,0 m 10.3487499,-0.75 0,0.6 -4.05,0 0,-0.6 0,0.6 4.05,0 0,-0.6 m 10.49875,-0.6 -4.19875,0 4.19875,0 m 10.5,-0.75 0,0.15 -4.2,0 0,-0.15 0,0.15 4.2,0 0,-0.15 m 10.49875,0 -4.2,0 4.2,0 m 10.49875,4.94875 0,2.1 -4.2,0 0,-2.1 0,2.1 4.2,0 0,-2.1 m 10.34875,-1.04875 0,1.79875 -4.04875,0 0,-1.79875 0,1.79875 4.04875,0 0,-1.79875 m 10.5,0.45 0,1.94875 -4.2,0 0,-1.94875 0,1.94875 4.2,0 0,-1.94875 m 10.49875,-2.4 0,0.3 -4.2,0 0,-0.3 0,0.3 4.2,0 0,-0.3"
+         style="fill:none;stroke:#000000;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3174" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -109.68429,-110.80517 4.19875,0 m 6.300002,-7.5 4.2,0 m 6.29875,-7.79875 4.05,0 m 6.3,-7.5 4.19875,0 m 6.300003,-8.24875 4.2,0 m 6.29875,-15.14875 4.2,0 m 6.29875,-12.44875 4.2,0 m 6.3,-6.6 4.04875,0 m 6.3,-4.35 4.2,0 m 6.29875,-3.15 4.2,0 m 6.3000001,-1.34875 4.19875004,0 m 6.29999996,-1.65 4.2,0 m 6.2987499,-0.75 4.05,0 m 6.3,-0.6 4.19875,0 m 6.3,-0.75 4.2,0 m 6.29875,0 4.2,0 m 6.29875,4.94875 4.2,0 m 6.3,-1.04875 4.04875,0 m 6.3,0.45 4.2,0 m 6.29875,-2.4 4.2,0"
+         style="fill:none;stroke:#000000;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3176" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -111.33429,-111.55517 -0.45,0 0,1.5 0.45,0 m 10.49875,-8.7 -0.45,0 0,0.9 0.45,0 m 10.498752,-12.14875 -0.45,0 0,7.79875 0.45,0 m 10.5,-15.44875 -0.6,0 0,8.25 0.6,0 m 10.498753,-14.39875 -0.6,0 0,3.9 0.6,0 m 10.34875,-22.19875 -0.45,0 0,10.04875 0.45,0 m 10.5,-24.5975 -0.45,0 0,14.39875 0.45,0 m 10.49875,-14.99875 -0.45,0 0,2.25 0.45,0 m 10.49875,-9.14875 -0.6,0 0,7.34875 0.6,0 m 10.49875,-8.54875 -0.6,0 0,3.44875 0.6,0 m 10.3500001,-4.04875 -0.45,0 0,2.09875 0.45,0 m 10.49875,-2.84875 -0.45,0 0,0.15 0.45,0 m 10.4987499,-3.6 -0.45,0 0,5.69875 0.45,0 m 10.5,-3.59875 -0.6,0 0,0.3 0.6,0 m 10.49875,-1.5 -0.6,0 0,1.2 0.6,0 m 10.34875,-0.6 -0.45,0 0,0.15 0.45,0 m 10.5,-4.95 -0.45,0 0,19.34875 0.45,0 m 10.49875,-18.74875 -0.45,0 0,16.34875 0.45,0 m 10.49875,-16.49875 -0.6,0 0,17.39875 0.6,0 m 10.49875,-13.19875 -0.6,0 0,4.05 0.6,0 m -200.082505,73.94375 0.6,0.3 0.45,-0.3 -0.45,-0.3 -0.6,0.3 1.05,0 m 9.44875,-7.5 0.6,0.15 0.45,-0.15 -0.45,-0.15 -0.6,0.15 1.05,0 m 9.448752,-7.79875 0.6,1.8 0.45,-1.8 -0.45,-1.65 -0.6,1.65 1.05,0 m 9.45,-7.5 0.45,1.95 0.6,-1.95 -0.6,-1.8 -0.45,1.8 1.05,0 m 9.448753,-8.24875 0.45,0.9 0.6,-0.9 -0.6,-0.9 -0.45,0.9 1.05,0 m 9.29875,-15.14875 0.6,2.25 0.45,-2.25 -0.45,-2.25 -0.6,2.25 1.05,0 m 9.45,-12.44875 0.6,3.14875 0.45,-3.14875 -0.45,-3.15 -0.6,3.15 1.05,0 m 9.44875,-6.6 0.6,0.45 0.45,-0.45 -0.45,-0.45 -0.6,0.45 1.05,0"
+         style="fill:none;stroke:#0000ff;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3178" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -28.541785,-180.40017 0.45,1.5 0.6,-1.5 -0.6,-1.65 -0.45,1.65 1.05,0 m 9.44875,-3.15 0.45,0.75 0.6,-0.75 -0.6,-0.74875 -0.45,0.74875 1.05,0 m 9.3000001,-1.34875 0.6,0.44875 0.45,-0.44875 -0.45,-0.6 -0.6,0.6 1.05,0 m 9.44875,-1.65 1.05,0 -1.05,0 1.05,0 m 9.4487499,-0.75 0.6,1.2 0.45,-1.2 -0.45,-1.35 -0.6,1.35 1.05,0 m 9.45,-0.6 0.45,0.15 0.6,-0.15 -0.6,-0.15 -0.45,0.15 1.05,0 m 9.44875,-0.75 0.45,0.3 0.6,-0.3 -0.6,-0.3 -0.45,0.3 1.05,0 m 9.29875,0 0.6,0.15 0.45,-0.15 -1.05,0 1.05,0 m 9.45,4.94875 0.6,4.2 0.45,-4.2 -0.45,-4.34875 -0.6,4.34875 1.05,0 m 9.44875,-1.04875 0.6,3.59875 0.45,-3.59875 -0.45,-3.6 -0.6,3.6 1.05,0 m 9.44875,0.45 0.45,3.89875 0.6,-3.89875 -0.6,-3.75 -0.45,3.75 1.05,0 m 9.45,-2.4 0.44875,0.75 0.6,-0.75 -0.6,-0.9 -0.44875,0.9 1.04875,0"
+         style="fill:none;stroke:#0000ff;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3180" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m -104.58554,-110.50517 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.64875,0 -2.99875,1.35 -2.99875,3.15 0,1.64875 1.35,2.99875 2.99875,2.99875 1.65,0 3.15,-1.35 3.15,-2.99875 z m 0,-0.6 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.64875,0 -2.99875,1.35 -2.99875,3.15 0,1.65 1.35,2.99875 2.99875,2.99875 1.65,0 3.15,-1.34875 3.15,-2.99875 z m 10.500002,-7.05 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.65,0 -3.000002,1.35 -3.000002,3.15 0,1.65 1.350002,3 3.000002,3 1.65,0 3.15,-1.35 3.15,-3 z m 0,-0.3 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.65,0 -3.000002,1.35 -3.000002,3.15 0,1.65 1.350002,3 3.000002,3 1.65,0 3.15,-1.35 3.15,-3 z m 10.49875,-5.84875 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.65,0 -3,1.35 -3,3.15 0,1.64875 1.35,2.99875 3,2.99875 1.65,0 3.15,-1.35 3.15,-2.99875 z m 0,-3.45 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.65,0 -3,1.35 -3,3.15 0,1.65 1.35,3 3,3 1.65,0 3.15,-1.35 3.15,-3 z m 10.34875,-4.05 c 0,-1.8 -1.5,-3.15 -3.15,-3.15 -1.65,0 -2.99875,1.35 -2.99875,3.15 0,1.65 1.34875,3 2.99875,3 1.65,0 3.15,-1.35 3.15,-3 z m 0,-3.45 c 0,-1.8 -1.5,-3.14875 -3.15,-3.14875 -1.65,0 -2.99875,1.34875 -2.99875,3.14875 0,1.65 1.34875,3 2.99875,3 1.65,0 3.15,-1.35 3.15,-3 z m 10.498753,-5.69875 c 0,-1.8 -1.49875,-3.15 -3.14875,-3.15 -1.65,0 -3,1.35 -3,3.15 0,1.65 1.35,2.99875 3,2.99875 1.65,0 3.14875,-1.34875 3.14875,-2.99875 z m 0,-1.8 c 0,-1.8 -1.49875,-3.15 -3.14875,-3.15 -1.65,0 -3,1.35 -3,3.15 0,1.65 1.35,3 3,3 1.65,0 3.14875,-1.35 3.14875,-3 z m 10.5,-12.29875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.79875 1.35,3.14875 3,3.14875 1.65,0 3.15,-1.35 3.15,-3.14875 z m 0,-4.35 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,-7.05 c 0,-1.65 -1.5,-2.99875 -3.15,-2.99875 -1.65,0 -3,1.34875 -3,2.99875 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-6.29875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,-3 c 0,-1.65 -1.5,-3 -3.14875,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.64875,0 3.14875,-1.35 3.14875,-3.15 z m 0,-0.9 c 0,-1.65 -1.5,-3 -3.14875,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.64875,0 3.14875,-1.35 3.14875,-3.15 z m 10.35,-2.4 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-3.15 c 0,-1.65 -1.5,-2.99875 -3.15,-2.99875 -1.65,0 -3,1.34875 -3,2.99875 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,-0.9 c 0,-1.64875 -1.5,-2.99875 -3.15,-2.99875 -1.65,0 -3,1.35 -3,2.99875 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-1.35 c 0,-1.64875 -1.5,-2.99875 -3.15,-2.99875 -1.65,0 -3,1.35 -3,2.99875 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875014,-0.14875 c 0,-1.65 -1.50000004,-3 -3.14875004,-3 -1.65,0 -3,1.35 -3,3 0,1.79875 1.35,3.14875 3,3.14875 1.64875,0 3.14875004,-1.35 3.14875004,-3.14875 z m 0,-0.9 c 0,-1.65 -1.50000004,-3 -3.14875004,-3 -1.65,0 -3,1.35 -3,3 0,1.79875 1.35,3.14875 3,3.14875 1.64875,0 3.14875004,-1.35 3.14875004,-3.14875 z"
+         style="fill:none;stroke:#ff0000;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3182" />
+      <path
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         inkscape:connector-curvature="0"
+         d="m 10.605715,-186.69892 c 0,-1.65 -1.4999999,-3 -3.1499999,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.14875 3,3.14875 1.65,0 3.1499999,-1.34875 3.1499999,-3.14875 z m 0,0 c 0,-1.65 -1.4999999,-3 -3.1499999,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.14875 3,3.14875 1.65,0 3.1499999,-1.34875 3.1499999,-3.14875 z m 10.49875,0.45 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.79875 1.35,3.14875 3,3.14875 1.65,0 3.15,-1.35 3.15,-3.14875 z m 0,-2.4 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.34875,0.75 c 0,-1.65 -1.5,-3 -3.15,-3 -1.64875,0 -2.99875,1.35 -2.99875,3 0,1.8 1.35,3.15 2.99875,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-0.3 c 0,-1.65 -1.5,-3 -3.15,-3 -1.64875,0 -2.99875,1.35 -2.99875,3 0,1.8 1.35,3.15 2.99875,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,-0.3 c 0,-1.65 -1.49875,-3 -3.14875,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.14875,-1.35 3.14875,-3.15 z m 0,-0.6 c 0,-1.65 -1.49875,-3 -3.14875,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.14875,-1.35 3.14875,-3.15 z m 10.5,0.45 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-0.15 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,8.99875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -2.99875,1.35 -2.99875,3 0,1.8 1.34875,3.15 2.99875,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-8.24875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -2.99875,1.35 -2.99875,3 0,1.8 1.34875,3.15 2.99875,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,6.74875 c 0,-1.65 -1.5,-2.99875 -3.14875,-2.99875 -1.65,0 -3,1.34875 -3,2.99875 0,1.8 1.35,3.15 3,3.15 1.64875,0 3.14875,-1.35 3.14875,-3.15 z m 0,-7.04875 c 0,-1.65 -1.5,-3 -3.14875,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.64875,0 3.14875,-1.35 3.14875,-3.15 z m 10.35,7.64875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 0,-7.49875 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z m 10.49875,2.1 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.14875 3,3.14875 1.65,0 3.15,-1.34875 3.15,-3.14875 z m 0,-1.65 c 0,-1.65 -1.5,-3 -3.15,-3 -1.65,0 -3,1.35 -3,3 0,1.8 1.35,3.15 3,3.15 1.65,0 3.15,-1.35 3.15,-3.15 z"
+         style="fill:none;stroke:#ff0000;stroke-width:1.19999993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3184" />
+      <text
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         style="font-size:14.98284054px"
+         y="-100.49146"
+         x="-126.02757"
+         transform="scale(0.9988561,1.0011452)"
+         id="text3186">
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-126.02757"
+           y="-100.49146"
+           id="tspan3188">0</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-131.58363 -126.02959"
+           y="-121.31612"
+           sodipodi:role="line"
+           id="tspan3190">50</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-137.13969 -131.58563 -126.03159"
+           y="-142.14079"
+           sodipodi:role="line"
+           id="tspan3192">100</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-137.13969 -131.58563 -126.03159"
+           y="-162.96545"
+           sodipodi:role="line"
+           id="tspan3194">150</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-137.13969 -131.58563 -126.03159"
+           y="-183.6404"
+           sodipodi:role="line"
+           id="tspan3196">200</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="-137.13969 -131.58563 -126.03159"
+           y="-204.46506"
+           sodipodi:role="line"
+           id="tspan3198">250</tspan>
+      </text>
+      <text
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         style="font-size:14.98284054px"
+         y="-104.46553"
+         x="90.661133"
+         transform="matrix(0,-0.9988561,1.0011452,0,0,0)"
+         id="text3200">
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="90.661133"
+           y="-104.46553"
+           id="tspan3202">1</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="90.661133"
+           y="-83.491165"
+           id="tspan3204">3</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="90.661133"
+           y="-62.666512"
+           id="tspan3206">5</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="90.661133"
+           y="-41.692139"
+           id="tspan3208">7</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="90.661133"
+           y="-20.867479"
+           id="tspan3210">9</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="85.105072 90.659119"
+           y="0.10688612"
+           sodipodi:role="line"
+           id="tspan3212">11</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="85.105072 90.659119"
+           y="21.081251"
+           sodipodi:role="line"
+           id="tspan3214">13</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="85.105072 90.659119"
+           y="41.90591"
+           sodipodi:role="line"
+           id="tspan3216">15</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="85.105072 90.659119"
+           y="62.880276"
+           sodipodi:role="line"
+           id="tspan3218">17</tspan>
+        <tspan
+           style="font-size:10.04711819px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="85.105072 90.659119"
+           y="83.704956"
+           sodipodi:role="line"
+           id="tspan3220">19</tspan>
+      </text>
+      <text
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         style="font-size:14.98284054px"
+         y="-75.472115"
+         x="-95.845543"
+         transform="scale(0.9988561,1.0011452)"
+         id="text3222">
+        <tspan
+           style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+           x="-95.845543 -88.639755 -82.481873 -73.505775 -67.322784 -61.768734 -57.866436 -55.012058 -48.829052 -45.525555 -42.671185 -35.925549 -30.371487 -26.469189 -20.915142 -18.077831 -15.240536 -9.6864891 -6.8491783 -3.9947929 2.0133858 9.2191811 15.964817 18.819202 26.024998 32.207996 38.39098 44.573978 50.12804 55.682072 58.985569 61.82288 68.005875 74.188858"
+           y="-75.472115"
+           sodipodi:role="line"
+           id="tspan3224">Number of Parallel TCP Connections</tspan>
+      </text>
+      <text
+         inkscape:export-ydpi="344.28"
+         inkscape:export-xdpi="344.28"
+         inkscape:export-filename="/home/chris/inaspmaterials/master/src/Network_Management/Unit_6_Solving_Network_Problems/images/tcp-multiple-streams-throughput.png"
+         style="font-size:14.98284054px"
+         y="-162.74391"
+         x="107.3287"
+         transform="matrix(0,-0.9988561,1.0011452,0,0,0)"
+         id="text3226">
+        <tspan
+           style="font-size:10px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+           x="107.3287 114.2602 118.91101 123.56183 128.21263 133.31557 136.47035 141.1252 146.22812 148.48068 154.49791 159.60085 164.70377 167.85857 172.50938 177.6123 182.26311 184.9668 189.61761 191.87018 196.9731 202.99033 208.55542"
+           y="-162.74391"
+           sodipodi:role="line"
+           id="tspan3228">Measured Aggregate TCP</tspan>
+        <tspan
+           style="font-size:10px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+           x="118.74122 124.75844 129.40924 134.51218 139.61511 146.0945 148.34706 153.453 156.15668 161.26263 163.5152 166.21887 173.12526 178.2282 180.48076 185.13158 189.78239 194.4332"
+           y="-150.00919"
+           sodipodi:role="line"
+           id="tspan3230">Bandwidth (Mb/sec)</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

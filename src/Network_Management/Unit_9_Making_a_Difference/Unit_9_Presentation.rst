@@ -13,8 +13,9 @@ Planning
 .. image:: images/800px-Dwight_D._Eisenhower,_official_Presidential_portrait.jpg
    :width: 50%
 
+US President Dwight D. Eisenhower once said:
+
 	I have always found that plans are useless but planning is indispensable.
-	-- Dwight D. Eisenhower
 
 Things you might want to plan for:
 
@@ -179,7 +180,7 @@ Empowering users
   * Even if they cannot contact an admin
 * For example: access to Nagios, service status page, basic diagnostic software.
   * Needs to be appropriate to users' level of understanding and desire to
-    help.
+  help.
 
 Affecting users
 ---------------
@@ -333,4 +334,12 @@ Example iptables rule to block all port 8080 traffic::
 
 	iptables -t filter -A FORWARD -p tcp --dport 8080 -j DROP
 
+Blocking websites
+-----------------
+
+You can use DansGuardian as a web proxy to block all pages containing certain keywords:
+
+* http://www.sussex.ac.uk
+* http://www.expertsexchange.com
+* http://196.21.99.105/archive/img097.jpg
 

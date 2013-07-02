@@ -17,7 +17,7 @@ This workshop is specifically aimed at:
   * responsible for the development and implementation of ICT policies
 * Head librarians or senior library staff
   * involved in the development and implementation of ICT policies
-    and should benefit from them
+  and should benefit from them
 
 Introductions
 -------------
