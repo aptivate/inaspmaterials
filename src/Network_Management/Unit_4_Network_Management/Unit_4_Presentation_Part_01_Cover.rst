@@ -19,3 +19,4 @@ On completion of this session, we hope you will know about:
 * Detecting and predicting problems
 * Preparing for disasters
 * The role of policy in guiding/changing behaviour
+

@@ -23,9 +23,7 @@ We most often use these graphs when a failure has occurred, or a problem is
 detected by a monitoring system, such as:
 
 * a server crashed
-* a network connection is slow/congested/lZenoss and Cacti
-	collect performance metrics from devices with SNMP support and graph them.
-ossy
+* a network connection is slow/congested/lossy
 * Nagios detected a server running out of disk space or memory
 * a server is/was running slowly (out of spec)
 
@@ -122,3 +120,4 @@ squid cache manager, webalizer and Google Analytics
 rrdtool
 	stores time-sequence data with high performance, automatic history
 	purging, and decent graphs. Used by smokeping, munin and cacti.
+
