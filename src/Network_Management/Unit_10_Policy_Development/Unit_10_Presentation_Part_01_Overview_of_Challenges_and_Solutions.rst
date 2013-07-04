@@ -1,11 +1,5 @@
-.. include:: <s5defs.txt>
-
-.. include:: ../includes/Series.rst
-
-Unit 10: Policy Development
-===========================
-
-.. include:: ../includes/Authors.rst
+Overview of Challenges and Solutions
+====================================
 
 Target participants
 -------------------
@@ -135,133 +129,31 @@ Policy and Behaviour
 * Who do users fear more?
 * Whose side are the users on? What do they want?
 
-Finding the Policy
-------------------
+Policy-based solutions
+----------------------
 
-* What is the Acceptable Use Policy (AUP) for your network? Where is it?
+* Aim to bring about behavioral change
+* Treat bandwidth just as any common good that needs policy management
+* Can require or authorise use of technical solutions
+  * distribute the bandwidth evenly between users
+  * make sure that no one user can damage other users' experiences
+  * can prioritise and restrict traffic flows or users but which ones and how?
+  * do not automatically ensure that the traffic that flows is consistent
+  with institutional purposes
 
-* Ask someone who uses your network to outline the policy from memory.
-  Compare it with the real policy.
+Examples of policy based approaches
+-----------------------------------
 
-* Ask someone to find a copy of it, and watch them try.
+Some simple examples, that we can come back to later.
 
-.. class:: handout
+A policy that says something about:
 
-Consider how well your users understand your policy. Test them.
-Test the next person you see: is action X allowed by the policy or not?
-
-How is your policy enforced, by who, and how well? Who follows the policy,
-who fights against it? How could you get them on side?
-
-It's been said that "5% of users use 50% of the traffic, so 95% should be
-on your side." Do you agree? How many people abuse your network or cause
-problems for you? Do the others understand the problem and the benefits
-of reasonable, fair use? If not, how would you show them?
-
-Who is responsible?
--------------------
-
-Who needs to be involved in network management, and why?
-
-* Executive management
-* Senior IT management
-* Technical staff involved in the day-to-day implementation
-* Academics, librarians and other legitimate Internet users
-
-.. class:: handout
-
-What roles do they play in managing a network?
-
-Executive management
-	have the power to create or change policy and budgets.
-Senior IT management
-	bridge the gap between staff on the ground, executives and the rest
-	of the university.
-Technical staff
-	have the skills to understand the problem, implement changes, and
-	identify policy violations.
-Legitimate Internet users
-	are the reason why the University pays so much for its Internet
-	connection and the IT department. They are your customers!
-
-Outline of a plan
------------------
-
-* Simple overall aim
-  * One to Three simple specific objectives
-  * Simpler is safer (K I S S)
-* An objective must be specific and measurable
-* Justification
-  * improving effectiveness
-  * return on spend/investment
-* Consequences
-  * Of doing or not doing
-* How do you manage risks during implementation
-  * Go/No Go gates
-* How will you monitor and review
-  * Regular milestones
-* Who are the key people (stakeholders)
-* Timetable
-
-Fair Deal
----------
-
-* Everyone gets 1 Mbps, without exception
-* Pros:
-  * Easy to implement
-  * No policing required
-* Cons:
-  * Network resource will be under-used
-  * Conversely, if everyone uses their 1 Mbps then capacity will be exceeded
-  * Important work-related downloads may be slowed
-
-Punish repeat offenders
------------------------
-
-* Heavy users:
-  * Those who transfer over 650MB/day off-campus are placed in heavy-user bucket
-  * Heavy-users get limited bandwidth (e.g. 1.5Mbps aggregate)
-  * Further reduction for repeat offenders
-* Pros:
-  * Heavy users get amplified negative feedback
-  * No deep packet inspection required
-* Cons:
-  * Network resource will be under-used
-  * Important work-related downloads may be slowed
-  * Arbitrary limits are difficult to justify
-
-Nuisance applications
----------------------
-
-* Define list of "nuisance" apps and identify their traffic
-* All nuisance app traffic goes into a fixed bucket (e.g. 10 Mbps)
-* Pros:
-  * Low maintenance
-  * Nuisance app users get amplified negative feedback
-* Cons:
-  * What is a nuisance app? How to identify it?
-  * Users will discover new ways to abuse bandwidth
-  * Requires a bandwidth manager with deep packet inspection
-
-Protocol mix
-------------
-
-.. image:: images/protocol-mix-chart.png
-   :width: 50%
-
-* Academic TCP and Recreational TCP are "equal"
-  * 40% each for Academic and Residential TCP
-* Non-TCP and TCP don’t necessarily play well together
-  * 10% for non-TCP
-* Leave 10% unallocated (burst, control plane)
-* Possible add-ons
-  * Individual flow or user policing
-  * Priority queuing
-* Pros:
-  * Low maintenance
-  * Recreational users get amplified negative feedback
-* Cons:
-  * How to identify academic/recreational traffic?
-  * Requires a bandwidth manager with deep packet inspection
-  * Is 10% enough for VoIP applications and VPNs?
+Appropriate and inappropriate use
+	Can be used to reward/punish such behaviour
+Ability to limit traffic by volume
+	Can be used to set quotas
+Ability to shape traffic
+	Can be used to throttle non-core online resources or speed up core ones
+Virus protection and software standards
+	Can be used to remove problem computers/users from the network who do not comply
 
