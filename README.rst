@@ -9,6 +9,9 @@ and `Aptivate <http://www.aptivate.org/>`_ to help IT staff to develop
 advanced, effective network management skills, including Bandwidth
 Management and Optimisation.
 
+Study Guide
+-----------
+
 The series is divided into workshop units. The units should make sense
 individually, although they may occasionally refer to other units.
 Each unit is available in several formats, for different learning approaches.
@@ -40,6 +43,16 @@ modify these resources on `Github <https://github.com/aptivate/inaspmaterials>`_
 to help us improve them for future participants. Thank you! These materials
 are licensed as `CC-BY-SA <http://creativecommons.org/licenses/by-sa/3.0/>`_
 and your contributions must be as well.
+
+At the end of each unit, participants may want to reflect individually on
+what they have learned so far and document any point to remember and/or
+follow up (expected time: 5 minutes).
+
+In these workshops we may use terms that are unfamiliar to you. If you are
+unsure of anything, please ask a facilitator, or if you are studying alone,
+please try searching the Internet or asking a question on the Server Fault
+website, a free "question and answer site for professional system and network
+administrators".
 
 Workshop Units
 --------------
@@ -76,17 +89,59 @@ Workshop Units
 	* Fault Tolerance
 	* Switching and security considerations (e.g. Rogue DHCP server and ARP spoofing prevention)
 	
-#.	Network management basics 
-	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst#unit-4-network-management>`__ 
-	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation.rst.odp>`__)
+#.	Network management basics
 
-	* What is regarded as Good Practice?
-	* What problems do you need to solve?
-	* How best to solve them?
-	* How to detect them before users do
-	* How to predict them before they occur
-	* What disasters might happen? How can we prepare for them?
-	* Role of policy in guiding/changing behaviour
+	* Introduction
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_01_Cover.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_01_Cover.rst.odp>`__)
+
+	* What is network management?
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Presentation_Part_02_What_Is_Network_Management.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Presentation_Part_02_What_Is_Network_Management.rst.odp>`__)
+
+	* Fault management
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_03_Fault_Management.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_03_Fault_Management.rst.odp>`__)
+
+	* Remote diagnosis
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_04_Remote_Diagnosis.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_04_Remote_Diagnosis.rst.odp>`__)
+
+	* Early detection
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_05_Early_Detection.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_05_Early_Detection.rst.odp>`__)
+
+	* Automation
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_06_Automation.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_06_Automation.rst.odp>`__)
+
+	* Fault mitigation
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_07_Fault_Mitigation.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_07_Fault_Mitigation.rst.odp>`__)
+
+	* Configuration management
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_08_Configuration_Management.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_08_Configuration_Management.rst.odp>`__)
+
+	* Performance management
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_09_Performance_Management.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_09_Performance_Management.rst.odp>`__)
+
+	* Security management
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_10_Security_Management.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_10_Security_Management.rst.odp>`__)
+
+	* Disaster response planning
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_11_Disaster_Response_Planning.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_11_Disaster_Response_Planning.rst.odp>`__)
+
+	* Policy
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_12_Policy.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_12_Policy.rst.odp>`__)
+
+	* Conclusion
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_13_Conclusion.rst>`__
+	  | `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_13_Conclusion.rst.odp>`__)
 	
 #.	The bandwidth challenge 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge>`__ 

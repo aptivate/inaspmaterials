@@ -53,7 +53,6 @@ Troubleshooting is not management
 ---------------------------------
 
 Emergency quick fixes (fire-fighting) will not keep the network running well!
-
 But it's a necessary part:
 
 * unexpected things will happen
@@ -424,15 +423,12 @@ whenever the speed of web page loading becomes too slow.
 What influences page loading speed?
 -----------------------------------
 
-*Both* the available bandwidth *and* the latency are lower bounds:
+DNS resolution, the available bandwidth *and* the latency are lower bounds:
 
-* a link with 1 Mbps free cannot load a 1 MB page in less than 8 seconds,
-  however low the latency;
-* a link with 3 second latency cannot load the page in less than 9 seconds,
-  however much bandwidth is free.
+* if a DNS lookup takes 1 second, the page cannot load in less than 1 second.
+* a link with 1 Mbps free cannot load a 1 MB page in less than 8 seconds.
+* a link with 3 second latency cannot load any page in less than 9 seconds.
 
-Don't forget DNS server and proxy latency.
-  
 .. class:: handout
 
 Keep **link latency** and **free bandwidth** under control to ensure
@@ -456,6 +452,11 @@ tool, for example::
 
 The reply may take a second if you haven't looked up the site before.
 After that it should be immediate, because the DNS server should cache it.
+Try different sites, particularly ones that you haven't visited recently.
+Try inventing random nonexistent hostnames to test this::
+
+	$ host ldigvtliyh.google.com
+	Host ldigvtliyh.google.com not found: 3(NXDOMAIN)
 
 If not, which DNS server are you using? The command ``ipconfig /all`` should
 tell you:
@@ -819,6 +820,9 @@ What happens when a link becomes full?
 .. image:: images/congestion-vs-latency.png
    :width: 70%
 
+.. image:: images/tcp-load-throughput.png
+   :width: 50%
+
 .. class:: handout
 
 Tests with a simulated (throttled) link with 1 Mbps bandwidth and 100 ms
@@ -846,6 +850,29 @@ The symptoms of congestion are:
 Packet loss and duplicate packets can also be caused by faulty network
 equipment, or radio interference on a wireless link, so they are not enough
 to identify congestion by themselves unless you can rule these causes out.
+
+Theoretical predictions show that:
+
+* Actual throughput falls off rapidly as the network becomes congested
+  (packet loss increases)
+* Latency/delay climbs exponentially when the load is slightly higher
+  than capacity.
+
+(Credit: Lancaster University, Vasileios Asloglou, Advanced Networking and
+the Internet Coursework. Tutorial Topic: Congestion Control techniques.
+http://www.lancs.ac.uk/postgrad/asloglou/ (dead link))
+
+Note that I could not find the source paper, and I found evidence that
+contradicts these models, in a paper called `The End-to-End Performance
+Effects of Parallel TCP Sockets on a Lossy Wide-Area Network
+<http://www-personal.umich.edu/~hacker/IPDPS.pdf‎>`_. This paper appears to
+show that under some assumptions, multiple simultaneous TCP streams
+experiencing random fair packet loss will all back off together, and
+aggregate flow neither increases nor decreases as the number of connections
+rises:
+
+.. image:: images/tcp-multiple-streams-throughput.png
+   :width: 70%
 
 Is my network congested?
 ------------------------
@@ -918,74 +945,19 @@ If available bandwidth is the main problem:
 * slow page loading
 * slow downloads
 * high latency or packet loss
-* connection is full
+* connection is full (congestion)
 
 Then you need to increase *supply* of bandwidth and/or reduce *demand*.
+See Unit 9, Making a Difference.
 
-Monetary Options
-----------------
+Example: Denial of Service Attack
+---------------------------------
 
-* Buy more bandwidth
-* Charge for bandwidth used
+.. image:: images/flow-traffic-dos-attack-ex2.png
+   :width: 70%
 
-.. class:: handout
-
-Buying more bandwidth may be difficult:
-
-* Expensive
-* Often only a short-term solution
-* Can make things worse (encourage bad behaviour)
-* Important to benchmark costs
-* How can you justify the cost?
-
-Perhaps the only way to justify the cost is to show that it's **all**
-being used for the intended purpose, which requires monitoring.
-
-Charging for bandwidth used is controversial:
-
-* Very effective at dampening demand
-* Can fund growth of the circuit
-* *Highly damaging* to educational and research objectives
-* Requires monitoring to know how much each person/department has used.
-
-Other incentives for good behaviour
------------------------------------
-
-* Understand how your connection is being used (requires monitoring)
-* Try to change user behaviour (requires policy)
-
-Changing user behaviour
------------------------
-
-Change in behaviour must be *voluntary*.
-
-.. class:: handout
-
-* You need an Acceptable Use Policy (AUP);
-* It must allow you to take some kind of action (including monitoring);
-* All users must have read it, and agreed to follow it.
-
-It will be more effective if users understand how and why it benefits them.
-Otherwise, the users will be fighting against you instead of for you. And
-there are more of them.
-
-* Give users feedback about how much bandwidth they're using.
-* Give each users a limited bandwidth quota.
-* Ensure that abusive users hurt themselves, not others.
-* Engage with highest bandwidth users.
-
-	* "Have a chat" with them, or
-	* Name and shame them
-
-* Block access to some resources.
-
-	* Unpopular with users - they want Facebook and Youtube!
-	* Least preferred option! But technically easiest.
-	* How much impact will it have? Is it worth the cost?
-	* Reduce bandwidth available at peak times instead of blocking?
-
-All of these require monitoring to implement them, except "Ensure that
-abusive users hurt themselves, not others" which can be automatic.
+Graphical tools can spot unusual changes in traffic levels, which may
+indicate an attack, and pinpoint start and stop times.
 
 Summary
 -------

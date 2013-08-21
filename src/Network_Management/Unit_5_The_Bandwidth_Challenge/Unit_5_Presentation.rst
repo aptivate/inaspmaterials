@@ -27,7 +27,7 @@ What is your Internet connection used for?
 
 .. image:: images/JANET-installed-bandwidth-growth.gif
 
-Why else do you have a campus network?
+Why else do you have a campus network? What if you didn't have one?
 
 What is it used for? Do you know? (Monitoring can tell you)
 
@@ -73,7 +73,7 @@ African universities pay 50x more for the same bandwidth as Europeans:
 	estimated bandwidth requirements and the level of bandwidth which is
 	*required for performance-leading work and teaching conditions*.
 	
-	` The Socio-Economic Impact of Broadband in sub-Saharan Africa:
+	`The Socio-Economic Impact of Broadband in sub-Saharan Africa:
 	The Satellite Advantage
 	<http://www.cto.int/wp-content/themes/solid/_layout/dc/ptojects/Socio-Economic_Impact_of_Broadband_The_Satellite_Advantage.pdf>`_
 
@@ -113,8 +113,6 @@ Abuse of shared resource hurts others
 
 .. image:: images/Cows_on_Selsley_Common_-_geograph.org.uk_-_192472.jpg
 
-.. class:: handout
-
 In economics, the `tragedy of the commons
 <http://en.wikipedia.org/wiki/Tragedy_of_the_commons>`_ is:
 
@@ -122,8 +120,12 @@ In economics, the `tragedy of the commons
 *	acting independently and rationally according to each one's self-interest,
 *	despite their understanding that depleting the common resource is
 	contrary to the group's long-term best interests.
+
+How does this relate to computer networks?
+
+.. class:: handout
 	
-This happens on a network when:
+On a shared and very limited connection, users can harm each other when:
 
 *	there is no incentive for users to limit their use of bandwidth
 
@@ -167,17 +169,19 @@ research.
 Possible solutions?
 -------------------
 
--  Doing nothing
--  More bandwidth and at lower cost
--  Better management of existing resource
--  Combination of the above
+* Find out if this is affecting you!
+* Collect the data to back you up (Units 6 and 7).
+* Negotiate more bandwidth and/or a change of policy (Units 9 and 10).
 
-.. class:: handout
+Note: bandwidth management and capacity increase are subject to diminishing
+returns! Increasing both gives more benefit than either alone.
 
-What would happen if we doubled our bandwidth?
+ATICS said:
 
-* It will always need managing to ensure maximum efficiency
-    
+	"Improving bandwidth management is probably the easiest way for
+	universities to improve the quantity and quality of their bandwidth
+	for educational purposes."
+
 Group Discussion
 ----------------
 
@@ -191,14 +195,12 @@ What impact are they having on:
 
 How are these issues being addressed within your institution?
 
-.. class:: handout
-
 * Technically?
 * With policies?
 * With both?
 * If not, why not?
 
-	* Time? Resources? Money? Wrong incentives?
+.. class:: handout
 
 You may want to nominate a group representative to capture the key points
 of the discussion on a flipchart sheet.
@@ -225,4 +227,4 @@ Can you help?
 * Give us the benefit of your experience: especially with a successful
   problem resolution!
 * Share your knowledge with others, don't hide or sell it.
-* Build a community in your country.
+* Build a community in your country, or online.

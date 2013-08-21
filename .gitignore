@@ -1,7 +1,7 @@
 *.bak
 *~
 *.kate-swp
-.~lock*
+.~lock.*#
 output
 inaspsite
 tools/benchmark/httperf-*

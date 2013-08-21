@@ -24,38 +24,55 @@ If you are the facilitator, please tell the group:
 	At the end of session I will ask if we have met the objectives – if not,
 	we will discuss again.
 
-Spend some time watching and doing
+Linux networking primer
+-----------------------
+
+Try out the following commands on a Linux command line:
+
+* ip link list
+* ip address show
+* ip route show
+* route –n
+* ip neigh show
+* ping anotherip –c 5
+* ip neigh show
+* ip neigh delete anotherip dev eth0
+* ip neigh show
+* ping 224.0.0.1 –c 5
+* nmap -sO 127.0.0.1
+* nmap -sS 127.0.0.1
+* ping 224.0.0.1 -c 5
+* traceroute www.bbc.co.uk
+* netstat –I
+* netstat –Mn
+* netstat -an
+
+If in doubt, try the manuals!
+
+Install software packages on Linux
 ----------------------------------
 
-* Use existing Microsoft Tools on XP (command line)
-* Install and use Wireshark or one of the other Windows based capture tools
-* Use standard Linux commands from a Linux Live CD
-* Use the `Kali Linux <http://www.kali.org/>`_ Live CD for penetration testing
+Installation (or watch installation) and usage of the following packages:
+
+* Webmin
+	* See handout for installation instructions, watch live demo
+* Ethereal
+	* You should try to install package then deinstall using WebMin during
+	  the course (only one person at a time !)
+* Nagios
+	* Watch demonstration
+	* Try using it (see url on board)
+	* Install yourself when you get back.
+* MRTG
+* Cacti
+* Webalizer
+* AWStats
+* SawMill (if available)
 
 .. class:: handout
 
-Discuss timetable for the day.
+TODO: complete instructions, walkthroughs and screenshots for these.
 
-This is your session so do ask questions, raise hands, so we can explore
-the methods we use and reinforce methods.
 
-Everyone participant must have installed a package using the tool, today or
-tomorrow. That way you know you can do it again with no help.
 
-I will first demonstrate, and then everyone will have a go installing by
-themselves. Use a token to indicate who is installing.
-
-Software used:
-
-Knoppix
-	able to be loaded on any PC – prime intent to provide a live CD to be
-	used anywhere like an Internet café.
-Ubuntu
-	provides open source desktop functionality for the African community.
-	If you are considering installing a computer lab or you don’t want to
-	buy any Microsoft software, but you still want to read Word and
-	PowerPoint files, this has Microsoft functionality. I.e. designer
-	knock offs. This is totally free to download from www.ubuntu.org.
-Auditor Security
-	security probe software that you can use.
 

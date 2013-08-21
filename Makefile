@@ -33,8 +33,9 @@ INVERT_PATH = $(shell echo $(call REMOVE_TRAILING_SLASH,$(1)) | sed -e 's|[^/]*|
 RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 
 # Automatically find all the presentation and guide input files.
-PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation.rst)
+PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
 GUIDES = $(wildcard $(SRC_DIR)/*/*.rst)
+SOURCE_DIRS = $(wildcard $(SRC_DIR)/*/Unit_*)
 
 # Ways of hiding commands. Show the full command when you run "make V=1",
 # otherwise just the name of the command and the output file.
@@ -83,8 +84,8 @@ MKDIR_V   = $(SILENT) mkdir -p $1
 
 # Commands that are used in multiple rules
 CREATE_DESTDIR = $(call MKDIR_V, $(dir $@))
-LINK_IMAGES    = $(SILENT) # ln -sf $(STATIC_DIR_ABS) $(dir $^)/images
-UNLINK_IMAGES  = $(SILENT) # rm -f $(dir $^)/images
+LINK_IMAGES    = $(SILENT) # ln -sf $((dir $^):$(DST_DIR)=$(PROJECT_DIR_ABS)/$(SRC_DIR)) $(dir $^)/images 
+UNLINK_IMAGES  = $(SILENT) # rm $(dir $^)/images
 
 # Make is target-driven, so we need to provide target filenames and
 # rules to generate each target filename from a source filename (we
@@ -113,8 +114,16 @@ UNLINK_IMAGES  = $(SILENT) # rm -f $(dir $^)/images
 
 ONE_TARGET_FILE_PER_SOURCE_FILE = $(1:$2/%$3=$4/%$5)
 
+# FILES_PATTERN calls ONE_TARGET_FILE_PER_SOURCE_FILE with these parameters:
+#   $1: the extension to be added to the target filename
+#   $2: the list of sources, for example $(PRESOS)
 FILES_PATTERN = $(call ONE_TARGET_FILE_PER_SOURCE_FILE,$2,$(SRC_DIR),,$(DST_DIR),$1)
-MAKE_PATTERN  = $(DST_DIR)/%$1: $(SRC_DIR)/%
+
+# MAKE_PATTERN creates a Make rule for building files in the destination dir
+# from files with the same name in the source dir, by adding a suffix, which
+# is the first argument. The second, optional argument is the suffix to be
+# added to the source files or directories.
+MAKE_PATTERN = $(DST_DIR)/%$1: $(SRC_DIR)/%$2
 
 debug:
 	@echo PRESO_ODP_FILES = $(PRESO_ODP_FILES)
@@ -132,15 +141,25 @@ $(PRESO_ODP_FILES): $(DST_DIR)/%.odp: $(SRC_DIR)/%
 presos_odp_clean:
 	$(RM_V) $(PRESO_ODP_FILES)
 
-PRESO_PDF_FILES = $(call FILES_PATTERN,.pdf,$(PRESOS))
+PRESO_PDF_FILES = $(call FILES_PATTERN,.pdf,$(SOURCE_DIRS))
 presos_pdf: $(PRESO_PDF_FILES)
-$(PRESO_PDF_FILES): $(call MAKE_PATTERN,.pdf)
+$(PRESO_PDF_FILES): %.pdf: %/pdf.src.rst
 	$(CREATE_DESTDIR)
-	$(LINK_IMAGES)
-	$(RST2PDF_V) $^ -o $@
-	$(UNLINK_IMAGES)
+	$(RST2PDF_V) -o $@ $^
+# rst2pdf only supports one input file, so we must combine them first
+PRESO_PDF_INTERMEDS = $(call FILES_PATTERN,/pdf.src.rst,$(SOURCE_DIRS))
+$(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
+# Create the intermediate files, output/Network_Management/Unit_XX/pdf.src.rst
+# by catting the source files together; and also symlinks to the includes and
+# images directory, so that rst2pdf can find images and files referenced by the
+# input files, although it's working in a different directory.
+	$(SILENT) cat $(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/Unit_*_Presentation*.rst) > $@
+	$(RM_V)   $(@:%/pdf.src.rst=%/images)
+	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/images) $(@:%/pdf.src.rst=%/images)
+	$(RM_V)   $(DST_DIR)/Network_Management/includes
+	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR)/Network_Management/includes $(DST_DIR)/Network_Management/includes
 presos_pdf_clean:
-	$(RM_V) $(PRESO_PDF_FILES)
+	$(RM_V) $(PRESO_PDF_FILES) $(PRESO_PDF_INTERMEDS)
 
 GUIDE_PDF_FILES = $(call FILES_PATTERN,.pdf,$(GUIDES))
 guides_pdf: $(PRESO_PDF_FILES)
