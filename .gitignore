@@ -10,3 +10,4 @@ tools/benchmark/old
 src/presentations/*/images
 odp
 Thumbs.db
+*.pyc
