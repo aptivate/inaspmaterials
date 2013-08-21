@@ -778,14 +778,20 @@ users? Do you talk to them?
 What is Configuration Management?
 ---------------------------------
 
-Recording changes to configuration of network devices such as:
+.. image:: images/configuration_management.png
+	:width: 50%
+
+Recording changes to configuration of network devices, for example:
 
 * configuration file management,
 * inventory management,
 * software management.
+* package management.
 
 Why use Configuration Management?
 ---------------------------------
+
+Configuration Management helps us to answer the following questions:
 
 * What changed?
 * When did it change?
@@ -795,14 +801,14 @@ Why use Configuration Management?
 
 .. class:: handout
 
-Configuration management helps us to solve two important problems:
+Thus, it helps us to solve two important problems:
 
-* We often need to understand what caused a problem in terms of changes
-  to a system, in order to reverse them or find a better solution.
+*	We often need to understand what caused a problem in terms of changes
+	to a system, in order to reverse them or find a better solution.
 
-* We often want to repeat the changes, for example setting up a new router
-  or server in minimal time, or reconfiguring all routers at the same time.
-  
+*	We often want to repeat the changes, for example setting up a new router
+	or server in minimal time, or reconfiguring all routers at the same time.
+
 Configuration management is a form of *version control*, applied to 
 system configurations: configuration files, installed packages and updates,
 registry changes, connection maps and diagrams.
@@ -827,6 +833,8 @@ Includes the entire state of every device:
 * The partition layout, entire filesystem and registry of servers;
 * The physical connections between machines and network devices;
 * The configuration files of devices.
+
+That's a lot of data! Where will you put it?
 
 Configuration management of servers
 -----------------------------------
