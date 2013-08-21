@@ -9,3 +9,4 @@ tools/benchmark/iperf-*
 tools/benchmark/old
 src/presentations/*/images
 odp
+Thumbs.db
