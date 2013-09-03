@@ -7,64 +7,76 @@ Unit 11: Web Caching Manual
 
 .. include:: ../includes/Authors.rst
 
+.. contents:: :depth: 2
+
+.. sectnum::
+
 Caching
 -------
 
-The term cache literally means to store. In computing terms caching is the act of storing
-information on a local system, where the act of retrieving the information from the local cache is
-less than the cost of retrieving the information from the original source.
+The term cache literally means to store. In computing terms caching is the act
+of storing information on a local system, where the act of retrieving the
+information from the local cache is less than the cost of retrieving the
+information from the original source.
 
-There is a principle known as the “locality of reference” in which there are two flavours, temporal
-and spatial. Temporal refers to the popularity or degrees of reference to, in this case, an item of
-information. Certain sites for example google are referenced many more times than other sites.
-Spatial locality of reference refers to the phenomenon that requests for certain pieces of
-information are likely to occur together. We know for example that when a request for google is
-processed we should expect back the google image, in conjunction to the search input page. We
-will learn a little about HTTP requests later, this will help us understand how caches can be so
-helpful.
+There is a principle known as the “locality of reference” in which there are
+two flavours, temporal and spatial. Temporal refers to the popularity or
+degrees of reference to, in this case, an item of information. Certain sites
+for example google are referenced many more times than other sites.  Spatial
+locality of reference refers to the phenomenon that requests for certain pieces
+of information are likely to occur together. We know for example that when a
+request for google is processed we should expect back the google image, in
+conjunction to the search input page. We will learn a little about HTTP
+requests later, this will help us understand how caches can be so helpful.
 
-If we now imagine a situation where the image for google is transferred from the local cache
-instead of traversing an expensive (in data terms) WAN link we can see the benefit. This is easily
-transposed into other areas of computing. Caches are used for memory, display cards, drive
-controllers etc. In general any area where the cost of getting data from the local cache rather
-than from the source is much cheaper than from the original, a cache is useful.
+If we now imagine a situation where the image for google is transferred from
+the local cache instead of traversing an expensive (in data terms) WAN link we
+can see the benefit. This is easily transposed into other areas of computing.
+Caches are used for memory, display cards, drive controllers etc. In general
+any area where the cost of getting data from the local cache rather than from
+the source is much cheaper than from the original, a cache is useful.
 
-When an item is transferred from the local cache instead of from the source this is termed a hit
-when it is not cached it is termed a miss.
+When an item is transferred from the local cache instead of from the source
+this is termed a hit when it is not cached it is termed a miss.
 
-An important concept of cache is that of stale data. Data or information is considered stale when
-it is not up to date with the source after validation. Fresh data is data that is generally used
-without validation (as it has not yet expired) and so is quicker.
+An important concept of cache is that of stale data. Data or information is
+considered stale when it is not up to date with the source after validation.
+Fresh data is data that is generally used without validation (as it has not yet
+expired) and so is quicker.
 
-Strong consistency is when data is always validated from the source before it is used, with weak
-consistency out of date data can sometimes be returned.
+Strong consistency is when data is always validated from the source before it
+is used, with weak consistency out of date data can sometimes be returned.
 
 Web Architecture
 ~~~~~~~~~~~~~~~~
 
-The web is essentially client server type architecture: a client will typically make a small request
-to the web server, the web server will respond with a response to the request. The latest version
-of the HTTP protocol is vrsion HTTP/1.1 (version 3) and this determines the format of the
-request and the response. It is useful to look at this when we consider caching.
+The web is essentially client server type architecture: a client will typically
+make a small request to the web server, the web server will respond with a
+response to the request. The latest version of the HTTP protocol is vrsion
+HTTP/1.1 (version 3) and this determines the format of the request and the
+response. It is useful to look at this when we consider caching.
 
-A HTTP header consists of a name followed by a colon and one or more values separated by
-commas. An example of a header request to google would be::
+A HTTP header consists of a name followed by a colon and one or more values
+separated by commas. An example of a header request to google would be::
 
 	GET /index.html HTTP/1.1
 	Host: www.google.com
 	Accept: */*
 
 HTTP defines four categories of headers: entity, request, response and general.
-Entity headers describe something about the data in the message body, for example the content-
-length length entity header describes the size of the data.
+Entity headers describe something about the data in the message body, for
+example the content- length length entity header describes the size of the
+data.
 
-Request headers are sent by the client to the server, along with the request. ``Host`` is an example of a
-request header. Response headers are sent by the server to the client. ``Server`` is an example of a
-response header. General headers can be used in both ``POST`` requests and responses.
+Request headers are sent by the client to the server, along with the request.
+``Host`` is an example of a request header. Response headers are sent by the
+server to the client. ``Server`` is an example of a response header. General
+headers can be used in both ``POST`` requests and responses.
 
-The first line of an HTTP message is important; it is called the request line and contains the
-request method for requests and response status, URI and HTTP version for responses.
-If we consider the example above of the request to google, and suitable response may be::
+The first line of an HTTP message is important; it is called the request line
+and contains the request method for requests and response status, URI and HTTP
+version for responses.  If we consider the example above of the request to
+google, and suitable response may be::
 
 	HTTP/1.1 200 Ok
 	Date: Mon, 11 Feb 2005 13:50:01 GMT
@@ -73,512 +85,784 @@ If we consider the example above of the request to google, and suitable response
 	Content-Length: 20
 	Content-Type: text/plain
 
-A HTTP request can contain several different methods as specified in RFC 2616. For the
-purposes of this course the methods we are interested in are ``GET``, ``POST`` and ``HEAD`` methods.
+A HTTP request can contain several different methods as specified in RFC 2616.
+For the purposes of this course the methods we are interested in are ``GET``,
+``POST`` and ``HEAD`` methods.
 
-4
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Other protocols besides HTTP are used to get content from servers, two relevant ones are FTP
-and HTTP/TLS or HTTP over TLS commonly referred to as HTTPS.
-III.
+Other protocols besides HTTP are used to get content from servers, two relevant
+ones are FTP and HTTP/TLS or HTTP over TLS commonly referred to as HTTPS.
+
 Caching of Web Traffic
-Section 3.01 When and how should we cache web traffic?
-For obvious reasons caching helps conserve bandwidth, the more content that is fetched from a
-local cache than direct from the destination will save bandwidth on the local Internet link.
-Caching can also reduce the load on destination webserver. Many content providers (ie CCN)
-use content providers such as Akamai to deliver content to users; these content caches are
-situated at key points throughout the internet. If this was not done the load on the CNN web
-server would increase exponentially. This is also an example of how cache servers that are close
-to the user will result in low latency (or transmission delays). An example of how latent demand
-for information can kill systems was reported from the South African 1998 elections. All live the
-election results where made available via the web. In the first few days while election results
-where being released the web servers frequently crashed. This was primarily because the
-content of the pages was dynamic and was fetched from the database every time a request was
-received. The system was quickly changed to generate static html pages every so often. This
-meant that the database was not queried for every page but it also had the side effect that the
-pages could be cached by cache servers very easily.
-Dynamic pages can be difficult to cache as the content on the web pages can typically change
-frequently and the cache server can only cache at the expense of containing some stale data.
-Section 3.02 Types of Cache
-Web content can be cached at different places, there is several different types of caches in
-existence, typically these are;
-(a) Caching Proxy Servers
-These are servers that cache for multiple users; they typically sit between the client (browser)
-and server (web server). They usually are situated at an internet gateway. The more a Shared
-Proxy Server is used the better the cache hit rate will be where the cache hit rate is defined as
-the rate of hits vs. the rate of requests. The proxy server will effectively split the request to the
-5
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-web server into two parts. There will be a connection between the browser and the proxy server
-and between the proxy server and the web server.
-(b) Browser Caches
-Many browsers have built in caches; these caches will store content on disk for a specified
-period of time. Often this cache is used when the user hits the back button. This is often known
-as a private or single user cache.
-(c) Reverse Proxies/ accelerators
-These servers sit in front of a web server and intercept requests destined to the web server, they
-then reply with the content instead of the web server. As in the example given above with
-akamai, this service conserves resources on the web server.
-(d) Meshes and Hierarchies
-Caches can talk to each other and share cached data and this can have pleasing benefits. We
-go into this in more depth later. For now it is convenient to know that a hierarchy and mesh can
-exist. These can further increase the efficiency of the cache system as a whole.
-6
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Section 3.03 Web Caching: How does it Work?
-(a) The HTTP connection
-When your browser of user agent makes a connection to the proxy server, it talks to the proxy
-server in a slightly different way than if it was talking straight to the web server. The browsers (or
-user agents) know they are talking to a proxy server because this has generally been configured
-in the agent’s settings. The exception to this is a transparent proxy. The agent in a non-
-transparent setup will talk to the proxy server in HTTP language, even if the URL that the user is
-going to is an FTP URL. The agent will pass the request on to the proxy server; the proxy server
-will then communicate to the server in the correct protocol.
-An example of this;
-A user agent that is not configured to connect to a proxy server when connecting to
-www.google.com will have the following request structure (headers are shortened for
-convenience sake);
-GET /index.html HTTP/1.1
-Host: www.google.net
-Accept: */*
-Connection: Keep-alive
+----------------------
+
+When and how should we cache web traffic?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For obvious reasons caching helps conserve bandwidth, the more content that is
+fetched from a local cache than direct from the destination will save bandwidth
+on the local Internet link.  Caching can also reduce the load on destination
+webserver. Many content providers (eg CNN) use content providers such as Akamai
+to deliver content to users; these content caches are situated at key points
+throughout the internet. If this was not done the load on the CNN web server
+would increase exponentially. This is also an example of how cache servers that
+are close to the user will result in low latency (or transmission delays). An
+example of how latent demand for information can kill systems was reported from
+the South African 1998 elections. All live the election results where made
+available via the web. In the first few days while election results where being
+released the web servers frequently crashed. This was primarily because the
+content of the pages was dynamic and was fetched from the database every time a
+request was received. The system was quickly changed to generate static html
+pages every so often. This meant that the database was not queried for every
+page but it also had the side effect that the pages could be cached by cache
+servers very easily.
+
+Dynamic pages can be difficult to cache as the content on the web pages can
+typically change frequently and the cache server can only cache at the expense
+of containing some stale data.
+
+Types of Cache
+~~~~~~~~~~~~~~
+
+Web content can be cached at different places, there is several different types
+of caches in existence, typically these are;
+
+Caching Proxy Servers
+^^^^^^^^^^^^^^^^^^^^^
+
+These are servers that cache for multiple users; they typically sit between the
+client (browser) and server (web server). They usually are situated at an
+internet gateway. The more a Shared Proxy Server is used the better the cache
+hit rate will be where the cache hit rate is defined as the rate of hits vs.
+the rate of requests. The proxy server will effectively split the request to
+the web server into two parts. There will be a connection between the browser
+and the proxy server and between the proxy server and the web server.
+
+Browser Caches
+^^^^^^^^^^^^^^
+
+Many browsers have built in caches; these caches will store content on disk for
+a specified period of time. Often this cache is used when the user hits the
+back button. This is often known as a private or single user cache.
+
+Reverse Proxies/ accelerators
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These servers sit in front of a web server and intercept requests destined to
+the web server, they then reply with the content instead of the web server. As
+in the example given above with akamai, this service conserves resources on the
+web server.
+
+Meshes and Hierarchies
+^^^^^^^^^^^^^^^^^^^^^^
+
+Caches can talk to each other and share cached data and this can have pleasing
+benefits. We go into this in more depth later. For now it is convenient to know
+that a hierarchy and mesh can exist. These can further increase the efficiency
+of the cache system as a whole.
+
+Web Caching: How does it Work?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The HTTP connection
+^^^^^^^^^^^^^^^^^^^
+
+When your browser of user agent makes a connection to the proxy server, it
+talks to the proxy server in a slightly different way than if it was talking
+straight to the web server. The browsers (or user agents) know they are talking
+to a proxy server because this has generally been configured in the agent’s
+settings. The exception to this is a transparent proxy. The agent in a non-
+transparent setup will talk to the proxy server in HTTP language, even if the
+URL that the user is going to is an FTP URL. The agent will pass the request on
+to the proxy server; the proxy server will then communicate to the server in
+the correct protocol.
+
+An example of this:
+
+A user agent that is not configured to connect to a proxy server when
+connecting to www.google.com will have the following request structure (headers
+are shortened for convenience sake) ::
+
+	GET /index.html HTTP/1.1
+	Host: www.google.net
+	Accept: */*
+	Connection: Keep-alive
+
 A user agent connecting to the same server via a proxy server will make the following request to
-the proxy server;
-GET http://www.google.com/index.html HTTP/1.1
-Host: www.google.com
-Accept: */*
-Proxy-connection: Keep-alive
-A FTP request through a proxy server would have the following format;
-GET ftp://ftp.is.co.za/pub/ HTTP/1.1
-Host: ftp.is.co.za
-Accept: */*
-7
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-The difference between the direct request and the proxy request is that the first line in the
-request to the proxy contains the full URI, this is important as it enables the proxy to quickly ask
-for the page. In a transparent proxy the proxy server will only see the normal http header. It then
-builds the complete URI by combining the Host portion of the header with the first line.
-Section 3.04 Cachability
-A proxy will only determine if a response is cacheable once it has received that response from a
-server, there are several things that the proxy will look at before it determines if the response is
-cacheable.
-(a) Response codes or Status codes
-When a user agent asks for a URL from a webserver the webserver will respond with a response
-that includes a status code, these status codes are defined in RFC 2616 and are broadly defined
-into five groups:
-1xx An informational, intermediate status. The transaction is still being processed.
-2xx The request was successfully received and processed.
-3xx The server is redirecting the client to a different location.
-4xx There is an error or problem with the client's request. For example, authentication is
-required, or the resource does not exist.
-5xx An error occurred on the server for a valid request.
-The most common and one we are mainly interested in is the 200 (OK) status which means that
-the server has processed the request and is returning the response. The 200 code is cachable
-by default. However this is not enough, other responses in the response from the server may
-also have an influence on the cachability of the response as we shall see below.
-(b) Cache-Control
-The Cache-Control feature of HTTP/1.1 is used to tell caches how to handle requests and
-responses.
-The header items used in Cache-Control are:
-private: This allows private caches to store responses but prevents a shared proxy from doing
-so.
-public : This allows both private and shared caches to cache the response.
-8
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-max-age: This will determine the expiration date/time of the response
-s-maxage: This is the same as Max-age except it only applies to shared caches.
-must-revalidate: This allows the cache to store the response subject to validation.
-proxy-revalidate: Same as must-revalidate but only applies to shared caches.
-No-store: Causes a response to become un-cachable.
-(c) Expiration/Validation
-RFC 2616 states that a URL with neither an expiration time nor a cache validator should not be
-cached. A cache needs these pieces of information to tell if a copy of a piece of data is stale or
-not. A page that is expired can still be validated. A typical header would contain:
-Date: Sun, 01 Apr 2001 18:32:48 GMT
-Expires: Sun, 01 Apr 2001 18:32:48 GMT
-(d) Cookies
-Cookies are not cached, the cookie information is not cached but the response data can be
-cached.
-Cache-control: no-cache="Set-cookie" will set this option.
-(e) Dynamic Content
-Dynamic content usually cannot be cached; the very nature of the content makes it unsuitable for
-caching. Typically dynamic content contains responses that contain data that frequently
-changes. There are no header options specifically to control this but the cache can be told not to
-cache pages with certain string matches, for example cgi-bin or asp. URL’s that contain query
-terms , typically denoted by a question mark “?” are also likely candidates for no caching.
-A cache can intelligently make a decision about the cachability of a page if the “Last-modified”
-header is used.
-9
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Section 3.05 Cache replacement
-Cache replacement is the process that takes place once the cache is “full”. When this happens
-old cache objects must be removed to make way for new cache objects, there are several
-algorithms that cache servers use to do this.
-(a) LRU – least recently used
-LRU is very popular and is as the name suggests based on the idea that the objects that have
-not been used for the longest time are removed from the cache. This is typically done using
-some sort of list; whenever an object in cache is accessed the object is moved to the top of the
-list. When an object needs to be removed from the cache the object at the end of the list is
-removed. This algorithm gives good performance.
-(b) LFU – Least frequently used
-Objects are ordered according to the number of accesses. The algorithm does not usually take
-time in account but simply keeps a sorted list of the objects by number of accesses.
-(c) FIFO-First in first out
-Objects are purged in the same order that they are added. This gives a very low hit rate as there
-is no accounting for popularity of the object.
-(d) Size
-The largest objects are moved out first; typically an aging mechanism is needed as well
-otherwise the cache may fill up with lost of old files.
-IV.
+the proxy server::
+
+	GET http://www.google.com/index.html HTTP/1.1
+	Host: www.google.com
+	Accept: */*
+	Proxy-connection: Keep-alive
+
+A FTP request through a proxy server would have the following format::
+
+	GET ftp://ftp.is.co.za/pub/ HTTP/1.1
+	Host: ftp.is.co.za
+	Accept: */*
+
+The difference between the direct request and the proxy request is that the
+first line in the request to the proxy contains the full URI, this is important
+as it enables the proxy to quickly ask for the page. In a transparent proxy the
+proxy server will only see the normal http header. It then builds the complete
+URI by combining the Host portion of the header with the first line.
+
+Cacheability
+~~~~~~~~~~~~
+
+A proxy will only determine if a response is cacheable once it has received
+that response from a server, there are several things that the proxy will look
+at before it determines if the response is cacheable.
+
+Response codes or Status codes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When a user agent asks for a URL from a webserver the webserver will respond
+with a response that includes a status code, these status codes are defined in
+RFC 2616 and are broadly defined into five groups:
+
+1xx
+  An informational, intermediate status. The transaction is still being
+  processed.
+
+2xx
+  The request was successfully received and processed.
+
+3xx
+  The server is redirecting the client to a different location.
+
+4xx
+  There is an error or problem with the client's request. For example,
+  authentication is required, or the resource does not exist.
+
+5xx
+  An error occurred on the server for a valid request.
+
+The most common and one we are mainly interested in is the 200 (OK) status which
+means that the server has processed the request and is returning the response.
+The 200 code is cachable by default. However this is not enough, other responses
+in the response from the server may also have an influence on the cachability of
+the response as we shall see below.
+
+Cache-Control
+^^^^^^^^^^^^^
+
+The Cache-Control feature of HTTP/1.1 is used to tell caches how to handle
+requests and responses.
+
+The possible values of the Cache-Control header are:
+
+private
+  This allows private caches to store responses but prevents a shared proxy
+  from doing so.
+
+public
+  This allows both private and shared caches to cache the response.
+
+max-age
+  This will determine the expiration date/time of the response
+
+s-maxage
+  This is the same as Max-age except it only applies to shared caches.
+
+must-revalidate
+  This allows the cache to store the response subject to validation.
+
+proxy-revalidate
+  Same as must-revalidate but only applies to shared caches.
+
+no-store
+  Causes a response to become un-cachable.
+
+Expiration/Validation
+^^^^^^^^^^^^^^^^^^^^^
+
+RFC 2616 states that a URL with neither an expiration time nor a cache validator
+should not be cached. A cache needs these pieces of information to tell if a
+copy of a piece of data is stale or not. A page that is expired can still be
+validated. A typical header would contain::
+
+	Date: Sun, 01 Apr 2001 18:32:48 GMT
+	Expires: Sun, 01 Apr 2001 18:32:48 GMT
+
+Cookies
+^^^^^^^
+
+If you want all the response data apart from the cookie to be cached, you could
+use this setting::
+
+	Cache-control: no-cache="Set-cookie"
+
+Dynamic Content
+^^^^^^^^^^^^^^^
+
+Typically dynamic content is content that changes frequently and so should not
+be cached.  There are no header options specifically to control this but the
+cache can be told not to cache pages with certain string matches, for example
+cgi-bin or asp. URLs that contain query terms, typically denoted by a question
+mark “?” are also likely candidates for not caching.
+
+Cache replacement
+~~~~~~~~~~~~~~~~~
+
+Cache replacement is the process that takes place once the cache is “full”. When
+this happens old cache objects must be removed to make way for new cache
+objects, there are several algorithms that cache servers use to do this.
+
+LRU – least recently used
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+LRU is very popular and is as the name suggests based on the idea that the
+objects that have not been used for the longest time are removed from the cache.
+This is typically done using some sort of list; whenever an object in cache is
+accessed the object is moved to the top of the list. When an object needs to be
+removed from the cache the object at the end of the list is removed. This
+algorithm gives good performance.
+
+LFU – Least frequently used
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Objects are ordered according to the number of accesses. The algorithm does not
+usually take time in account but simply keeps a sorted list of the objects by
+number of accesses.
+
+FIFO-First in first out
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Objects are purged in the same order that they are added. This gives a very low
+hit rate as there is no accounting for popularity of the object.
+
+Size
+^^^^
+
+The largest objects are moved out first; typically an aging mechanism is needed
+as well otherwise the cache may fill up with old files.
+
 Cache Hierarchies
-Section 4.01 What and How
-When talking about cache hierarchies we are talking about relationships between caches. Much
-like a human family these relationships are described in terms of parent, child and sibling. A
-parent and sibling cache can also be referred to as a neighbor or peer.
-A child cache will forward all requests that did not result in a local hit to the parent; the parent will
-then either reply with a hit from its own cache or will go and fetch the object from its source and
-pass it back to the child. A sibling cache will only respond with a hit, if it does not have the object
-10
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-in it’s local cache then it will respond with a miss to the cache that asked, the original cache will
-then go and fetch the object from the source.
-Cache hierarchies can be very useful in large networks where WAN links are prevalent. If there
-are 5 sites each with its own proxy these proxies can be setup to peer to each other, this will
-result an object being fetched from the neighbor cache instead of via the gateway.
-Cache hierarchies need to be evaluated carefully and a clear understanding of what is involved
-is needed. A debate should then ensure to determine the optimal setup taking all factors into
+-----------------
+
+What and How
+~~~~~~~~~~~~
+
+When talking about cache hierarchies we are talking about relationships between
+caches. Much like a human family these relationships are described in terms of
+parent, child and sibling. A parent and sibling cache can also be referred to as
+a neighbor or peer.
+
+A child cache will forward all requests that did not result in a local hit to
+the parent; the parent will then either reply with a hit from its own cache or
+will go and fetch the object from its source and pass it back to the child. A
+sibling cache will only respond with a hit, if it does not have the object in
+it’s local cache then it will respond with a miss to the cache that asked, the
+original cache will then go and fetch the object from the source.
+
+Cache hierarchies can be very useful in large networks where WAN links are
+prevalent. If there are 5 sites each with its own proxy these proxies can be
+setup to peer to each other, this will result an object being fetched from the
+neighbor cache instead of via the gateway.  Cache hierarchies need to be
+evaluated carefully and a clear understanding of what is involved is needed. A
+debate should then ensure to determine the optimal setup taking all factors into
 account.
-Cache hierarchies can be very complex and can be setup in a mesh or in a hierarchy. To realize
-improved performance with a cache hierarchy, the following points should all be true:
+
+Cache hierarchies can be very complex and can be setup in a mesh or in a
+hierarchy. To realize improved performance with a cache hierarchy, the following
+points should all be true:
+
 - Some of the objects not found in your cache will be found in your neighbor caches. In other
-words, you can get cache hits from your neighbors.
+  words, you can get cache hits from your neighbors.
 - Cache hits from neighbors are delivered more quickly than misses from origin servers.
 - Cache misses from parent caches are not significantly slower than responses from origin
-servers.
+  servers.
+
 If any of these are false cache performance might actually suffer.
-Caches use inter cache protocols to query each other, the most common of these are CARP,
-ICP and HTCP.
-Section 4.02 Carp
-For a given request, CARP calculates a score for every proxy cache. The request is forwarded to
-the proxy with the highest score. If this fails, then the second-highest scoring cache is tried. The
-score is a calculation based on a hash of the URL, a hash of the cache's name, and weights
-assigned to each cache. The important characteristic is that adding a new cache to the array
-does not change the relative ranking of the scores for the other caches; instead, the new cache
-creates new scores. Statistically, the new scores will be higher than the existing caches' scores
-for a fraction of the URLs that is proportional to the cache's weight within the array.
-CARP also specifies a file format for a Proxy Array Membership Table. This table allows clients
-to figure out which caches belong to a group. The table may be accessed via web protocols
-(HTTP) so many clients can easily retrieve the information.
-11
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-The CARP algorithm may be used by any web client, such as a browser or proxy cache, that
-needs to choose among a set of caches. Note, however, that it only works for parent
-relationships because CARP does not predict cache hits. Another minor problem with CARP is
-related to persistent HTTP connections. A client that makes four requests may use more TCP
-connections with CARP than it would without. Finally, also note that CARP has linear scaling
-properties (similar to ICP) because a score must be calculated for every group member. Carp
-can be used by Squid and Microsoft proxy servers
-Section 4.03 ICP
-ICP is the most useful intercache protocol, I quote this section from the book “Web Caching” by
-Duane Wessels.
-ICP is the original intercache protocol. Its primary purpose is to discover whether any neighbor
-caches have a fresh copy of a particular object. The neighbor caches answer with either yes
-(HIT) or no (MISS). The querying cache collects a particular number of ICP replies and then
-makes a forwarding decision. Even if all neighbors reply with MISS, ICP may provide additional
-hints that help to choose the best parent cache.
-As already mentioned, the primary purpose of ICP is to find out which, if any, of your neighbor
-caches have a specific object. This feature is fundamental to the idea of a sibling relationship.
-We can request only cache hits from a sibling, so we need some way to predict whether a given
-request will be a hit or a miss. ICP's hit predictions are useful for parent relationships as well. In
-most cases, a hit from one parent should be faster than a miss from another
-.
-ICP messages are normally sent as UDP packets, which have some useful side effects. The
-delay that an ICP transaction experiences tells us something about the status of the network and
-the remote cache. For example, if we don't receive a reply message within a certain period of
-time, we can conclude that the remote cache is offline or the network is severely congested. ICP
-can be used as a tiebreaker when choosing between two or more equivalent parents. A parent
-that is heavily loaded takes longer to process an ICP query, and the transaction experiences
-some delay. By selecting the first cache that responds, we do some basic load balancing.
-Notice that an ICP query contains only a URL and none of the other HTTP headers from a client
-request. This is problematic because whether a given HTTP request is a hit or a miss depends
-on additional headers such as the Cache-control: max-age, Accept-language. ICP doesn't
-12
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-include enough information for a cache to make an accurate determination, which leads to false
-hits.
-One of the benefits of caching is reduced wait time for web pages. A strange thing about ICP is
-that cache misses actually incur an additional delay during an ICP query/reply phase. The ICP
-transaction is very similar to gambling. If you get a HIT reply, then the gamble probably paid off.
-If, on the other hand, you get all MISS replies, then you lost the bet. The big question is: does
-ICP increase or decrease your overall object retrieval times in the long run? The answer
-depends on a number of factors, including the network distances to your neighbor caches and
-the speeds at which web objects are transferred from neighbors and origin servers.
-If your neighbors are relatively close compared to the rest of the Internet, then the ICP delays
-represent a small gamble with a big payoff. If you win, you can perhaps download an object in
-0.5 seconds instead of 5 seconds. If you lose, you've wasted perhaps only 0.05 seconds.
-Conversely, if your neighbor caches are not much closer than the rest of the Internet, ICP
-probably doesn't make sense. All downloads may still take 5 seconds on average, and the ICP
-misses probably add an additional 0.1- or 0.2-second delay.
-Another important factor is the percentage of replies that are hits. In essence, this represents the
-probability of the gamble paying off. In practice, the ICP hit ratio is quite low—about 5%. Some
-caches achieve up to 10%, and some only get around 1%. The reason for this low percentage is
-that neighbor caches tend to store the same set of popular objects over time. The users of one
-cache request the same web pages as the users of another cache
-Speaking of bandwidth, you may be wondering how much of it ICP consumes. It is quite easy to
-calculate the additional bandwidth ICP uses. The size of an ICP query is 24 bytes plus the length
-of the URL. The average URL length seems to be about 55 characters, so ICP queries average
-about 80 bytes. ICP replies are four bytes smaller than queries.
-Taken together, an ICP query/reply transaction uses about 160 bytes per neighbor before
-including UDP and IP headers. A cache with 3 neighbors uses 480 bytes for each cache miss.
-To put this in perspective, consider that the average web object size is about 10KB. Thus, a
-cache with three ICP neighbors increases its bandwidth consumption by about 5% on average.
-Note that this corresponds to a measurement made at the cache's network interface. Whether
-ICP increases your wide area bandwidth depends on the location of your neighbor caches.
-13
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Notice that an ICP query contains only a URL and none of the other HTTP headers from a client
-request. This is problematic because whether a given HTTP request is a hit or a miss depends
-on additional headers such as the Cache-control: max-age, Accept-language. ICP doesn't
-include enough information for a cache to make an accurate determination, which leads to false
-hits.
-Section 4.04 HTCP
-HCTP addresses the problem of false hits with ICP by sending the full http headers with the
-request. HCTP is a very complex protocol and as such uses extra processing power.
-Section 4.05 Cache Digests
-A cache digest is essentially a database of cache contents, this is shared between caches and
-this removes the reliance on the ICP query. An algorithm called the Bloom Filter is used to
-encode the cache contents into a database that describes the contents of the cache. A digest
-protocol will typically use more bandwidth during idle time but will utilize the same bandwidth as
-ICP in busy times. Digest also require more CPU and memory as the digest lists need to be kept
-in memory.
-Section 4.06 Which protocol to use?
-The four protocols and algorithms presented here each have unique features and characteristics.
-Which one you should use depends on numerous factors. The following guidelines may help to
-determine the best protocol for your particular situation.
-ICP may be a good choice if you need to interoperate with products from different vendors. Since
-ICP has been around longer than the others, it is supported in most caching products. It is also a
-reasonable choice if you want to build or connect into a small mesh of caches. You want to avoid
-having too many neighbors with ICP; try to limit yourself to no more than five or six. ICP may not
-be a good choice if you are very concerned about security, and it may be all but useless on
-networks with high delays and/or a large amount of congestion. The protocol has no
-authentication mechanisms and may be susceptible to address spoofing. Finally, you probably
-cannot use ICP if there is a firewall between you and your neighbor caches because firewalls
-typically block UDP traffic by default.
-CARP is a logical choice if you have multiple parent caches administered by a single
-organization. For example, some large service providers may have a cluster of proxy caches
-located where they connect to the rest of the Internet. If this applies to you, make sure you
-always have up-to-date configuration information. CARP is the only protocol that does not allow
-you to create sibling relationships.
-14
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-HTCP has characteristics similar to ICP. You can use HTCP for small cache meshes and where
-network conditions are good. Unlike ICP, HTCP has relatively strong authentication. This may be
-particularly important if you need the object deletion features. HTCP should cause fewer false
-hits than ICP because hit/miss decisions are based on full HTTP headers rather than only the
-URI. Note that HTCP messages are about five times larger than ICP, so it uses more bandwidth.
-You should use Cache Digests if you can afford to trade increased memory usage for lower
-forwarding delays. The bandwidth tradeoffs of Cache Digests versus ICP depend on many
-factors. You cannot really use Cache Digests over slow network connections because the
-transfer of a large digests saturates the link. Cache Digests probably result in a higher
-percentage of false hits compared to ICP. Even so, overall client response times should be
-lower, and false hits are only a concern for sibling relationships.
-Section 4.07 Why not to have a hierarchy?
-(a) Privacy
+
+Caches use inter cache protocols to query each other, the most common of these
+are CARP, ICP and HTCP.
+
+CARP
+~~~~
+
+For a given request, CARP calculates a score for every proxy cache. The request
+is forwarded to the proxy with the highest score. If this fails, then the
+second-highest scoring cache is tried. The score is a calculation based on a
+hash of the URL, a hash of the cache's name, and weights assigned to each cache.
+The important characteristic is that adding a new cache to the array does not
+change the relative ranking of the scores for the other caches; instead, the new
+cache creates new scores. Statistically, the new scores will be higher than the
+existing caches' scores for a fraction of the URLs that is proportional to the
+cache's weight within the array.
+
+CARP also specifies a file format for a Proxy Array Membership Table. This table
+allows clients to figure out which caches belong to a group. The table may be
+accessed via web protocols (HTTP) so many clients can easily retrieve the
+information.
+
+The CARP algorithm may be used by any web client, such as a browser or proxy
+cache, that needs to choose among a set of caches. Note, however, that it only
+works for parent relationships because CARP does not predict cache hits. Another
+minor problem with CARP is related to persistent HTTP connections. A client that
+makes four requests may use more TCP connections with CARP than it would
+without. Finally, also note that CARP has linear scaling properties (similar to
+ICP) because a score must be calculated for every group member. CARP can be used
+by Squid and Microsoft proxy servers
+
+ICP
+~~~
+
+ICP is the most useful intercache protocol, I quote this section from the book
+“Web Caching” by Duane Wessels.
+
+	ICP is the original intercache protocol. Its primary purpose is to discover
+	whether any neighbor caches have a fresh copy of a particular object. The
+	neighbor caches answer with either yes (HIT) or no (MISS). The querying
+	cache collects a particular number of ICP replies and then makes a
+	forwarding decision. Even if all neighbors reply with MISS, ICP may provide
+	additional hints that help to choose the best parent cache.
+
+As already mentioned, the primary purpose of ICP is to find out which, if any,
+of your neighbor caches have a specific object. This feature is fundamental to
+the idea of a sibling relationship.  We can request only cache hits from a
+sibling, so we need some way to predict whether a given request will be a hit or
+a miss. ICP's hit predictions are useful for parent relationships as well. In
+most cases, a hit from one parent should be faster than a miss from another.
+
+ICP messages are normally sent as UDP packets, which have some useful side
+effects. The delay that an ICP transaction experiences tells us something about
+the status of the network and the remote cache. For example, if we don't receive
+a reply message within a certain period of time, we can conclude that the remote
+cache is offline or the network is severely congested. ICP can be used as a
+tiebreaker when choosing between two or more equivalent parents. A parent that
+is heavily loaded takes longer to process an ICP query, and the transaction
+experiences some delay. By selecting the first cache that responds, we do some
+basic load balancing.
+
+One of the benefits of caching is reduced wait time for web pages. A strange
+thing about ICP is that cache misses actually incur an additional delay during
+an ICP query/reply phase. The ICP transaction is very similar to gambling. If
+you get a HIT reply, then the gamble probably paid off.  If, on the other hand,
+you get all MISS replies, then you lost the bet. The big question is: does ICP
+increase or decrease your overall object retrieval times in the long run? The
+answer depends on a number of factors, including the network distances to your
+neighbor caches and the speeds at which web objects are transferred from
+neighbors and origin servers.
+
+If your neighbors are relatively close compared to the rest of the Internet,
+then the ICP delays represent a small gamble with a big payoff. If you win, you
+can perhaps download an object in 0.5 seconds instead of 5 seconds. If you lose,
+you've wasted perhaps only 0.05 seconds.  Conversely, if your neighbor caches
+are not much closer than the rest of the Internet, ICP probably doesn't make
+sense. All downloads may still take 5 seconds on average, and the ICP misses
+probably add an additional 0.1- or 0.2-second delay.
+
+Another important factor is the percentage of replies that are hits. In essence,
+this represents the probability of the gamble paying off. In practice, the ICP
+hit ratio is quite low—about 5%. Some caches achieve up to 10%, and some only
+get around 1%. The reason for this low percentage is that neighbor caches tend
+to store the same set of popular objects over time. The users of one cache
+request the same web pages as the users of another cache.
+
+Speaking of bandwidth, you may be wondering how much of it ICP consumes. It is
+quite easy to calculate the additional bandwidth ICP uses. The size of an ICP
+query is 24 bytes plus the length of the URL. The average URL length seems to be
+about 55 characters, so ICP queries average about 80 bytes. ICP replies are four
+bytes smaller than queries.
+
+Taken together, an ICP query/reply transaction uses about 160 bytes per neighbor
+before including UDP and IP headers. A cache with 3 neighbors uses 480 bytes for
+each cache miss.  To put this in perspective, consider that the average web
+object size is about 10KB. Thus, a cache with three ICP neighbors increases its
+bandwidth consumption by about 5% on average.  Note that this corresponds to a
+measurement made at the cache's network interface. Whether ICP increases your
+wide area bandwidth depends on the location of your neighbor caches.
+
+Notice that an ICP query contains only a URL and none of the other HTTP headers
+from a client request. This is problematic because whether a given HTTP request
+is a hit or a miss depends on additional headers such as the Cache-control:
+max-age, Accept-language. ICP doesn't include enough information for a cache to
+make an accurate determination, which leads to false hits.
+
+HTCP
+~~~~
+
+HCTP addresses the problem of false hits with ICP by sending the full http
+headers with the request. HCTP is a very complex protocol and as such uses extra
+processing power.
+
+Cache Digests
+~~~~~~~~~~~~~
+
+A cache digest is essentially a database of cache contents, this is shared
+between caches and this removes the reliance on the ICP query. An algorithm
+called the Bloom Filter is used to encode the cache contents into a database
+that describes the contents of the cache. A digest protocol will typically use
+more bandwidth during idle time but will utilize the same bandwidth as ICP in
+busy times. Digest also require more CPU and memory as the digest lists need to
+be kept in memory.
+
+Which protocol to use?
+~~~~~~~~~~~~~~~~~~~~~~
+
+The four protocols and algorithms presented here each have unique features and
+characteristics.  Which one you should use depends on numerous factors. The
+following guidelines may help to determine the best protocol for your particular
+situation.
+
+ICP may be a good choice if you need to interoperate with products from
+different vendors. Since ICP has been around longer than the others, it is
+supported in most caching products. It is also a reasonable choice if you want
+to build or connect into a small mesh of caches. You want to avoid having too
+many neighbors with ICP; try to limit yourself to no more than five or six. ICP
+may not be a good choice if you are very concerned about security, and it may be
+all but useless on networks with high delays and/or a large amount of
+congestion. The protocol has no authentication mechanisms and may be susceptible
+to address spoofing. Finally, you probably cannot use ICP if there is a firewall
+between you and your neighbor caches because firewalls typically block UDP
+traffic by default.
+
+CARP is a logical choice if you have multiple parent caches administered by a
+single organization. For example, some large service providers may have a
+cluster of proxy caches located where they connect to the rest of the Internet.
+If this applies to you, make sure you always have up-to-date configuration
+information. CARP is the only protocol that does not allow you to create sibling
+relationships.
+
+HTCP has characteristics similar to ICP. You can use HTCP for small cache meshes
+and where network conditions are good. Unlike ICP, HTCP has relatively strong
+authentication. This may be particularly important if you need the object
+deletion features. HTCP should cause fewer false hits than ICP because hit/miss
+decisions are based on full HTTP headers rather than only the URI. Note that
+HTCP messages are about five times larger than ICP, so it uses more bandwidth.
+You should use Cache Digests if you can afford to trade increased memory usage
+for lower forwarding delays. The bandwidth tradeoffs of Cache Digests versus ICP
+depend on many factors. You cannot really use Cache Digests over slow network
+connections because the transfer of a large digests saturates the link. Cache
+Digests probably result in a higher percentage of false hits compared to ICP.
+Even so, overall client response times should be lower, and false hits are only
+a concern for sibling relationships.
+
+Why not to have a hierarchy?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Privacy
+^^^^^^^
+
 You will have to trust caches. Log file are stored on cache servers, this might have privacy
 concerns. You will need to trust your cache and all its neighbors. There also is no guaranteed
 method for authenticating the authenticity of web pages end to end with the web server.
-(b) Hit ratios
+
+Hit ratios
+^^^^^^^^^^
+
 On a lot of occasions similar data is contained on different proxies due to similar browsing
 patterns, this can result in lower hit ratios between cache servers.
-(c) Freshness
+
+Freshness
+^^^^^^^^^
+
 Different versions of a file can be contained across different cache servers.
-(d) Performance issues
+
+Performance issues
+^^^^^^^^^^^^^^^^^^
+
 In a large hierarchy the top levels can become performance bottlenecks. Management of this can
 become problematic
-(e) Legal issues
+
+Legal issues
+^^^^^^^^^^^^
+
 Proxy servers help users to become anonymous, it makes it difficult for service providers to track
 abuse.
-15
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-(f) Loops
+
+Loops
+^^^^^
+
 A loop can occur when two proxies are parented to each other.
-(g) Points of failure
+
+Points of failure
+^^^^^^^^^^^^^^^^^
+
 A parent cache in particular is a single point of failure, this is not optimal. Care must be taken
 when the parent cache is not under the control of your organization.
-V.
+
 Transparent caching
-Section 5.01 The process
-Transparent caching simply involves the process where the client request is intercepted at a
-router or switch and is passed onto a cache server. The cache server will then service the
-request and pass it back to the switch/router and the client.
-This has the benefit that the clients do not need to be configured to use the cache. As the client
-does not know it is connected to a cache the HTTP request is a little different than when it is
-talking to a proxy server directly.
-A switch or router will recognize a packet as being HTTP. This is usually done by identifying the
-port. There are various methods that are commonly used do the interception.
+-------------------
+
+The process
+~~~~~~~~~~~
+
+Transparent caching simply involves the process where the client request is
+intercepted at a router or switch and is passed onto a cache server. The cache
+server will then service the request and pass it back to the switch/router and
+the client.
+
+This has the benefit that the clients do not need to be configured to use the
+cache. As the client does not know it is connected to a cache the HTTP request
+is a little different than when it is talking to a proxy server directly.
+
+A switch or router will recognize a packet as being HTTP. This is usually done
+by identifying the port. There are various methods that are commonly used do the
+interception.
+
 Layer four switches:
-16
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-A layer 4 switch can make decisions based on IP addresses and port numbers, because of this
-they can be used for HTTP re-direction. These switches are often capable of other advanced
-features such as load balancing.
+	A layer 4 switch can make decisions based on IP addresses and port numbers,
+	because of this they can be used for HTTP re-direction. These switches are
+	often capable of other advanced features such as load balancing.
+
 WCCP:
-This is a Cisco method that is used between the switch/router and the cache, most
-implementations of this are by Cisco. WCCP supports load balancing and clusters.
+	This is a Cisco method that is used between the switch/router and the cache,
+	most implementations of this are by Cisco. WCCP supports load balancing and
+	clusters.
+
 CPR:
-Cisco policy routing is when a router makes decisions based on some characteristic of the IP
-packet. Used by Cisco Routers and some switches
+	Cisco policy routing is when a router makes decisions based on some
+	characteristic of the IP packet. Used by Cisco Routers and some switches.
+
 In Line:
-This is a device that combines caching and routing in one device. This is an obvious point of
-failure and care should be taken.
+	This is a device that combines caching and routing in one device. This is an
+	obvious point of failure and care should be taken.
+
 Other Router/Switch:
-There are various software implementations of router/bandwidth management systems that will
-intercept HTTP traffic and pass this on to a cache. ipchains/iptables can be used to do this.
-Section 5.02 Issues
-(a) Port Issues
-Not all HTTP traffic sits on port 80, the major problem comes when someone runs something
-other than HTTP on port 80, and a typical transparent cache will attempt to do something with it.
-(b) Browser and HTTP Issues
-As the browser does not know it is using a proxy server when you issue a reload on the browser
-some browsers will neglect to issue the correct reload header and so the cache will serve up a
-page from its cache, this is because Internet Explorer in particular does not include the Cache-
-control: no-cache header.
-(c) It affects all HTTP traffic
+	There are various software implementations of router/bandwidth management
+	systems that will intercept HTTP traffic and pass this on to a cache.
+	ipchains/iptables can be used to do this.
+
+Issues
+~~~~~~
+
+Port Issues
+^^^^^^^^^^^
+
+Not all HTTP traffic sits on port 80, the major problem comes when someone runs
+something other than HTTP on port 80, and a typical transparent cache will
+attempt to do something with it.
+
+Browser and HTTP Issues
+^^^^^^^^^^^^^^^^^^^^^^^
+
+As the browser does not know it is using a proxy server when you issue a reload
+on the browser some browsers will neglect to issue the correct reload header and
+so the cache will serve up a page from its cache, this is because Internet
+Explorer in particular does not include the Cache- control: no-cache header.
+
+It affects all HTTP traffic
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 There are times when you wish some traffic to not go via the cache; this traffic might be from
 robots or scripts. It is also difficult for users to bypass
-17
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-(d) Routing/IP Changes
+
+Routing/IP Changes
+^^^^^^^^^^^^^^^^^^
+
 The request that comes from the transparent cache will have the cache’s IP address as the
 source. This might cause issues with services that use the original IP address for authentication
 or authorization.
-(e) Flexibility
+
+Flexibility
+^^^^^^^^^^^
+
 You loose some measure of flexibility that you might have with multiple proxy servers, you can
 have groups of users serviced by proxy servers that have different configurations. This can be
 hard to do when a transparent cache is used.
-(f) Authentication
+
+Authentication
+^^^^^^^^^^^^^^
 Authentication cannot be done when using interception.
-VI.
+
 Caching Clusters and fault tolerance
-A single cache server can be a point of failure, when a single cache server fails your users can
-fail to connect to web sites. This can present a problem; the obvious solution is to run multiple
-cache servers. The most popular way for doing this is via DNS Round Robin. However it can
-sometimes take a long time for the browser to recognize the failure (up to two minutes) and
-switch over. Another technique is to use the proxy.pac or autoconfig scripts to do this; this will be
-fully explained in the next chapter.
-Another obvious approach is to use a hardware or software cluster, however this can be
-expensive and difficult to implement.
-VII.
+------------------------------------
+
+A single cache server can be a point of failure, when a single cache server
+fails your users can fail to connect to web sites. This can present a problem;
+the obvious solution is to run multiple cache servers. The most popular way for
+doing this is via DNS Round Robin. However it can sometimes take a long time for
+the browser to recognize the failure (up to two minutes) and switch over.
+Another technique is to use the proxy.pac or autoconfig scripts to do this; this
+will be fully explained in the next chapter.
+
+Another obvious approach is to use a hardware or software cluster, however this
+can be expensive and difficult to implement.
+
 Configuring cache clients
-Section 7.01 Manual Configuration
-Proxies can be manually configured in most browsers, typically this is done by inserting the
-address and port of the proxy server in the appropriate place in the browser. (See below)
-18
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Firefox Settings
-19
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Internet Explorer
-Both provide a place where you can put in bypass lists, this should always be filled in for local
-sites.
-Section 7.02 Auto Config scripts
-A Proxy PAC file or autoconfig file is a very convenient way of setting proxy settings in the
-browser. If the browser is configured to use a proxy auto config script it will execute a function for
-every request. This function will return a list of proxy addresses.
+-------------------------
+
+Manual Configuration
+~~~~~~~~~~~~~~~~~~~~
+
+Proxies can be manually configured in most browsers, typically this is done by
+inserting the address and port of the proxy server in the appropriate place in
+the browser. (See below)
+
+.. image:: images/firefox-cache-settings.png
+   :width: 70%
+   Cache settings in Mozilla Firefox
+
+.. image:: images/windows-cache-settings.png
+   :width: 70%
+   Cache settings in Microsoft Internet Explorer
+
+Both provide a place where you can enter a list of domains or IP addresses
+which bypass the cache. It is recommended to add all domains that you serve
+locally to these lists.
+
+Auto Config scripts
+~~~~~~~~~~~~~~~~~~~
+
+You can imagine that configuring and maintaining the proxy cache settings on
+hundreds or thousands of clients is a difficult and monotonous task.
+Fortunately there are automated configuration mechanims to ease the burden.
+
+A Proxy PAC file or autoconfig file is a very convenient way of setting proxy
+settings in the browser. If the browser is configured to use a proxy auto config
+script it will execute a function for every request. This function will return a
+list of proxy addresses.
+
 The script must contain this function (FindProxyForURL) and return a valid proxy server.
 The nice thing about the proxy autoconfig script is that you have the flexibility of JavaScript at
 your control, for example you can forward different requests to different proxies based on the
 source address, destination or other info.
-And example proxy pac is shown below:
-function FindProxyForURL(url, host)
-{
-var proxy1 = "proxy1.abc.com:8080; proxy2.abc.com:8080";
-var myip=myIpAddress()
-var ipbits=myip.split(".")
-var myseg=parseInt(ipbits[3])
-if(myseg==Math.floor(myseg/2)*2)
-{
-var proxy1 = " proxy1.abc.com:8080; proxy2.abc.com ";
-}
-else
-{
-var proxy1 = " proxy2.abc.com; proxy1.abc.com:8080 ";
-}
-if (shExpMatch(host, "*.abc.com"))
-return "DIRECT";
-else if (shExpMatch(host, "127.*"))
-return "DIRECT";
-else if (shExpMatch(host, "localhost"))
-20
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-return "DIRECT";
-else if (shExpMatch(host, "*.jstor.org"))
-return "PROXY 146.230.128.27:8080";
-else if (isInNet(myIpAddress(), "192.168.0.0", "255.255.0.0"))
-return "PROXY "siteproxy.abc.com:8080";
-else
-return proxy1 ;
-}
-If we run through the script;
-First we set a variable to point to two proxies that we want returned by default if there are no
-other matches. We then do a bit of javascript maths to calculate if the client (workstation) IP
-address is odd or even, we return the same proxies in different order depending on the outcome
-of the math. This gives us a form of load balancing. We then do some checks on the destination
-using the function shExpMatch if any of these match we return “Direct” as the proxy, this is to
-make the browser go direct to local sites since there is no need to cache them.
-We then check to see if the browser is going to jstor.org and if it is we return a special proxy
-server for that site. Lastly we check if the client is coming from the subnet 192.168.* and if so
-return the proxy siteproxy.abc.com. As you can see we have used a simple script to return one of
-four different proxies depending on different situations.
-Section 7.03 Auto Discovery
-Proxy auto discovery or WPAD is a relatively new feature that is supported by most browsers.
-WPAD uses several ways to find the autoconfig URL. The first is by DHCP, the DHCP server
-can supply a WPAD option to the client. The second is via SLP, the third is via DNS. The client
-will simply look for a WPAD.domain . All that is required if using the DNS method is to put the
-proxy config file at the root of the webserver at WPAD.domain and call it wpad.dat.
-VIII.
+
+An example proxy PAC is::
+
+	function FindProxyForURL(url, host)
+	{
+		var proxy1 = "proxy1.abc.com:8080; proxy2.abc.com:8080";
+		var myip = myIpAddress();
+		var ipbits = myip.split(".");
+		var myseg = parseInt(ipbits[3]);
+
+		if(myseg == Math.floor(myseg/2) * 2)
+		{
+			var proxy1 = " proxy1.abc.com:8080; proxy2.abc.com ";
+		}
+		else
+		{
+			var proxy1 = " proxy2.abc.com; proxy1.abc.com:8080 ";
+		}
+
+		if (shExpMatch(host, "*.abc.com"))
+			return "DIRECT";
+		else if (shExpMatch(host, "127.*"))
+			return "DIRECT";
+		else if (shExpMatch(host, "localhost"))
+			return "DIRECT";
+		else if (shExpMatch(host, "*.jstor.org"))
+			return "PROXY 146.230.128.27:8080";
+		else if (isInNet(myIpAddress(), "192.168.0.0", "255.255.0.0"))
+			return "PROXY "siteproxy.abc.com:8080";
+		else
+			return proxy1;
+	}
+
+What does this script do? 
+
+#. Sets a variable to point to two proxies
+   that we want returned by default if there are no other matches.
+#. Calculates whether the client (workstation) IP address is odd
+   or even, and swaps the order of the proxies depending on the outcome. This
+   is a simple and cheap form of load balancing across multiple proxy servers.
+#. Checks the destination website address (using the function shExpMatch). In
+   certain cases it returns ``DIRECT``, telling the client to bypass the proxy
+   server for these hostnames.
+#. If the client is accessing the domain ``jstor.org``, then the request will
+   be sent to a different proxy server (perhaps in order to fix the public IP
+   address).
+#. If the client's IP address is in the range 192.168.0.0/16 then it will use
+   a different proxy server (perhaps a physically closer one).
+
+As you can see, this relatively simple script can tell the client to use
+one of four different proxy servers, or none, depending on the identity of
+the client.
+
+Auto Discovery
+~~~~~~~~~~~~~~
+
+Manually configuring all clients to use a Proxy PAC file is still a significant
+burden, even though it only has to be done once. Web Proxy Auto Discovery (WPAD)
+allows even this configuration step to be automated for many clients.
+
+WPAD allows the administrator to configure the network DHCP, SLP or DNS server
+to hand out to clients the address of the Proxy PAC file that they should use.
+
+For the DNS method, the client simply attempts to resolves the domain name
+``WPAD.domain``, where ``domain`` is the domain name configured on the client,
+possibly by the DHCP server. The administrator can configure this domain name
+to point to a web server hosting the PAC file. If the web address
+http://wpad.my.domain.edu/wpad.dat serves the PAC file to the client, then
+it will configure itself.
+
 Political and organization aspects of caching
-There are some issues that need to be considered when implementing a proxy server.
-Section 8.01 Privacy
-The privacy of individuals needs to be respected in conjunction with the local law. If proxy logs
-are kept there should be accountability with regard to these logs. Caching servers can in effect
-21
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-strengthen privacy; a cache server can serve to make user requests anonymous to the end
+---------------------------------------------
+
+There are some issues that need to be considered when implementing a proxy
 server.
-Section 8.02 Authentication
-Here again there are links to the privacy issue, normally authentication is done for legal reasons
-or management reasons. You need to make users aware of the consequences of their actions
-and where the boundaries between private and corporate actions lie. When you authenticate you
-are placing an identity against a request.
-Section 8.03 Site restrictions
-It is possible to block content at the proxy server, this is a dangerous exercise and the cache
-administrator should ensure that he/she is operating within the boundaries of the organizational
-culture and policies when doing this.
-Section 8.04 Copyright
-In the eyes of some people a cache server is copyright infringement. However some will argue
-that the cache is what the internet is all about, the sharing of information and that objects are
-simply reproductions of the original. Often the no-store header is used to tell cache servers not
-to store pages to protect copyright Information.
-Section 8.05 Content Integrity
-How can you trust what is coming from the cache, is it up to date, or has it been altered. This is
-probably a very minor threat since most caches are hard to get into and alter content. All the
-same it pays to take the necessary precautions to protect your server.
-Section 8.06 UnCachable Content
-Some content you may wish not to be cached, an example of this is on-line journals. In this case
-the cache administrator has several methods that he/she can employ to do this. Bypass lists
-could be used as well as different cache servers.
-Section 8.07 Free bandwidth
-Care must be taken in the access rules of the proxy otherwise you could find yourself supplying
-free bandwidth to Internet users. Make sure you only allow internal connections to the proxy
-server
-22
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-IX.
+
+Privacy
+~~~~~~~
+
+The privacy of individuals needs to be respected in conjunction with the local
+law and any applicable organisational policies. If proxy logs are kept there
+should be accountability with regard to these logs. Caching servers can also be
+configured in a way that strengthens privacy, by hiding the identity of the
+end user.
+
+Authentication
+~~~~~~~~~~~~~~
+
+This issue is closely connected to privacy. Normally authentication is done for
+legal reasons, management or network security reasons. You need to make users
+aware of the consequences of their actions and where the boundaries between
+private and corporate actions lie. When you authenticate you are placing an
+identity against a request.
+
+Site restrictions
+~~~~~~~~~~~~~~~~~
+
+It is possible to block content at the proxy server. This is a dangerous
+exercise and the cache administrator should ensure that he/she is operating
+within the boundaries of the organizational culture and policies when doing
+this.
+
+Copyright
+~~~~~~~~~
+
+Technically, keeping a copy of protected information without permission of the
+copyright holder could be regarded as copyright infringement. In most
+jurisdictions it is considered to be completely legal, provided that the copy is
+only kept for functional reasons (it is necessary for fast and efficient network
+operation). However if in doubt, please check with a lawyer.
+
+Content Integrity
+~~~~~~~~~~~~~~~~~
+
+How can you trust the information returned by the cache? Is it up to date, or
+has it been altered by the cache administrator? In some cases the user has
+no choice but to trust the cache administrator. The cache is only used for
+unsecured communications (non-SSL) and many attacks are possible by untrusted
+parties on such communications, so the additional threat posed by a proxy cache
+is usually negligible. But as usual it is important to properly secure the
+proxy server.
+
+Uncachable Content
+~~~~~~~~~~~~~~~~~~
+
+If you don't wish to cache certain content there are a few options available
+to you including bypass lists and Proxy PAC files that ignore the cache servers
+for some URLs.
+
+Free bandwidth
+~~~~~~~~~~~~~~
+
+Care must be taken in the access rules of the proxy otherwise you could find
+yourself supplying free bandwidth to Internet users, and your servers and
+bandwidth could be used in Denial Of Service (DOS) attacks or other illegal
+activity. As a minimum, ensure you only allow internal connections to the proxy
+server.
+
 Case Study: University of KwaZulu-Natal
+---------------------------------------
+
 This will be done via instructor PowerPoint
-23
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
+
 SECTION 2 - Squid
 X.
 Squid Introduction
