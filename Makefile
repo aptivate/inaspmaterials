@@ -1,4 +1,4 @@
-DEFAULT_TARGETS = presos_odp presos_pdf guides_pdf
+DEFAULT_TARGETS = presos_odp presos_pdf exers_pdf guides_pdf
 all: $(DEFAULT_TARGETS)
 clean:
 	rm -rf $(DST_DIR)
@@ -16,6 +16,8 @@ help:
 	@echo "              Delete and rebuild all .odp files for presentations"
 	@echo "  presos_pdf, presos_pdf_clean, presos_pdf_force:"
 	@echo "              Similarly for .pdf files for presentations"
+	@echo "  exers_pdf, exers_pdf_clean, exers_pdf_force:"
+	@echo "              Similarly for .pdf files for exercises"
 	@echo "  guides_pdf, guides_pdf_clean, guides_pdf_force:"
 	@echo "              Similarly for .pdf files for guide/study documents"
 
@@ -35,6 +37,7 @@ RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 # Automatically find all the presentation and guide input files.
 PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
 GUIDES = $(wildcard $(SRC_DIR)/*/*.rst)
+EXERS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Exercises*.rst)
 SOURCE_DIRS = $(wildcard $(SRC_DIR)/*/Unit_*)
 
 # Ways of hiding commands. Show the full command when you run "make V=1",
@@ -153,6 +156,7 @@ $(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
 # by catting the source files together; and also symlinks to the includes and
 # images directory, so that rst2pdf can find images and files referenced by the
 # input files, although it's working in a different directory.
+	$(CREATE_DESTDIR)
 	$(SILENT) cat $(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/Unit_*_Presentation*.rst) > $@
 	$(RM_V)   $(@:%/pdf.src.rst=%/images)
 	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/images) $(@:%/pdf.src.rst=%/images)
@@ -161,8 +165,18 @@ $(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
 presos_pdf_clean:
 	$(RM_V) $(PRESO_PDF_FILES) $(PRESO_PDF_INTERMEDS)
 
+EXER_PDF_FILES = $(call FILES_PATTERN,.pdf,$(EXERS))
+exers_pdf: $(EXER_PDF_FILES)
+$(EXER_PDF_FILES): $(call MAKE_PATTERN,.pdf)
+	$(CREATE_DESTDIR)
+	$(LINK_IMAGES)
+	$(RST2PDF_V) $^ -o $@
+	$(UNLINK_IMAGES)
+exers_pdf_clean:
+	$(RM_V) $(EXER_PDF_FILES)
+
 GUIDE_PDF_FILES = $(call FILES_PATTERN,.pdf,$(GUIDES))
-guides_pdf: $(PRESO_PDF_FILES)
+guides_pdf: $(GUIDE_PDF_FILES)
 $(GUIDE_PDF_FILES): $(call MAKE_PATTERN,.pdf)
 	$(CREATE_DESTDIR)
 	$(LINK_IMAGES)
