@@ -36,21 +36,21 @@ Recovering from problems
 ------------------------
 
 * Identify problem
-  * Alarm system trigger
-  * Abnormal activity
-  * User complaints
+	* Alarm system trigger
+	* Abnormal activity
+	* User complaints
 * Contain problem
-  * Localise the problem to some service, network branch, etc.
-  * Prevent the problem from spreading if necessary
-  * Isolate the segment or device(s) causing the problem
-  * Diagnose problem and fix
+	* Localise the problem to some service, network branch, etc.
+	* Prevent the problem from spreading if necessary
+	* Isolate the segment or device(s) causing the problem
+	* Diagnose problem and fix
 * Test the resolution
-  * Change monitoring level temporarily to reduce noise?
-  * Reintroduce device(s) to network
-  * Compare monitoring to baseline in real-time
+	* Change monitoring level temporarily to reduce noise?
+	* Reintroduce device(s) to network
+	* Compare monitoring to baseline in real-time
 * Learn from the problem
-  * Identify process to reduce risk of reoccurrence or reduce severity
-  * See Unit 4, Section 7 (How do we mitigate faults?) for details
+	* Identify process to reduce risk of reoccurrence or reduce severity
+	* See Unit 4, Section 7 (How do we mitigate faults?) for details
 
 Solving bandwidth problems
 --------------------------
@@ -111,7 +111,7 @@ Reducing waste of bandwidth
 ---------------------------
 
 * Can make a big difference
-  * Use monitoring to identify whether it's needed or not
+	* Use monitoring to identify whether it's needed or not
 * Often provides a basis for further action
 * Almost never a complete solution
 * What kind of technical issues?
@@ -120,12 +120,12 @@ Examples of reducing waste
 --------------------------
 
 * House-keeping
-  * Microsoft updates, virus definition files, automated patches of all kinds
+	* Microsoft updates, virus definition files, automated patches of all kinds
 * Spam, virus and worm outbreaks
-  * valueless traffic that might be eating bandwidth
+	* valueless traffic that might be eating bandwidth
 * Caching
-  * DNS caching can make a huge difference to page loading speed
-  * web caching can speed up some pages, and reduce bandwidth use by 40%
+	* DNS caching can make a huge difference to page loading speed
+	* web caching can speed up some pages, and reduce bandwidth use by 40%
 
 Monetary Options
 ----------------
@@ -166,21 +166,21 @@ Other incentives for good behaviour
 * Understand how your connection is being used (requires monitoring)
 * Try to change user behaviour (requires policy)
 * Empower users to diagnose and understand network problems
-  * Recruits users onto your side!
+	* Recruits users onto your side!
 
 Empowering users
 ----------------
 
 * You could call these users "Guard Dogs"
 * Give them tools and knowledge to identify if network is really broken
-  * Provides a sense of empowerment
-  * Local departmental resource
-  * Campus, Link, national, international
-  * Even if they don’t understand what it means
-  * Even if they cannot contact an admin
+	* Provides a sense of empowerment
+	* Local departmental resource
+	* Campus, Link, national, international
+	* Even if they don’t understand what it means
+	* Even if they cannot contact an admin
 * For example: access to Nagios, service status page, basic diagnostic software.
-  * Needs to be appropriate to users' level of understanding and desire to
-  help.
+	* Needs to be appropriate to users' level of understanding and desire to
+	  help.
 
 Affecting users
 ---------------
@@ -258,11 +258,11 @@ Blocking access to resources
 ----------------------------
 
 * Unpopular with users
-  * They want Facebook and Youtube!
+	* They want Facebook and Youtube!
 * Least preferred option!
-  * But technically easiest.
+	* But technically easiest.
 * How much impact will it have?
-  * Is it worth the cost?
+	* Is it worth the cost?
 * Reduce bandwidth available at peak times instead of blocking?
 
 Actually blocking access to resources
@@ -343,3 +343,8 @@ You can use DansGuardian as a web proxy to block all pages containing certain ke
 * http://www.expertsexchange.com
 * http://196.21.99.105/archive/img097.jpg
 
+.. class:: handout
+
+The first two would be blocked if you blocked all URLs that contain "sex".
+
+The third is an example where you have no way of knowing what the image contains.
