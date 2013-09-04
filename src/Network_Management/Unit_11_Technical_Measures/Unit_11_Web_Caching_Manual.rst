@@ -864,204 +864,380 @@ Case Study: University of KwaZulu-Natal
 This will be done via instructor PowerPoint
 
 SECTION 2 - Squid
-X.
+=================
+
 Squid Introduction
-With apologies to the author this section on squid is based unashamedly on the book “Squid the
-Definitive Guide” by Duane Wessels. Since this book is to be given out to each participant I have
-tried to keep the structure along the same lines so it can be used as a sort of abbreviated study
-guide. I encourage everyone to get a copy of this excellent book if you consider running squid.
+------------------
+
+With apologies to the author this section on squid is based unashamedly on the
+book “Squid the Definitive Guide” by Duane Wessels. Since this book is to be
+given out to each participant I have tried to keep the structure along the same
+lines so it can be used as a sort of abbreviated study guide. I encourage
+everyone to get a copy of this excellent book if you consider running squid.
 (See Reference section)
-Section 10.01 What
-Squid is an open source caching engine with many features. Squid runs on many platforms and
-operating systems including flavors of UNIX, Linux, BSD and Windows.
-Squid is a proxy and a cache; it is a proxy between the client and the server and will cache
-replies. Squid only supports HTTP requests from browsers but can talk other protocols such as
-FTP to servers. Undoubtedly squid is most famous as an extremely stable proxy cache server
-running under Linux.
-Section 10.02 Where from
-Squid is available from www.squid-cache.org, however most Linux distributions contain a stable
-version of squid in their distributions. Usually you do not need to download the source and
-compile the software, however often it is necessary if you wish to enable or compile in new
-features or if you wish for performance enhancements.
-The Squid developers make periodic releases of the source code. Each release has a version
-number, such as 2.5.STABLE4. The third component starts either with STABLE or DEVEL (short
-for development).
-As you can probably guess, the DEVEL releases tend to have newer, experimental features.
-They are also more likely to have bugs. Inexperienced users should not run DEVEL releases.
-After spending some time in the development state, the version number changes to STABLE.
-These releases are suitable for all users. Of course, even the stable releases may have some
-bugs. The higher-numbered stable versions (e.g., STABLE3, STABLE4) are likely to have fewer
-bugs. If you are really concerned about stability, you may want to wait for one of these later
-releases.
-24
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-XI.
+
+What
+~~~~
+
+Squid is an open source caching engine with many features. Squid runs on many
+platforms and operating systems including flavors of UNIX, Linux, BSD and
+Windows.  Squid is a proxy and a cache; it is a proxy between the client and
+the server and will cache replies. Squid only supports HTTP requests from
+browsers but can talk other protocols such as FTP to servers. Undoubtedly squid
+is most famous as an extremely stable proxy cache server running under Linux.
+
+Where from
+~~~~~~~~~~
+
+Squid is available from www.squid-cache.org, however most Linux distributions
+contain a stable version of squid in their distributions. Usually you do not
+need to download the source and compile the software, however often it is
+necessary if you wish to enable or compile in new features or if you wish for
+performance enhancements.
+
+The Squid developers make periodic releases of the source code. Each release
+has a version number, such as 2.5.STABLE4. The third component starts either
+with STABLE or DEVEL (short for development).
+
+As you can probably guess, the DEVEL releases tend to have newer, experimental
+features.  They are also more likely to have bugs. Inexperienced users should
+not run DEVEL releases.  After spending some time in the development state, the
+version number changes to STABLE.  These releases are suitable for all users.
+Of course, even the stable releases may have some bugs. The higher-numbered
+stable versions (e.g., STABLE3, STABLE4) are likely to have fewer bugs. If you
+are really concerned about stability, you may want to wait for one of these
+later releases.
+
 Installation
-As we mentioned before squid is available in most distributions, so why compile?
-The primary reason is that the code needs to know about certain operating system parameters.
-In particular, the most important parameter is the maximum number of open file descriptors.
-Squid’s. /configure script probes for these values before compiling. If you take a Squid binary
-built for one value and run it on a system with a different value, you may encounter problems.
-Another reason is that many of Squid's features must be enabled at compile time. If you take a
-binary that somebody else compiled, and it doesn't include the code for the features that you
-want, you'll need to compile your own version anyway.
-If downloading and compiling Chapter 3 of the book provides a good guide on how to do this.
-I have found in my own experience that a precompiled version is not good enough, especially on
-a busy server. The file descriptors usually end up being set too low. I have ended up re-
-compiling it on all of our existing boxes.
-XII.
+------------
+
+As we mentioned before squid is available in most distributions, so why
+compile?  The primary reason is that the code needs to know about certain
+operating system parameters.  In particular, the most important parameter is
+the maximum number of open file descriptors.  Squid’s. /configure script probes
+for these values before compiling. If you take a Squid binary built for one
+value and run it on a system with a different value, you may encounter
+problems.  Another reason is that many of Squid's features must be enabled at
+compile time. If you take a binary that somebody else compiled, and it doesn't
+include the code for the features that you want, you'll need to compile your
+own version anyway.
+
+If downloading and compiling Chapter 3 of the book provides a good guide on how
+to do this.  I have found in my own experience that a precompiled version is
+not good enough, especially on a busy server. The file descriptors usually end
+up being set too low. I have ended up re- compiling it on all of our existing
+boxes.
+
 Basic Configuration
-The squid conf file is very similar to other UNIX type config files, consisting of a directive and a
-value. Things to watch out for in particular are case sensitivity and sometimes order can be
-important when one directive needs to take heed of another that was before it, access rules are
-an example of this. The squid config file is generally stored in /etc/squid or /etc and is called
-squid.conf.
-Section 12.01 Userid
-A userid must be set for the directive cache_effective_user, this is usually squid. Squid will
-startup as root and switch to this id. This user must be made owner of the cache directory.
-Section 12.02 Port
-A port number should be given for the directive http_port, this will tell squid on what port to listen
-on. An Ipaddress can be included in this directive if your server has multiple interfaces.
-Section 12.03 Log Files
-Make sure the log files are stored on a partition with enough space. It is handy to keep the log
-files on a separate partition to the cache files, this will help performance.
-25
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Section 12.04 Access Controls
-By default squid will deny all access to all clients. To get things working the simplest approach to
-take is to add a line for your pc or network such as
-acl mynet 192.168.0.0/16
-and then to add a rule that allows your pc access such as
-http_access allow mynet
-The order of the http_access is very important, You should put the http_access line just before
-http_access Deny All
-Section 12.05 Visible hostname
-The visible_hostname directive should be set to the hostname of your machine. This is important
-as it is sometimes used in headers.
-Section 12.06 Cache_mgr
-You should set the cache_mgr directive to a valid contact address; this is displayed to users
-when a squid error occurs.
-Section 12.07 Cache_mem
-Set this to the amount of memory to use to store hot objects, memory is your friend in this case.
-As a rule of thumb on Squid uses approximately 10 MB of RAM per GB of the total of all
-cache_dirs (more on 64 bit servers such as Alpha), plus your cache_mem setting and about an
-additional 10-20MB. It is recommended to have at least twice this amount of physical RAM
-available on your Squid server.
-XIII.
+-------------------
+
+The squid conf file is very similar to other UNIX type config files, consisting
+of a directive and a value. Things to watch out for in particular are case
+sensitivity and sometimes order can be important when one directive needs to
+take heed of another that was before it, access rules are an example of this.
+The squid config file is generally stored in ``/etc/squid`` or ``/etc`` and is
+called ``squid.conf``.
+
+Userid
+~~~~~~
+
+A userid must be set for the directive ``cache_effective_user``, this is
+usually squid. Squid will startup as root and switch to this id. This user must
+be made owner of the cache directory.
+
+Port
+~~~~
+
+A port number should be given for the directive ``http_port``, this will tell
+squid on what port to listen on. An ``Ipaddress`` can be included in this
+directive if your server has multiple interfaces.
+
+Log Files
+~~~~~~~~~
+
+Make sure the log files are stored on a partition with enough space. It is
+handy to keep the log files on a separate partition to the cache files, this
+will help performance.
+
+Access Controls
+~~~~~~~~~~~~~~~
+
+By default squid will deny all access to all clients. To get things working the
+simplest approach to take is to add a line for your pc or network such as::
+
+    acl mynet 192.168.0.0/16
+
+and then to add a rule that allows your PC access such as::
+
+    http_access allow mynet
+
+The order of the http_access is very important, You should put the
+``http_access`` line just before::
+
+    http_access Deny All
+
+Visible hostname
+~~~~~~~~~~~~~~~~
+
+The ``visible_hostname`` directive should be set to the hostname of your
+machine. This is important as it is sometimes used in headers.
+
+Cache_mgr
+~~~~~~~~~
+
+You should set the ``cache_mgr`` directive to a valid contact address; this is
+displayed to users when a squid error occurs.
+
+Cache_mem
+~~~~~~~~~
+
+Set this to the amount of memory to use to store hot objects, memory is your
+friend in this case.  As a rule of thumb on Squid uses approximately 10 MB of
+RAM per GB of the total of all cache_dirs (more on 64 bit servers such as
+Alpha), plus your ``cache_mem`` setting and about an additional 10-20MB. It is
+recommended to have at least twice this amount of physical RAM available on
+your Squid server.
+
 Running Squid
-Section 13.01 Command Line options
-There are many command line options for squid, the books goes into some detail here; useful
-ones to remember are;
+-------------
+
+Command Line options
+~~~~~~~~~~~~~~~~~~~~
+
+There are many command line options for squid, the books goes into some detail
+here; useful ones to remember are:
+
 -v
-Prints the version string.
+	Prints the version string.
+
 -z
-26
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Initializes cache, or swap, directories. You must use this option when running Squid for the first
-time or whenever you add a new cache directory.
+	Initializes cache, or swap, directories. You must use this option when
+	running Squid for the first time or whenever you add a new cache directory.
+
 First time
-When you start squid for the first time you should do so with squid –z to create the cache
-directories then with squid –N –d1, N for foreground opration and –d1 for debug to check that
-everything is ok.
-Once you see the Ready to serve requests message, test Squid with a few HTTP requests.
-You can do this by configuring your browser to use Squid as a proxy and then open a web page.
-If Squid is working correctly, the page should load as quickly as it would without using Squid.
-Alternatively, you can use the squidclient program that comes with Squid:
-% squidclient http://www.squid-cache.org/
+~~~~~~~~~~
+
+When you start squid for the first time you should do so with squid ``–z`` to
+create the cache directories then with squid ``–N –d1``, ``-N`` for foreground
+operation and ``–d1`` for debug to check that everything is ok.
+
+Once you see the Ready to serve requests message, test Squid with a few HTTP
+requests.  You can do this by configuring your browser to use Squid as a proxy
+and then open a web page.  If Squid is working correctly, the page should load
+as quickly as it would without using Squid.  Alternatively, you can use the
+``squidclient`` program that comes with Squid::
+
+	% squidclient http://www.squid-cache.org/
+
 Starting squid in scripts and as a daemon
-Most prebuilt systems that come with distributions have all the startup scripts in place.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Most prebuilt systems that come with distributions have all the startup scripts
+in place.
+
 Reconfiguring a running squid
-When you change the config files on a running system you will need to tell squid to re-read the
-config file and re-configure itself. This can happen more often than you might think. For example
-an ACL that controls who can do what based on a charging model will change often and squid
-must re-read the config file each time.
-This is done with the command squid –k reconfigure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you change the config files on a running system you will need to tell
+squid to re-read the config file and re-configure itself. This can happen more
+often than you might think. For example an ACL that controls who can do what
+based on a charging model will change often and squid must re-read the config
+file each time.  This is done with the command::
+
+	squid –k reconfigure
+
 Rotating log files
-The squid log files can get very big, it is very important to rotate these logfiles at periodic
-intervals. This can be done with a squid –k rotate
-XIV.
+~~~~~~~~~~~~~~~~~~
+
+The squid log files can get very big, it is very important to rotate these
+logfiles at periodic intervals. This can be done with a::
+
+	squid –k rotate
+
 Access controls
-Access controls are a very important part of the squid system, they are very flexible and can be
-used to great effect in all manner of ways.
-The basic format of the access rule is
-acl name type value1 value2 ..
+---------------
+
+Access controls are a very important part of the squid system, they are very
+flexible and can be used to great effect in all manner of ways.
+
+The basic format of the access rule is::
+
+	acl name type value1 value2 ..
+
 Squid knows about the following types of ACL elements:
-27
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-src: source (client) IP addresses
-dst: destination (server) IP addresses
-myip: the local IP address of a client's connection
-srcdomain: source (client) domain name
-dstdomain: destination (server) domain name
-srcdom_regex: source (client) regular expression pattern matching
-dstdom_regex: destination (server) regular expression pattern matching
-time: time of day, and day of week
-url_regex: URL regular expression pattern matching
-urlpath_regex: URL-path regular expression pattern matching, leaves out the protocol and
-hostname
-port: destination (server) port number
-myport: local port number that client connected to
-proto: transfer protocol (http, ftp, etc)
-method: HTTP request method (get, post, etc)
-browser: regular expression pattern matching on the request's user-agent header
-ident: string matching on the user's name
-ident_regex: regular expression pattern matching on the user's name
-src_as: source (client) Autonomous System number
-dst_as: destination (server) Autonomous System number
-proxy_auth: user authentication via external processes
-proxy_auth_regex: user authentication via external processes
-snmp_community: SNMP community string matching
-maxconn: a limit on the maximum number of connections from a single client IP address
-req_mime_type: regular expression pattern matching on the request content-type header
-arp: Ethernet (MAC) address matching
-rep_mime_type: regular expression pattern matching on the reply (downloaded content)
-content-type header. This is only usable in the http_reply_access directive, not http_access.
-external: lookup via external acl helper defined by external_acl_type
-Notes:
-Not all of the ACL elements can be used with all types of access lists (described below). For
-example, snmp_community is only meaningful when used with snmp_access. The src_as and
-dst_as types are only used in cache_peer_access access lists.
-The arp ACL requires the special configure option --enable-arp-acl. Furthermore, the ARP ACL
-code is not portable to all operating systems. It works on Linux, Solaris, and some *BSD variants.
-The SNMP ACL element and access list require the --enable-snmp configure option.
-28
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
-Some ACL elements can cause processing delays. For example, use of src_domain and
-srcdom_regex require a reverse DNS lookup on the client's IP address. This lookup adds some
-delay to the request.
-Each ACL element is assigned a unique name. A named ACL element consists of a list of
-values. When checking for a match, the multiple values use OR logic. In other words, an ACL
-element is matched when any one of its values is a match.
-You can't give the same name to two different types of ACL elements. It will generate a syntax
-error.
-You can put different values for the same ACL name on different lines. Squid combines them into
-one list.
+
+src
+	Source (client) IP addresses.
+
+dst
+	Destination (server) IP addresses.
+
+myip
+	The local IP address of a client's connection.
+
+srcdomain
+	Source (client) domain name.
+
+dstdomain
+	Destination (server) domain name.
+
+srcdom_regex
+	Source (client) regular expression pattern matching.
+
+dstdom_regex
+	Destination (server) regular expression pattern matching.
+
+time
+	Time of day, and day of week.
+
+url_regex
+	URL regular expression pattern matching.
+
+urlpath_regex
+	URL-path regular expression pattern matching, leaves out the protocol and
+	hostname.
+
+port
+	Destination (server) port number.
+
+myport
+	Local port number that client connected to.
+
+proto
+	Transfer protocol (http, ftp, etc).
+
+method
+	HTTP request method (get, post, etc).
+
+browser
+	Regular expression pattern matching on the request's user-agent header.
+
+ident
+	String matching on the user's name.
+
+ident_regex
+	Regular expression pattern matching on the user's name.
+
+src_as
+	Source (client) Autonomous System number.
+
+dst_as
+	Destination (server) Autonomous System number.
+
+proxy_auth
+	User authentication via external processes.
+
+proxy_auth_regex
+	User authentication via external processes.
+
+snmp_community
+	SNMP community string matching.
+
+maxconn
+	A limit on the maximum number of connections from a single client IP
+	address.
+
+req_mime_type
+	Regular expression pattern matching on the request content-type header.
+
+arp
+	Ethernet (MAC) address matching.
+
+rep_mime_type
+	Regular expression pattern matching on the reply (downloaded content)
+	content-type header. This is only usable in the ``http_reply_access``
+	directive, not ``http_access``.
+
+external
+	Lookup via external acl helper defined by ``external_acl_type``.
+
+Notes
+~~~~~
+
+Not all of the ACL elements can be used with all types of access lists
+(described below). For example, ``snmp_community`` is only meaningful when used
+with ``snmp_access``. The ``src_as`` and ``dst_as`` types are only used in
+``cache_peer_access`` access lists.
+
+The arp ACL requires the special configure option ``--enable-arp-acl``.
+Furthermore, the ARP ACL code is not portable to all operating systems. It
+works on Linux, Solaris, and some BSD variants.  The SNMP ACL element and
+access list require the ``--enable-snmp`` configure option.
+
+Some ACL elements can cause processing delays. For example, use of
+``src_domain`` and ``srcdom_regex`` require a reverse DNS lookup on the
+client's IP address. This lookup adds some delay to the request.
+
+Each ACL element is assigned a unique name. A named ACL element consists of a
+list of values. When checking for a match, the multiple values use OR logic. In
+other words, an ACL element is matched when any one of its values is a match.
+
+You can't give the same name to two different types of ACL elements. It will
+generate a syntax error.
+
+You can put different values for the same ACL name on different lines. Squid
+combines them into one list.
+
 Access Lists
+------------
+
 There are a number of different access lists:
-http_access: Allows HTTP clients (browsers) to access the HTTP port. This is the primary
-access control list.
-http_reply_access: Allows HTTP clients (browsers) to receive the reply to their request. This
-further restricts permissions given by http_access, and is primarily intended to be used together
-with the rep_mime_type acl type for blocking different content types.
-icp_access: Allows neighbor caches to query your cache with ICP.
-miss_access: Allows certain clients to forward cache misses through your cache. This further
-restricts permissions given by http_access, and is primarily intended to be used for enforcing
-sibling relations by denying siblings from forwarding cache misses through your cache.
-no_cache: Defines responses that should not be cached.
-redirector_access: Controls which requests are sent through the redirector pool.
-ident_lookup_access: Controls which requests need an Ident lookup.
-always_direct: Controls which requests should always be forwarded directly to origin servers.
-never_direct: Controls which requests should never be forwarded directly to origin servers.
-snmp_access: Controls SNMP client access to the cache.
-broken_posts: Defines requests for which squid appends an extra CRLF after POST message
-bodies as required by some broken origin servers.
-cache_peer_access: Controls which requests can be forwarded to a given neighbor (peer).
-Notes:
+
+http_access
+	Allows HTTP clients (browsers) to access the HTTP port. This is the
+	primary access control list.
+
+http_reply_access
+	Allows HTTP clients (browsers) to receive the reply to their request.
+	This further restricts permissions given by ``http_access``, and is
+	primarily intended to be used together with the ``rep_mime_type``
+	acl type for blocking different content types.
+
+icp_access
+	Allows neighbor caches to query your cache with ICP.
+
+miss_access
+	Allows certain clients to forward cache misses through your cache.
+	This further restricts permissions given by ``http_access``, and is
+	primarily intended to be used for enforcing sibling relations by denying
+	siblings from forwarding cache misses through your cache.
+
+no_cache
+	Defines responses that should not be cached.
+
+redirector_access
+	Controls which requests are sent through the redirector pool.
+
+ident_lookup_access
+	Controls which requests need an Ident lookup.
+
+always_direct
+	Controls which requests should always be forwarded directly to origin
+	servers.
+
+never_direct
+	Controls which requests should never be forwarded directly to origin
+	servers.
+
+snmp_access
+	Controls SNMP client access to the cache.
+
+broken_posts
+	Defines requests for which squid appends an extra ``CRLF`` after ``POST``
+	message bodies as required by some broken origin servers.
+
+cache_peer_access
+	Controls which requests can be forwarded to a given neighbor (peer).
+
+
+Notes
+~~~~~
+
 An access list rule consists of an allow or deny keyword, followed by a list of ACL element
 names.
+
 An access list consists of one or more access list rules.
-29
-Caching Workshop , Kenya , Feb/March 2006 by Richard Stubbs
+
 Access list rules are checked in the order they are written. List searching terminates as soon as
 one of the rules is a match.
 If a rule has multiple ACL elements, it uses AND logic. In other words, all ACL elements of the
