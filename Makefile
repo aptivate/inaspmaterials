@@ -1,4 +1,4 @@
-DEFAULT_TARGETS = presos_odp presos_pdf guides_pdf
+DEFAULT_TARGETS = presos_odp presos_pdf docs_pdf guides_pdf
 all: $(DEFAULT_TARGETS)
 clean:
 	rm -rf $(DST_DIR)
@@ -16,12 +16,15 @@ help:
 	@echo "              Delete and rebuild all .odp files for presentations"
 	@echo "  presos_pdf, presos_pdf_clean, presos_pdf_force:"
 	@echo "              Similarly for .pdf files for presentations"
+	@echo "  docs_pdf, docs_pdf_clean, docs_pdf_force:"
+	@echo "              Similarly for .pdf files for documents (exercises and manuals)"
 	@echo "  guides_pdf, guides_pdf_clean, guides_pdf_force:"
 	@echo "              Similarly for .pdf files for guide/study documents"
 
 # Directories where various files should be found or written to:
 SRC_DIR = src
 DST_DIR = output
+TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
 
@@ -35,6 +38,8 @@ RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 # Automatically find all the presentation and guide input files.
 PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
 GUIDES = $(wildcard $(SRC_DIR)/*/*.rst)
+EXERS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Exercises.rst)
+MANUALS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Manual.rst)
 SOURCE_DIRS = $(wildcard $(SRC_DIR)/*/Unit_*)
 
 # Ways of hiding commands. Show the full command when you run "make V=1",
@@ -61,20 +66,20 @@ PANDOC_COMMON = $(PANDOC_BIN) --data-dir=. --smart \
 	--variable static-dir=$(STATIC_DIR_ABS)
 PANDOC_PDF_BEAMER = $(PANDOC_COMMON) -t beamer --latex-engine=xelatex \
 	--toc --toc-depth=4 \
-	--template=templates/beamer.tex --variable handout=1
+	--template=$(TEMPLATES_DIR)/beamer.tex --variable handout=1
 # ".. include::" doesn't work, so work around it with the -B option:
 # https://groups.google.com/forum/?fromgroups=#!topic/pandoc-discuss/75zqDF9ZMkg
 PANDOC_PDF_READABLE = $(PANDOC_COMMON) -t latex --latex-engine=xelatex \
 	--toc --toc-depth=4 \
-	--template=templates/readable.tex --variable handout=1 \
+	--template=$(TEMPLATES_DIR)/readable.tex --variable handout=1 \
 	-B src/includes/Series.rst \
 	-B src/includes/Authors.rst
 RST2PDF = $(RST2PDF_BIN) \
-	--stylesheets=templates/rst2pdf.styles.txt \
+	--stylesheets=$(TEMPLATES_DIR)/rst2pdf.styles.txt \
 	--font-path=static/CharisSIL-4.112-web \
 	--smart-quotes=1
 RST2ODP = $(RST2ODP_BIN) --traceback \
-	--template-file=templates/presentation.odp
+	--template-file=$(TEMPLATES_DIR)/presentation.odp
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
@@ -133,10 +138,10 @@ debug:
 PRESO_ODP_FILES = $(call FILES_PATTERN,.odp,$(PRESOS))
 presos_odp: $(PRESO_ODP_FILES)
 # $(PRESO_ODP_FILES): $(call MAKE_PATTERN,.odp)
-$(PRESO_ODP_FILES): $(DST_DIR)/%.odp: $(SRC_DIR)/%
+$(PRESO_ODP_FILES): $(DST_DIR)/%.odp: $(SRC_DIR)/% $(TEMPLATES_DIR)/presentation.odp
 	$(CREATE_DESTDIR)
 	$(LINK_IMAGES)
-	$(RST2ODP_V) $^ $@
+	$(RST2ODP_V) $< $@
 	$(UNLINK_IMAGES)
 presos_odp_clean:
 	$(RM_V) $(PRESO_ODP_FILES)
@@ -153,6 +158,7 @@ $(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
 # by catting the source files together; and also symlinks to the includes and
 # images directory, so that rst2pdf can find images and files referenced by the
 # input files, although it's working in a different directory.
+	$(CREATE_DESTDIR)
 	$(SILENT) cat $(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/Unit_*_Presentation*.rst) > $@
 	$(RM_V)   $(@:%/pdf.src.rst=%/images)
 	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/images) $(@:%/pdf.src.rst=%/images)
@@ -161,8 +167,21 @@ $(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
 presos_pdf_clean:
 	$(RM_V) $(PRESO_PDF_FILES) $(PRESO_PDF_INTERMEDS)
 
+EXER_PDF_FILES = $(call FILES_PATTERN,.pdf,$(EXERS))
+MANUAL_PDF_FILES = $(call FILES_PATTERN,.pdf,$(MANUALS))
+DOC_PDF_FILES = $(EXER_PDF_FILES) $(MANUAL_PDF_FILES)
+docs_pdf: $(DOC_PDF_FILES)
+$(DOC_PDF_FILES): $(call MAKE_PATTERN,.pdf)
+	$(CREATE_DESTDIR)
+	$(LINK_IMAGES)
+	$(RST2PDF_V) $^ -o $@
+	$(UNLINK_IMAGES)
+docs_pdf_clean:
+	$(RM_V) $(DOC_PDF_FILES)
+
+
 GUIDE_PDF_FILES = $(call FILES_PATTERN,.pdf,$(GUIDES))
-guides_pdf: $(PRESO_PDF_FILES)
+guides_pdf: $(GUIDE_PDF_FILES)
 $(GUIDE_PDF_FILES): $(call MAKE_PATTERN,.pdf)
 	$(CREATE_DESTDIR)
 	$(LINK_IMAGES)
