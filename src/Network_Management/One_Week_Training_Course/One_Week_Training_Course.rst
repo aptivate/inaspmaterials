@@ -496,7 +496,9 @@ Further study
 -  Practical: implement a DNS server, add reverse DNS for network
    devices (1 hour; instruction sheet)
 -  Practical: set up netdot, document our network, locate a given end
-   device (1 hour)
+   device
+   -  NSRC materials: `text <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.txt>`_
+      or `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.pdf>`_.
 -  Practical: implement a RADIUS server and wired and wireless NAC
 
 Lunch (1hr, 12:30-13:30)
@@ -1112,6 +1114,9 @@ What's going on on your connection? (15 mins, 08:35-08:50)
 -  What are the heaviest uses of bandwidth? (2 mins)
 -  How much do they use? What percentage do they represent?
 
+Monitoring switch ports and routers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Further study
 ~~~~~~~~~~~~~
 
@@ -1266,8 +1271,15 @@ TODO: plan this unit in more detail, with activities and timings
 
 Monitor and manage the network quality of service
 
--  Monitoring network connection quality with Smokeping
--  Install and configure Nagios to alert you of network problems
+-  Monitoring network connection quality with Smokeping:
+   `PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.pdf>`_,
+   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.odp>`_ or
+   `PowerPoint <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.ppt>`_,
+   `exercises <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios-exercises.html>`_.
+-  Install and configure Nagios to alert you of network problems:
+   `PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.pdf>`_,
+   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.odp>`_
+   or `Powerpoint <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.ppt>`_.
 -  Monitoring service availability, connectivity, bandwidth, latency,
    packet loss
 -  Configure Nagios to send SMS alerts
@@ -1283,6 +1295,7 @@ TODO: plan this unit in more detail, with activities and timings
 
 -  What creates downtime?
 -  How long is the downtime? (detection+diagnosis+repair+restoration)
+-  How can we detect faults quickly, especially if they recur?
 -  How can we diagnose common faults more quickly?
 -  How can we repair (patch) them quickly?
 -  Can we create alternative/backup systems? What kinds are there?
