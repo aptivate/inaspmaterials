@@ -1,10 +1,12 @@
-# Network Management
+Network Management
+##################
 
 A one week training course for 20-30 network managers.
 
 .. contents:: Table of Contents
 
-## Goal
+Goal
+====
 
 The goal of this training is to:
 
@@ -12,7 +14,8 @@ The goal of this training is to:
       needs of academic staff?
    -  Improve staff access to journals and the academic Internet
 
-## Aims and Objectives
+Aims and Objectives
+-------------------
 
 On completion of this course you will be able to:
 
@@ -30,9 +33,34 @@ On completion of this course you will be able to:
 In addition, during the course we will design and build a test network, 
 to experiment and learn with.
 
-## Preparation
+Format
+------
+
+This training course is not just a load of powerpoints! The aim is to make
+it as engaging, enjoyable, practical and rewarding for the participants as
+possible. Therefore most sessions are planned as either
+"Questions and Answers", small group discussions, or practical technical
+exercises.
+
+Since this is hard work for the facilitators, we strongly recommend that
+two facilitators are available, and take turns and support each other.
+  
+Reducing the scope
+------------------
+
+If you need to trim this down, to run the course over a shorter period, you
+might want to consider:
+
+-  What makes the participants best able to meet the needs of the
+   academic staff?
+-  Which exercises am I confident will work well?
+-  Which are essential to other essential exercises?
+
+Preparation
+===========
  
-### Equipment
+Equipment
+---------
 
 If this equipment is not available, some of the following training plans
 will need to be modified.
@@ -56,7 +84,8 @@ will need to be modified.
 -  Power strips
 -  UPSes
 
-### Host Requirements
+Host Requirements
+-----------------
 
 -  256 IP address block (/24): 5-9 subnets with 16 IP addresses each
 -  Isolated network segment (not a shared broadcast domain) over ethernet
@@ -68,7 +97,8 @@ will need to be modified.
 -  Access to the venue during the specified times, including evenings
 -  Access to the venue beforehand for preparation
    
-### Participant Requirements
+Participant Requirements
+------------------------
 
 -  Physical campus map/diagram
 -  Campus network map/diagram
@@ -77,7 +107,8 @@ will need to be modified.
    work)
 -  Traffic graphs from router/internet connection over several days
    
-### Venue Setup
+Venue Setup
+-----------
 
 -  Wall area set up for parking area (topics to revisit later).
 -  Equipment in space, but NOT connected.
@@ -95,30 +126,21 @@ will need to be modified.
 -  Set up Cacti and configure it to draw traffic graphs from the host's
    router.
 
-### Format
-
-This training course is not just a load of powerpoints! The aim is to make
-it as engaging, enjoyable, practical and rewarding for the participants as
-possible. Therefore most sessions are planned as either
-"Questions and Answers", small group discussions, or practical technical
-exercises.
-
-Since this is hard work for the facilitators, we strongly recommend that
-two facilitators are available, and take turns and support each other.
-   
-### Reporting
+Reporting
+---------
 
 Reporting requirements currently unknown. I propose:
 
-   -  Feedback from trainees about their experience of the course and
-      ways that it could be improved, including summaries of outcomes from
-      daily feedback sessions (positives and deltas)
-   -  Feedback from academic staff about perceived changes to network
-      administration, and the direction and size of those changes, after
-      some time (perhaps a month or two).
-   -  Number of tickets filed and time taken to resolve them in that time.
+-  Feedback from trainees about their experience of the course and
+   ways that it could be improved, including summaries of outcomes from
+   daily feedback sessions (positives and deltas)
+-  Feedback from academic staff about perceived changes to network
+   administration, and the direction and size of those changes, after
+   some time (perhaps a month or two).
+-  Number of tickets filed and time taken to resolve them in that time.
    
-## Timetable
+Timetable
+=========
 
 The course is planned to run Monday to Friday, for 8 hours a day, including
 breaks. Days include 4 sessions of 1h 45m, giving a total of 7 hours per day.
@@ -155,9 +177,11 @@ participants.
    17.45: end
    19.00-22.00: evening clinic and preparation
 
-## Monday
+Monday
+======
 
-### 08.30: Welcome and Introduction
+08.30: Welcome and Introduction
+-------------------------------
 
 -  Introductions (go round, 15 mins)
 -  Make name badges (5 mins)
@@ -166,11 +190,13 @@ participants.
 -  Define a scope: what is your remit? inside and outside (brainstorm,
    15 mins)
 
-### 09.30: Network Design
+09.30: Network Design
+---------------------
    
 Objective: Design and build a good network, and improve an existing one
 
-#### Presentation (1hr, 09:30-10:30)
+Presentation (1hr, 09:30-10:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Work through the presentation
    `In-building Network Design <https://nsrc.org/workshops/2009/summer/detailed.html>`_,
@@ -180,9 +206,11 @@ Objective: Design and build a good network, and improve an existing one
    when we come to build the test network, or redesign their campus network.
 -  Write these notes up on the board.
 
-#### Break (10:30-11:00)
+Break (10:30-11:00)
+~~~~~~~~~~~~~~~~~~~
 
-#### Capacity needs (30 mins, 11:00-11:30)
+Capacity needs (30 mins, 11:00-11:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As we go through each of these points, participants respond with information
 about their needs in particular areas, and write down the needs on their
@@ -200,7 +228,8 @@ campus maps.
 -  email accounts and storage (2 mins; this goes in the NOC)
 -  domain/authentication accounts (2 mins)
 
-#### Network elements (25 mins, 11:30-11:55)
+Network elements (25 mins, 11:30-11:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What are they? When would you use them? What types can you get?
 How much do they cost? What are the limitations?
@@ -213,7 +242,8 @@ How much do they cost? What are the limitations?
 -  Firewalls (3 mins)
 -  Caches (web and DNS) (5 mins)
 
-#### Broadcast domains (15 mins, 11:55-12:10)
+Broadcast domains (15 mins, 11:55-12:10)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is broadcast traffic? (2 min)
 -  What is a broadcast domain? (2 min)
@@ -225,23 +255,27 @@ How much do they cost? What are the limitations?
 -  How would you connect them together? (3 min)
    -  Subnets and routing
 
-#### Security needs (10 mins, 12:10-12:20)
+Security needs (10 mins, 12:10-12:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What needs to be partitioned from what? (3 mins)
 -  Rogue DHCP/RA server containment (2 mins)
 -  Protect switches and IP phones (3 mins)
 -  Port security vs dumb devices (3 mins)
 
-#### Protocol needs (10 mins, 12:20-12:30)
+Protocol needs (10 mins, 12:20-12:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  what things need to or benefit from being on the same broadcast domain? (3 mins)
 -  who needs to use them? (2 mins)
 -  can you work around them? (3 mins)
 -  DHCP, proxy auto detect, Dropbox LAN sync, Microsoft domain browsing and WINS
 
-#### Lunch break (12:30-13:30)
+Lunch break (12:30-13:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Physical layer needs (40 mins, 13:30-14:10)
+Physical layer needs (40 mins, 13:30-14:10)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What are the long-distance connection on your site? (10 mins)
 -  What kinds of connections can you use? How much do they cost? (10 mins)
@@ -255,14 +289,16 @@ How much do they cost? What are the limitations?
    -  redundancy (multiple paths) (2 mins)
    -  reliability (switches that are single points of failure) (2 mins)
 
-#### Reliability needs (10 mins, 14:10-14:20)
+Reliability needs (10 mins, 14:10-14:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Redundant paths - where? (3 mins)
 -  Ring and mesh topologies - where? (3 mins)
 -  Ports and LACP trunks required - where? (3 mins)
 -  How much does it cost? (2 mins)
 
-#### Manageability needs (25 mins, 14:20-14:45)
+Manageability needs (25 mins, 14:20-14:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How much does management cost? (3 mins)
 -  Quantify the benefits of:
@@ -274,13 +310,15 @@ How much do they cost? What are the limitations?
 -  Transparency (debuggability) (3 mins)
 -  Eliminating NAT (3 mins)
 
-#### Hierarchical design building blocks (10 mins, 14:45-14:55)
+Hierarchical design building blocks (10 mins, 14:45-14:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Stars (3 mins)
 -  Separate edge and core (3 mins)
 -  Connect up and down instead of sideways (3 mins)
 
-#### VLANs (10 mins, 14:55-15:05)
+VLANs (10 mins, 14:55-15:05)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Advantages and disadvantages:
 
@@ -291,7 +329,8 @@ Advantages and disadvantages:
 -  topology recommendations (3 mins)
    -  use subsets of the same topology, not different virtual topologies
 
-#### Network Access Control (10 mins, 15:05-15:15)
+Network Access Control (10 mins, 15:05-15:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is it for? (3 mins)
 -  What is 802.1x? (3 mins)
@@ -300,9 +339,11 @@ Advantages and disadvantages:
 -  What are the alternatives? (port security; advantages and disadvantages)
    (3 mins)
 
-#### Break (30 mins, 15:15-15:45)
+Break (30 mins, 15:15-15:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
-#### Requirements for the test network (30 mins, 15:45-16:15)
+Requirements for the test network (30 mins, 15:45-16:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Requirements gathering for the test network (brainstorm, 25 minutes,
 essential)
@@ -331,7 +372,8 @@ essential)
       appearance)
    -  Redundancy? Fault tolerance?
 
-#### Design the test network (1hr, 16:15-17:15)
+Design the test network (1hr, 16:15-17:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What we want you to do: (show a reference diagram on the wall,
    role play, especially the swapping of participants; 5 mins)
@@ -351,15 +393,19 @@ essential)
 -  Go round the groups, each one quickly explains their changes (2 mins
    per group, 10-15 mins total)
 
-#### Feedback (15 mins, 17:15-17:30)
+Feedback (15 mins, 17:15-17:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Tuesday
+Tuesday
+=======
 
-### Network Design continued (08:30)
+08:30: Network Design, continued
+--------------------------------
    
-#### Synthesize (30 mins, 08:30-09:00)
+Synthesize (30 mins, 08:30-09:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Synthesize into a single network plan (draw up on a sheet,
+-  Synthesize the designs into a single network plan (draw up on a sheet,
    brainstorm; 15 mins; how likely is this to actually work? main
    goal is to reach a shared vision/understanding of the network, so
    everyone can help build it. Need to carefully control time and
@@ -367,7 +413,8 @@ essential)
 -  "Participatory Budget" (allocate equipment to plan, maybe VLANs;
    10-15 mins)
 
-#### Build the test network (1h 15m, 09:00-10:15)
+Build the test network (1h 15m, 09:00-10:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Break up into groups of 4 (2 mins)
 -  Distribute equipment to the right places, connect power and network
@@ -382,9 +429,11 @@ essential)
    (10 mins)
 -  No VLANs yet!
 
-#### Break (30 mins, 10:15-10:45)
+Break (30 mins, 10:15-10:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Redesign your campus networks (1hr, 10:45-11:45)
+Redesign your campus networks (1hr, 10:45-11:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note: you might skip this as it's a repeat of the previous practical,
 but on the participant's own network instead of the test network.
@@ -397,7 +446,6 @@ however it does introduce useful concepts such as:
 
 Work in pairs (Owner and Drawer), choose one of your networks (the
 Owner), redesign it from scratch:
-
 
 -  Draw a physical building diagram (10 mins), including:
 
@@ -431,9 +479,10 @@ redundancy, IP range changes, multi-homing)
 Also, switches and VLAN configuration and testing has been left out, but
 may be necessary (cheat sheet; 30 mins) 
 
-#### Improving an Existing Network 
+Improving an Existing Network (45 mins, 11:45-12:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-How do we get from here to there? (45 mins, 11:45-12:30)
+How do we get from here to there?
 
 -  In groups of 4
 -  Study diagrams of old campus networks
@@ -441,7 +490,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
 -  List the links to move, servers to move, IPs to change
 -  Estimate and schedule downtime
 
-#### Further study
+Further study
+~~~~~~~~~~~~~
 
 -  Practical: implement a DNS server, add reverse DNS for network
    devices (1 hour; instruction sheet)
@@ -449,11 +499,14 @@ How do we get from here to there? (45 mins, 11:45-12:30)
    device (1 hour)
 -  Practical: implement a RADIUS server and wired and wireless NAC
 
-#### Lunch (1hr, 12:30-13:30)
+Lunch (1hr, 12:30-13:30)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Troubleshoot network problems (13:30)
+Troubleshoot network problems (13:30)
+-------------------------------------
 
-#### Preparing our servers (30 mins, 13:30-14:00)
+Preparing our servers (30 mins, 13:30-14:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Boot from the network, go through the questions, start installing
    Ubuntu (20 mins)
@@ -474,7 +527,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
    (`http://tinderblog.wordpress.com/2009/04/29/ubuntu-live-cdnetwork-boot/) <http://tinderblog.wordpress.com/2009/04/29/ubuntu-live-cdnetwork-boot/)>`_
 -  (setup may continue while we talk about virtualisation)
 
-#### Virtualisation (40 mins, 14:00-14:40)
+Virtualisation (40 mins, 14:00-14:40)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is virtualisation? Run one or more independent virtual
    computers on a single physical computer (2 min)
@@ -493,7 +547,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
    options and create the first one)
 -  Install Ubuntu ISO in the virtual machine (10 mins to get started)
 
-#### IP addresses, subnets and routing: (35 mins, 14:40-15:15)
+IP addresses, subnets and routing: (35 mins, 14:40-15:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is an IP address? How long is it? (2 mins)
 -  What is a subnet? What is a network mask? How does the binary
@@ -507,9 +562,11 @@ How do we get from here to there? (45 mins, 11:45-12:30)
 -  How do you do this on Windows? What does the output look like? (4
    mins)
 
-#### Break (30 mins, 15:15-15:45)
+Break (30 mins, 15:15-15:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Ethernet addresses (20 mins, 15:45-16:05)
+Ethernet addresses (20 mins, 15:45-16:05)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is an Ethernet address? How long is it? (2 mins)
 -  What happens when you ping from one computer to another on an
@@ -528,7 +585,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
 -  How do you go the other way, from MAC address to IP address?
    (sniffer, ping scan + arp, DHCP leases; 3 mins)
 
-#### Duplicate IP addresses and DHCP (15 mins, 16:05-16:20)
+Duplicate IP addresses and DHCP (15 mins, 16:05-16:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What happens if you have duplicate IP addresses on the network
    (think about the ARP process; some hosts end up talking to the
@@ -538,7 +596,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
 -  In pairs, create a duplicate IP address on the network, and list
    both the MAC addresses (10 mins)
 
-#### Traceroute (15 mins, 16:20-16:35)
+Traceroute (15 mins, 16:20-16:35)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How do we use Traceroute? What destination do we use? What does it
    tell us? (10 mins)
@@ -566,7 +625,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
    -  what is the effect of a router filtering out ICMP packets?
    -  so how does traceroute actually work?
 
-#### Troubleshooting network connectivity (20 mins, 16:35-16:55)
+Troubleshooting network connectivity (20 mins, 16:35-16:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Imagine you can't ping an address on the internet.
 -  What steps does the packet have to go through? (5 mins)
@@ -585,7 +645,8 @@ How do we get from here to there? (45 mins, 11:45-12:30)
       www.google.com)
    -  Responses take over 4 seconds (on Windows)
 
-#### Good troubleshooting technique (40 mins, 16:55-17:35)
+Good troubleshooting technique (40 mins, 16:55-17:35)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use some slides from the `Solving Network Problems Presentation <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst>`_.
 
@@ -648,27 +709,29 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
    -  Do no harm (make sure you can quickly undo whatever you've
       done, and it won't cause bigger problems later)
 
--  Simulating Problems (30 mins)
-
--  Want to practice solving some problems in the lab
--  What can we simulate?
-
-   -  Look at the list of problems from day 1, and brainstorm ways to
-      simulate them (30 mins)
-
 #### Feedback (15 mins, 17:35-17:50)
 
 ## Wednesday
       
 ### Troubleshoot network problems
 
-#### Building a virtual network (1h 45m, 08:30-10:15)
+Simulating Problems (30 mins, 08:30-09:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Want to practice solving some problems in the lab
+-  What can we simulate?
+
+   -  Look at the list of problems from day 1, and brainstorm ways to
+      simulate them
+
+Building a virtual network (1h 15m, 09:00-10:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  This is optional, only need to do it if people want to simulate
    network problems (but that's quite likely)
 -  We may need to cover VLANs first, if we don't have a second NIC in
-   the servers (1 hour?)
--  Make the virtual machine into a virtual router: (2 hours)
+   the servers (1 hour extra?)
+-  Make the virtual machine into a virtual router: (1h 15m)
 
    -  Plenty of network debugging practice here!
    -  Split into groups as necessary to configure one machine each
@@ -683,12 +746,18 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
    -  Configure the upstream router to route the subnet back via the
       virtual router
 
-#### Break (30 mins, 10:15-10:45)
+Break (30 mins, 10:15-10:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       
-#### Simulating latency and packet loss (45 mins, 10:45-11:30)
+Simulating latency and packet loss (45 mins, 10:45-11:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Measuring latency (ping; 5 mins)
--  tc commands to add latency to an interface: (10 mins)
+-  What is latency? (5 mins)
+-  Measuring latency (5 mins)
+
+   -  What are we measuring? Round trip time.
+   
+-  tc commands to add latency to an interface: (5 mins)
 
    -  tc qdisc add dev eth0 root netem delay 97ms
    -  tc -s qdisc
@@ -715,9 +784,14 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
 
 -  How would you make it permanent (5 mins)
 
-#### Simulating limited bandwidth (1 hr, 11:30-12:30)
+Simulating limited bandwidth (1 hr, 11:30-12:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Why would we want to do this? (5 mins)
+   -  So we can see how much bandwidth we need to load pages
+   -  See the effects of different bandwidth settings
+   -  Need to restrict bandwidth to own the queue, for traffic engineering
+   
 -  Measuring bandwidth (5 mins)
 
    -  what are we actually measuring?
@@ -758,9 +832,11 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
 
 -  Measure the results; is it what you expected? (15 mins)
 
-#### Lunch Break (1hr, 12:30-13:30)
+Lunch Break (1hr, 12:30-13:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Contention with other users (15 mins, 13:30-13:45)
+Competition with other users (15 mins, 13:30-13:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Only makes sense with limited bandwidth
 -  Use ab to generate concurrent streams: (5 mins)
@@ -772,7 +848,8 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
 -  What happens when you vary the number of concurrent streams (ab
    -c parameter)? (5 mins)
 
-#### Solving common problems (1 hr, 13:45-14:45)
+Solving common problems (1 hr, 13:45-14:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 How would you attack them? What would you look for? Can you reproduce it
 on our test network?
@@ -798,13 +875,16 @@ we hope to cover these later:
 -  Blocking websites (iptables firewalls, squid, dansguardian)
 -  Blocking traffic based on keywords (dansguardian)
 
-#### Further study
+Further study
+~~~~~~~~~~~~~
 
 -  Add DNS performance testing, flood pings, ssh.
 
-### Network capacity planning (14:45)
+14:45: Network capacity planning
+--------------------------------
 
-#### Why do we need to plan capacity? (10 min, 14:45-14:55)
+Why do we need to plan capacity? (10 min, 14:45-14:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What happens as a road becomes more full? (2 min)
 
@@ -820,7 +900,8 @@ we hope to cover these later:
 -  And how you do this will determine how much bandwidth you need
    (2 min)
 
-#### What's going to change in future? (25 min, 14:55-15:20)
+What's going to change in future? (25 min, 14:55-15:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  More devices connected? How many and when? (5 min)
 -  More wireless clients? How much have they grown? (5 min)
@@ -836,12 +917,13 @@ we hope to cover these later:
       (`https://en.wikipedia.org/wiki/Dropbox\_(service)#History) <https://en.wikipedia.org/wiki/Dropbox_(service)#History)>`_
    -  Has your demand for cloud services been doubling every year?
 
-#### Break (30 mins, 15:20-15:50)
+Break (30 mins, 15:20-15:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
-#### How much local traffic do you use? (30 mins. 15:50-16:20)
+How much local traffic do you use? (30 mins. 15:50-16:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  What services do you run locally? (go round, 10 mins, keep a
-   tally)
+-  What services do you run locally? (go round, 10 mins, keep a tally)
 -  How much bandwidth is available to end users? (10 mins)
 
    -  Where are the bottlenecks?
@@ -855,7 +937,8 @@ we hope to cover these later:
 
 -  If you don't know, how would you find out? (2 mins)
 
-#### Wireless capacity planning (30 min, 16:20-16:50)
+Wireless capacity planning (30 min, 16:20-16:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How much bandwidth is available from each AP? (2 min)
 
@@ -907,7 +990,8 @@ we hope to cover these later:
    -  Identify stations with high probe and retransmission rates,
       probably have marginal signal
 
-#### What will it cost? (10 mins, 16:50-17:00)
+What will it cost? (10 mins, 16:50-17:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 How will you budget for it? How much do you need to spend every year?
 And on what?
@@ -935,9 +1019,11 @@ And on what?
 
    -  `http://drpeering.net/white-papers/Internet-Transit-Pricing-Historical-And-Projected.php <http://drpeering.net/white-papers/Internet-Transit-Pricing-Historical-And-Projected.php>`_
 
-### Understand traffic on an Internet connection (17:00)
+17.00: Understand traffic on an Internet connection
+---------------------------------------------------
 
-#### Theoretical and actual capacity (35 mins, 17:00-17:35)
+Theoretical and actual capacity (35 mins, 17:00-17:35)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Why would they be different? (5 mins)
 
@@ -990,13 +1076,17 @@ And on what?
       -  Pretty much nothing you can do, except complain, negotiate
          or switch ISP!
 
-#### Feedback (15 mins, 17:35-17:50)
+Feedback (15 mins, 17:35-17:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Thursday
+Thursday
+========
 
-### Understand traffic on an Internet connection, continued (08:30)
+08.30: Understand traffic on an Internet connection, continued
+--------------------------------------------------------------
 
-#### How much bandwidth do you need? (5 mins, 08:30-08:35)
+How much bandwidth do you need? (5 mins, 08:30-08:35)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What does it take to ensure that web pages load quickly? (2 mins)
 -  `Bandwidth required to load a <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#how-much-free-bandwidth-do-i-need>`_
@@ -1005,10 +1095,12 @@ And on what?
 -  Also: fast, reliable DNS service and local bandwidth (think
    about wireless)
 
-#### What's going on on your connection? (15 mins, 08:35-08:50)
+What's going on on your connection? (15 mins, 08:35-08:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Participants who brought traffic graphs, please show them (5
    mins)
+   -  Otherwise you can use the ones from `Unit 7 <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#overall-traffic-level>`_
 -  Can we identify any features? (5 mins)
 
    -  Times of peak usage and little usage
@@ -1020,9 +1112,10 @@ And on what?
 -  What are the heaviest uses of bandwidth? (2 mins)
 -  How much do they use? What percentage do they represent?
 
-#### Further study
+Further study
+~~~~~~~~~~~~~
 
--  Link speed and overhead
+-  Link speed, encapsulation and overhead
 -  MTU and MSS
 -  Queueing, packet loss and effects on performance throughput
 -  Monitoring switch ports and routers (practical with Cacti, SNMP; 1
@@ -1046,7 +1139,8 @@ And on what?
    length with cross-traffic; 1 hour)
 -  Tracking down a rogue DHCP server
 
-#### Tracking down an IP address (30 mins, 08:50-09:20)
+Tracking down an IP address (30 mins, 08:50-09:20)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
 -  everyone writes up their used IP addresses on the board (10 mins)
 -  choose an IP address used by another group
@@ -1054,7 +1148,8 @@ And on what?
 -  if they struggle, explain how they can log into switches and look
    at the forwarding tables to see which MAC addresses are on which port
    
-#### Bandwidth/traffic management (10 mins, 09:20-09:30)
+Bandwidth/traffic management (10 mins, 09:20-09:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to ensure that (some) road journeys are fast, what can
 you do?
@@ -1070,10 +1165,10 @@ you do?
 -  Arrest people for driving slowly
 -  We'll come back to all of these in more detail
 
-#### Give some vehicles/packets priority over others (10 mins, 09:30-09:40)
+Give some vehicles/packets priority over others (10 mins, 09:30-09:40)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  What happens when the police try to drive through a traffic
-   jam?
+-  What happens when the police try to drive through a traffic jam?
 -  Does it help? How much?
 -  Why does the same apply to network connections?
 
@@ -1086,7 +1181,8 @@ you do?
 -  You must `control the queue <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#effects-of-higher-demand-than-supply>`_!
 -  You usually don't control the incoming queue (from your ISP)
 
-#### Reserve capacity for some types of traffic (20 mins, 09:40-10:00)
+Reserve capacity for some types of traffic (20 mins, 09:40-10:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  On the road: have a special lane for emergency vehicles
 -  On the web: reserve some bandwidth
@@ -1119,7 +1215,8 @@ you do?
 
 -  Still need to control the queue!
 
-#### Limit the amount of traffic each user can cause (10 mins, 10:00-10:10)
+Limit the amount of traffic each user can cause (10 mins, 10:00-10:10)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Per-user quotas or bandwidth restrictions
 -  Ensures that users downloading heavily will only affect
@@ -1149,18 +1246,23 @@ you do?
       towards their quota
    -  Use TOS flags to catch some downloads early
 
-#### Increase the cost of use (5 mins, 10:10-10:15)
+Increase the cost of use (5 mins, 10:10-10:15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Road analogy: increase the cost of petrol
 -  What are the effects?
 -  How would students react? Who can afford to pay?
 -  How would you implement it? (use the same tools as for quotas)
 
-#### Further study
+Further study
+~~~~~~~~~~~~~
 
 Look at the other alternatives above.
          
-### Network quality of service (TODO)
+Network quality of service
+--------------------------
+
+TODO: plan this unit in more detail, with activities and timings
 
 Monitor and manage the network quality of service
 
@@ -1174,7 +1276,10 @@ Monitor and manage the network quality of service
 -  Build a VoIP network with Asterisk
 -  Measure effects of cross-traffic on call quality
 
-### Maximise uptime by fault mitigation (TODO)
+Maximise uptime by fault mitigation (TODO)
+------------------------------------------
+
+TODO: plan this unit in more detail, with activities and timings
 
 -  What creates downtime?
 -  How long is the downtime? (detection+diagnosis+repair+restoration)
@@ -1194,14 +1299,16 @@ Monitor and manage the network quality of service
    approach)
 -  Scheduling downtime, keeping users informed
 
-## Friday
+Friday
+======
 
-### Encourage organisational behaviour change (08:30)
+08.30: Encouraging organisational behaviour change
+--------------------------------------------------
 
-#### Explore some interactions with staff or students (1 hr, 08:30-09:30)
+Explore some interactions with staff or students (1 hr, 08:30-09:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  We're going to try out what happens when we interact with our
-   users
+-  We're going to try out what happens when we interact with our users
 -  Rather than put people on the spot, we'll go round volunteering a
    difficult (but real) question/interaction with a user.
 -  The people interacting are anonymised, for example "a sysadmin"
@@ -1217,7 +1324,8 @@ Monitor and manage the network quality of service
 -  How does the user feel after this interaction? (1 min)
 -  How could the interaction have gone better? (1 min)
 
-#### How do you interact with users? (1 hr, 09:30-10:30)
+How do you interact with users? (1 hr, 09:30-10:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Split up into groups of 4
 -  Discuss/brainstorm on these questions (20 mins):
@@ -1238,9 +1346,11 @@ Monitor and manage the network quality of service
    -  being proactive to prevent failures
    -  keeping users informed
 
-#### Break (10:30-11:00)   
+Break (10:30-11:00)
+~~~~~~~~~~~~~~~~~~~
    
-#### Do you know what users want? (1 hr, 11:00-12:00)
+Do you know what users want? (1 hr, 11:00-12:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's go talk to some!
 
@@ -1258,7 +1368,8 @@ Let's go talk to some!
    users? (5 min)
 -  Get people to write notes on a lopad
 
-#### How to affect user behaviour (25 mins, 12:00-12:25)
+How to affect user behaviour (25 mins, 12:00-12:25)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Introduce supply and demand (5 mins)
 -  Introduce the Tragedy of the Commons (5 mins)
@@ -1278,9 +1389,11 @@ Let's go talk to some!
       `INASP PDW unit 2 <https://github.com/aptivate/inaspmaterials/blob/master/pdw/Unit%202/Unit2.ppt>`_,
       slides 5-6)
 
-#### Lunch break (1 hr, 12:30-13:30)
+Lunch break (1 hr, 12:30-13:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Alternatives to policy (15 mins, 13:30-13:45)
+Alternatives to policy (15 mins, 13:30-13:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What are the alternatives to creating a policy? What advantages
 and disadvantages do they have? 
@@ -1297,7 +1410,8 @@ and disadvantages do they have?
    printer faster; encourage/enable printing at different times;
    spread out dissertation printing.
 
-#### What makes a good policy? (15 mins, 13:30-13:45)
+What makes a good policy? (15 mins, 13:30-13:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Brainstorm; use the slides from `PDW Unit 2 <https://github.com/aptivate/inaspmaterials/blob/master/pdw/Unit%202/Unit2.ppt>`_
 as prompts if necessary.
@@ -1327,7 +1441,8 @@ as prompts if necessary.
 -  How can we help our university and our department? (negotiating
    policy, being proactive)
 
-#### How good is your policy? (1 hr, 13:45-14:45)
+How good is your policy? (1 hr, 13:45-14:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
 -  Examine participants' policies (15 mins)
 
@@ -1344,7 +1459,8 @@ as prompts if necessary.
 
 -  Practical: in pairs, negotiate a policy with each other (15 mins)
    
-#### Request Management (15 mins, 13:45-14:00)
+Request Management (15 mins, 13:45-14:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Help desks and ticketing systems
 
@@ -1395,10 +1511,27 @@ Help desks and ticketing systems
 
    -  sudo python manage.py syncdb
 
+How can we be effective, help and support each other? (15 mins)
+---------------------------------------------------------------
 
--  How can we be effective, help and support each other?
+Brainstorm for ideas about forming a support network:
 
-### Confidently change and manage network configuration
+-  Why would we do it?
+-  How much time can we allocate?
+-  What can we get funding for?
+-  What works well?
+   -  Exchanges?
+   -  Visits?
+   -  Emails?
+   -  Online forum?
+   -  Conference call?
+-  How can we ensure that it happens?
+-  How can we involve new staff as they arrive?
+
+Confidently change and manage network configuration
+---------------------------------------------------
+
+TODO: plan this in more detail, with activities and timings
 
 -  What is the configuration? How big is it?
 -  Practical: set up RANCID to download and version configurations
@@ -1410,11 +1543,4 @@ Help desks and ticketing systems
 -  Practical: backup and restore a Unix virtual machine with duplicity
 -  Practical: backup and restore a Windows virtual machine with system
    imaging
-
-   
-If necessary to trim down:
-
--  What makes them best able to meet the needs of the academic staff?
--  Which exercises am I confident will work well?
--  Which are essential to other essential exercises?
 
