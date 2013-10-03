@@ -10,9 +10,9 @@ Goal
 
 The goal of this training is to:
 
-   -  Improve ability of network managers to understand and meet the
-      needs of academic staff?
-   -  Improve staff access to journals and the academic Internet
+-  Improve ability of network managers to understand and meet the
+   needs of academic staff?
+-  Improve staff access to journals and the academic Internet
 
 Aims and Objectives
 -------------------
@@ -199,8 +199,10 @@ Presentation (1hr, 09:30-10:30)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Work through the presentation
-   `In-building Network Design <https://nsrc.org/workshops/2009/summer/detailed.html>`_,
-   by Carlos Vicente of NSRC.
+   *In-building Network Design* by Carlos Vicente of NSRC
+   (`PDF <https://nsrc.org/workshops/2009/summer/presentations/day2/layer2-network-design.pdf>_`,
+   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day2/layer2-network-design.odp>`_ or
+   `PowerPoint <https://nsrc.org/workshops/2009/summer/presentations/day2/layer2-network-design.ppt>`_)
 -  Discuss the slides with the participants
 -  Aask them to put forward any important points that they want to remember
    when we come to build the test network, or redesign their campus network.
