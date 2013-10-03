@@ -161,21 +161,21 @@ went well about the day, and what they'd like to change in future. This can
 help the facilitators to refine and adapt the course to the needs of the
 participants.
 
-.. csv-table:: Target Daily Timetable
-   :header: "Time", "Activity"
-   :stub-columns: 1
-   :delim: :
-   08.00: morning walk
-   08.30: session 1
-   10.15: break
-   10.45: session 2
-   12.30: lunch break
-   13.30: session 3
-   15.15: break
-   15.45: session 4
-   17.30: feedback
-   17.45: end
-   19.00-22.00: evening clinic and preparation
+============ ==============================
+Time         Activity
+============ ==============================
+08.00        morning walk
+08.30        session 1
+10.15        break
+10.45        session 2
+12.30        lunch break
+13.30        session 3
+15.15        break
+15.45        session 4
+17.30        feedback
+17.45        end
+19.00-22.00  evening clinic and preparation
+============ ==============================
 
 Monday
 ======
