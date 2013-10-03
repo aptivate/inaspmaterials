@@ -711,11 +711,14 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
    -  Do no harm (make sure you can quickly undo whatever you've
       done, and it won't cause bigger problems later)
 
-#### Feedback (15 mins, 17:35-17:50)
+Feedback (15 mins, 17:35-17:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Wednesday
+Wednesday
+=========
       
-### Troubleshoot network problems
+Troubleshoot network problems
+-----------------------------
 
 Simulating Problems (30 mins, 08:30-09:00)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1266,6 +1269,40 @@ Look at the other alternatives above.
          
 Network quality of service
 --------------------------
+
+What do we want to monitor?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Statistics
+   -  Packet Loss
+   -  Latency
+   -  Bandwidth
+   -  Errors
+   -  Web page loading speed
+   -  DNS speed
+-  What do you want to know?
+   -  How are they right now? (is something wrong?)
+   -  How do they compare to last week/month/year? (is it getting better/worse?)
+   -  Were they bad this morning/yesterday? (why did I get so many complains)
+   -  Are they worse at certain times of day? (is something unexpected happening?)
+
+Round Robin Databases
+~~~~~~~~~~~~~~~~~~~~~
+
+-  How would you collect this?
+   -  Ping every 5 minutes?
+   -  Store for a year?
+-  How much data do you need to store?
+   -  20 samples x (60/5) per hour x 24 hrs x 365 days? (2.1 million samples)
+   -  How are you going to display it?
+   -  How will you discard old data from the database?
+-  Solution: Round Robin Database (RRD)
+   -  Keep a certain number of data points
+   -  Automatically overwrite old ones
+   -  Automatically maintain aggregates (minimum, maximum, average) over
+      different time periods
+      
+   
 
 TODO: plan this unit in more detail, with activities and timings
 
