@@ -399,7 +399,7 @@ Feedback (15 mins, 17:15-17:30)
 Tuesday
 =======
 
-08:30: Network Design, continued
+08.30: Network Design, continued
 --------------------------------
    
 Synthesize (30 mins, 08:30-09:00)
@@ -502,8 +502,8 @@ Further study
 Lunch (1hr, 12:30-13:30)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Troubleshoot network problems (13:30)
--------------------------------------
+13.30: Troubleshoot network problems
+------------------------------------
 
 Preparing our servers (30 mins, 13:30-14:00)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -880,7 +880,7 @@ Further study
 
 -  Add DNS performance testing, flood pings, ssh.
 
-14:45: Network capacity planning
+14.45: Network capacity planning
 --------------------------------
 
 Why do we need to plan capacity? (10 min, 14:45-14:55)
@@ -1079,8 +1079,8 @@ Theoretical and actual capacity (35 mins, 17:00-17:35)
 Feedback (15 mins, 17:35-17:50)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Thursday
-========
+Wednesday
+=========
 
 08.30: Understand traffic on an Internet connection, continued
 --------------------------------------------------------------
@@ -1276,8 +1276,8 @@ Monitor and manage the network quality of service
 -  Build a VoIP network with Asterisk
 -  Measure effects of cross-traffic on call quality
 
-Maximise uptime by fault mitigation (TODO)
-------------------------------------------
+Maximise uptime by fault mitigation
+-----------------------------------
 
 TODO: plan this unit in more detail, with activities and timings
 
@@ -1531,7 +1531,7 @@ Brainstorm for ideas about forming a support network:
 Confidently change and manage network configuration
 ---------------------------------------------------
 
-TODO: plan this in more detail, with activities and timings
+TODO: plan this unit in more detail, with activities and timings
 
 -  What is the configuration? How big is it?
 -  Practical: set up RANCID to download and version configurations
