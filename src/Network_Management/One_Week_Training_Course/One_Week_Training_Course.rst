@@ -110,10 +110,14 @@ Participant Requirements
 Venue Setup
 -----------
 
+-  Print some copies of the `Vi Quick Reference <http://www.ws.afnog.org/afnog2013/unix-intro/references/vi-quick-reference.pdf>`_
+   (perhaps one for every two participants).
 -  Wall area set up for parking area (topics to revisit later).
 -  Equipment in space, but NOT connected.
 -  Download Ubuntu Live DVD, VirtualBox for Ubuntu, CentOS, Mac and
-   Windows and guest additions onto the shared drive.
+   Windows and guest additions onto the shared drive or the
+   Class Router/Server. Ensure that participants can find and download
+   them from their computers.
 -  Set up a DHCP server, and TFTP network install of Ubuntu from a
    server.
 
@@ -125,6 +129,8 @@ Venue Setup
 -  Set up an iperf server (for clients to connect to).
 -  Set up Cacti and configure it to draw traffic graphs from the host's
    router.
+-  Prepare router cheat sheets
+-  Set up a DNS server and domain (``localdomain``) on the Class Router/Server.
 
 Reporting
 ---------
@@ -412,6 +418,8 @@ Synthesize (30 mins, 08:30-09:00)
    goal is to reach a shared vision/understanding of the network, so
    everyone can help build it. Need to carefully control time and
    shepherd)
+-  Negotiate to remove as many differences as possible from the
+   `reference plan <https://raw.github.com/aptivate/inaspmaterials/master/src/Network_Management/One_Week_Training_Course/images/test-network-design.png>`_.
 -  "Participatory Budget" (allocate equipment to plan, maybe VLANs;
    10-15 mins)
 
@@ -423,8 +431,8 @@ Build the test network (1h 15m, 09:00-10:15)
    cables (30 mins)
 -  Shuffle groups so each has at least one person with Cisco
    experience (5 mins)
--  Prepare to configure the routers: put up a cheat sheet, get access
-   to console (10 mins)
+-  Prepare to configure the routers (linux/pfsense/vyatta/cisco): put up a
+   cheat sheet, get access to console (10 mins)
 -  **TODO cisco (or vyatta) router setup cheat sheet**
 -  Configure the routers and test (20 mins)
 -  Swap two people with another group and test their configuration
@@ -550,8 +558,40 @@ Virtualisation (40 mins, 14:00-14:40)
 -  How do we create a virtual machine? (10 mins to go through the
    options and create the first one)
 -  Install Ubuntu ISO in the virtual machine (10 mins to get started)
+-  Install Vyatta/pfSense in a virtual machine (**TODO** add time for this)
 
-IP addresses, subnets and routing: (35 mins, 14:40-15:15)
+Introduction to Unix 1 (2 hrs, 15:45-17:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  These materials are provided or based on the work of NSRC, please give
+   them credit.
+-  Show the `Introduction to Commands <http://www.ws.afnog.org/afnog2013/unix-intro/presos/intro-commands.pdf>`_ presentation from Afnog 2013 Unix Intro. (1 hr)
+-  Demonstrate the use of tab completion in the shell on slide 17. (5 min)
+-  Ask participants to work through the
+   `Linux Familiarization and Commands Exercises <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/One_Week_Training_Course/Linux_Familiarization_and_Commands_Exercises.rst>`_. (1 hr)
+
+Feedback (15 mins, 17:45-18:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wednesday
+=========
+
+Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  These materials are provided or based on the work of NSRC, please give
+   them credit.
+-  Show the `Editing <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing.pdf>`_
+   presentation from Afnog 2013 Unix Intro. (30 min)
+-  Ask participants to work through the
+   `Editing Exercises <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.pdf>`_
+   -  Source can be `downloaded <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.doc>`_
+      in MS Word format if you need to modify this exercise. (1 hr?)
+      
+Break (30 mins, 10:00-10:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      
+IP addresses, subnets and routing: (35 mins, 10:30-11:05)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is an IP address? How long is it? (2 mins)
@@ -566,10 +606,7 @@ IP addresses, subnets and routing: (35 mins, 14:40-15:15)
 -  How do you do this on Windows? What does the output look like? (4
    mins)
 
-Break (30 mins, 15:15-15:45)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Ethernet addresses (20 mins, 15:45-16:05)
+Ethernet addresses (20 mins, 11:05-11:25)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is an Ethernet address? How long is it? (2 mins)
@@ -589,7 +626,7 @@ Ethernet addresses (20 mins, 15:45-16:05)
 -  How do you go the other way, from MAC address to IP address?
    (sniffer, ping scan + arp, DHCP leases; 3 mins)
 
-Duplicate IP addresses and DHCP (15 mins, 16:05-16:20)
+Duplicate IP addresses and DHCP (15 mins, 11:25-11:40)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What happens if you have duplicate IP addresses on the network
@@ -600,7 +637,7 @@ Duplicate IP addresses and DHCP (15 mins, 16:05-16:20)
 -  In pairs, create a duplicate IP address on the network, and list
    both the MAC addresses (10 mins)
 
-Traceroute (15 mins, 16:20-16:35)
+Traceroute (15 mins, 11:40-11:55)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How do we use Traceroute? What destination do we use? What does it
@@ -629,7 +666,7 @@ Traceroute (15 mins, 16:20-16:35)
    -  what is the effect of a router filtering out ICMP packets?
    -  so how does traceroute actually work?
 
-Troubleshooting network connectivity (20 mins, 16:35-16:55)
+Troubleshooting network connectivity (20 mins, 11:55-12:15)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Imagine you can't ping an address on the internet.
@@ -649,8 +686,8 @@ Troubleshooting network connectivity (20 mins, 16:35-16:55)
       www.google.com)
    -  Responses take over 4 seconds (on Windows)
 
-Good troubleshooting technique (40 mins, 16:55-17:35)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Good troubleshooting technique 1 (15 mins, 12:15-12:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use some slides from the `Solving Network Problems Presentation <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst>`_.
 
@@ -673,6 +710,12 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
    -  Respond to a problem (1 min)
    -  Identify possible causes (1 min)
    -  Eliminate causes (1 min)
+
+Lunch Break (1hr, 12:30-13:30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+Good troubleshooting technique (25 mins, 13:30-13:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How do we respond to a problem? (brainstorm, 5 mins)
 
@@ -713,16 +756,10 @@ You can use some slides from the `Solving Network Problems Presentation <https:/
    -  Do no harm (make sure you can quickly undo whatever you've
       done, and it won't cause bigger problems later)
 
-Feedback (15 mins, 17:35-17:50)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Wednesday
-=========
-      
 Troubleshoot network problems
 -----------------------------
 
-Simulating Problems (30 mins, 08:30-09:00)
+Simulating Problems (30 mins, 13:55-14:25)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Want to practice solving some problems in the lab
@@ -731,7 +768,7 @@ Simulating Problems (30 mins, 08:30-09:00)
    -  Look at the list of problems from day 1, and brainstorm ways to
       simulate them
 
-Building a virtual network (1h 15m, 09:00-10:15)
+Building a virtual network (1h 15m, 14:25-15:40)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  This is optional, only need to do it if people want to simulate
@@ -753,10 +790,10 @@ Building a virtual network (1h 15m, 09:00-10:15)
    -  Configure the upstream router to route the subnet back via the
       virtual router
 
-Break (30 mins, 10:15-10:45)
+Break (30 mins, 15:40-15:55)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       
-Simulating latency and packet loss (45 mins, 10:45-11:30)
+Simulating latency and packet loss (45 mins, 15:55-16:40)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What is latency? (5 mins)
@@ -791,7 +828,7 @@ Simulating latency and packet loss (45 mins, 10:45-11:30)
 
 -  How would you make it permanent (5 mins)
 
-Simulating limited bandwidth (1 hr, 11:30-12:30)
+Simulating limited bandwidth (1 hr, 16:40-17:40)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Why would we want to do this? (5 mins)
@@ -839,10 +876,13 @@ Simulating limited bandwidth (1 hr, 11:30-12:30)
 
 -  Measure the results; is it what you expected? (15 mins)
 
-Lunch Break (1hr, 12:30-13:30)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Feedback (15 mins, 17:40-17:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Competition with other users (15 mins, 13:30-13:45)
+Thursday
+========
+
+Competition with other users (15 mins, 08:30-08:45)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Only makes sense with limited bandwidth
@@ -855,7 +895,7 @@ Competition with other users (15 mins, 13:30-13:45)
 -  What happens when you vary the number of concurrent streams (ab
    -c parameter)? (5 mins)
 
-Solving common problems (1 hr, 13:45-14:45)
+Solving common problems (1 hr, 08:45-09:45)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 How would you attack them? What would you look for? Can you reproduce it
@@ -890,7 +930,7 @@ Further study
 14.45: Network capacity planning
 --------------------------------
 
-Why do we need to plan capacity? (10 min, 14:45-14:55)
+Why do we need to plan capacity? (10 min, 09:45-09:55)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What happens as a road becomes more full? (2 min)
@@ -907,7 +947,7 @@ Why do we need to plan capacity? (10 min, 14:45-14:55)
 -  And how you do this will determine how much bandwidth you need
    (2 min)
 
-What's going to change in future? (25 min, 14:55-15:20)
+What's going to change in future? (25 min, 09:55-10:20)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  More devices connected? How many and when? (5 min)
@@ -924,10 +964,10 @@ What's going to change in future? (25 min, 14:55-15:20)
       (`https://en.wikipedia.org/wiki/Dropbox\_(service)#History) <https://en.wikipedia.org/wiki/Dropbox_(service)#History)>`_
    -  Has your demand for cloud services been doubling every year?
 
-Break (30 mins, 15:20-15:50)
+Break (30 mins, 10:20-10:50)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
-How much local traffic do you use? (30 mins. 15:50-16:20)
+How much local traffic do you use? (30 mins. 10:50-11:20)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  What services do you run locally? (go round, 10 mins, keep a tally)
@@ -944,7 +984,7 @@ How much local traffic do you use? (30 mins. 15:50-16:20)
 
 -  If you don't know, how would you find out? (2 mins)
 
-Wireless capacity planning (30 min, 16:20-16:50)
+Wireless capacity planning (30 min, 11:20-11:50)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  How much bandwidth is available from each AP? (2 min)
@@ -997,7 +1037,7 @@ Wireless capacity planning (30 min, 16:20-16:50)
    -  Identify stations with high probe and retransmission rates,
       probably have marginal signal
 
-What will it cost? (10 mins, 16:50-17:00)
+What will it cost? (10 mins, 11:50-12:00)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 How will you budget for it? How much do you need to spend every year?
@@ -1026,6 +1066,146 @@ And on what?
 
    -  `http://drpeering.net/white-papers/Internet-Transit-Pricing-Historical-And-Projected.php <http://drpeering.net/white-papers/Internet-Transit-Pricing-Historical-And-Projected.php>`_
 
+Network Monitoring
+------------------
+
+.. figure:: images/test-network-design.png
+   :caption: Example network diagram, repeated for easy reference
+   
+-  What can we monitor?
+   -  use slides from `Unit 7 Presentation <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst>`_
+-  Monitoring service availability, connectivity, bandwidth, latency,
+   packet loss
+-  Install and configure Nagios to alert you of network problems
+   (`PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.pdf>`_,
+   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.odp>`_
+   or `Powerpoint <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.ppt>`_)
+   -  Basic exercise: Install Nagios, add a host and a service, email notification
+   -  Medium exercise: Define host and service groups and check commands,
+      SMS notification
+   -  Advanced exercise: Writing your own checks, bandwidth check, NRPE
+-  Monitoring Nagios on your desktop and phone
+-  Install and configure Cacti to monitor switch ports and routers
+-  Importance of network documentation
+   -  Practical using Netdot
+
+   -  Example network diagram
+   -  Keeping documentation
+
+      -  Swap over and use someone else's setup half way through
+      -  Reverse DNS, public whois data and abuse contacts
+
+   -  Network monitoring
+
+      -  nagios (fault management:
+         `https://github.com/aptivate/inaspmaterials/blob/master/src/Network\_Management/Unit\_4\_Network\_Management/Unit\_4\_Presentation\_Part\_03\_Fault\_Management.rst#what-is-fault-management) <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_03_Fault_Management.rst#what-is-fault-management)>`_
+      -  early detection:
+         `https://github.com/aptivate/inaspmaterials/blob/master/src/Network\_Management/Unit\_4\_Network\_Management/Unit\_4\_Presentation\_Part\_05\_Early\_Detection.rst <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_05_Early_Detection.rst>`_
+      -  smokeping (early detection of packet loss and latency issues:
+         query the RRD using Nagios for alerting?)
+      -  network traffic logging/forensics using pmacct
+      -  ddos detection using pmacct
+
+         -  average UDP packet size
+         -  number of unreplied UDP packets
+
+            -  pre\_tag\_map: set\_tag=3 filter='udp'
+            -  pre\_tag\_filter[ddos\_unreplied\_udp]: 3
+            -  aggregate[ddos\_unreplied\_udp]: src\_host, src\_port,
+               dst\_host, dst\_port
+            -  SELECT src\_host, COUNT(\*) AS unreplied\_udps FROM
+               ddos\_unreplied\_udp AS out LEFT JOIN
+               ddos\_unreplied\_udp AS return ON return.ip\_src =
+               out.ip\_dst AND return.port\_src = out.port\_dst AND
+               return.ip\_dst = out.ip\_src AND return.port\_dst =
+               out.port\_src WHERE return.ip\_src IS NULL;
+
+         -  number of outbound connections
+
+            -  pre\_tag\_map: set\_tag=5 filter='tcp[13]=2'
+            -  pre\_tag\_filter[ddos\_syn\_packets]: 5
+            -  aggregate[ddos\_syn\_packets]: src\_host
+            -  SELECT src\_host, SUM(packets) AS syn\_packets FROM
+               ddos\_syn\_packets WHERE stamp\_inserted >
+               date\_sub(now(), interval 4 hours) HAVING syn\_packets >
+               10000;
+
+         -  number of remote hosts contacted (unique destination IP
+            addresses)
+
+            -  aggregate[ddos\_remote\_hosts]: src\_host, dst\_host
+            -  SELECT src\_host, COUNT(DISTINCT dst\_host) AS dst\_hosts
+               FROM ddos\_remotehosts WHERE stamp\_inserted >
+               date\_sub(now(), interval 4 hours) AND
+
+         -  total volume of outbound traffic, and per destination host
+
+            -  aggregate[ddos\_total\_traffic]: src\_host
+            -  aggregate[ddos\_src\_dst]: src\_host, dst\_host
+
+         -  monitoring and alerting using Nagios
+
+      -  interface traffic levels: cacti
+      -  real-time anomaly detetcion:
+         `https://github.com/etsy/skyline <https://github.com/etsy/skyline>`_
+
+Network Management
+------------------
+
+   -  Network access control
+
+      -  Enabling port security and tracking users by MAC address
+      -  Build a RADIUS-compatible directory
+
+         -  Password strength, change and expiration policies
+         -  Importing users in bulk
+
+      -  Enable 802.1x authentication on wireless networks
+      -  Enable 802.1x authentication on wired ports
+      -  Captive portals for guests (with tickets) and self-registration
+      -  Integrating service authentication with the directory
+
+         -  Web servers, file servers
+
+   -  Firewalls
+
+      -  general security principles: block by default, declared
+         servers, DMZ and isolation between departments
+      -  firewalling individual machines (defence in depth/crunchy
+         armadillo theory)
+      -  firewalls and web caches: forcing people to use the cache
+      -  limitations: layer 7/deep packet inspection (+DNS, HTTP
+         proxies), website hostnames/IP addresses
+      -  stateless and stateful firewalls
+      -  iptables firewalls
+      -  maybe vyatta firewall?
+         `http://carbonwind.net/VyattaOFR/Firewall/Firewall.htm <http://carbonwind.net/VyattaOFR/Firewall/Firewall.htm>`_
+
+   -  Bandwidth self-management
+
+      -  Implementing usage reporting with pmacct
+      -  Implementing quotas with pmacct and iptables/vyatta
+
+   -  Antivirus
+
+      -  Build an update distribution system for AVG?
+
+         -  Need to install Windows virtual machines for this, may take
+            a long time
+
+   -  Proxy caches
+
+      -  Internal DNS resolver/cache
+      -  Internal HTTP proxy/cache (Squid)
+      -  Blocking websites with Squid
+      -  Content filtering with Dans Guardian
+      -  Caching updates (Windows and antivirus)
+
+   -  Intrusion Detection
+   -  Penetration/scanning (Nessus, Inprotect, NMap)
+   -  
+   
+   
 17.00: Understand traffic on an Internet connection
 ---------------------------------------------------
 
@@ -1119,9 +1299,6 @@ What's going on on your connection? (15 mins, 08:35-08:50)
 -  What are the heaviest uses of bandwidth? (2 mins)
 -  How much do they use? What percentage do they represent?
 
-Monitoring switch ports and routers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Further study
 ~~~~~~~~~~~~~
 
@@ -1173,7 +1350,7 @@ you do?
    into off-peak periods
 -  Increase the cost of petrol, or charge tolls
 -  Arrest people for driving slowly
--  We'll come back to all of these in more detail
+-  We'll come back to all of these in more detail (**TODO**)
 
 Give some vehicles/packets priority over others (10 mins, 09:30-09:40)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1272,6 +1449,19 @@ Look at the other alternatives above.
 Network quality of service
 --------------------------
 
+TODO: plan this unit in more detail, with activities and timings
+
+Monitor and manage the network quality of service
+
+-  Monitoring network connection quality with Smokeping:
+   `PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.pdf>`_,
+   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.odp>`_ or
+   `PowerPoint <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.ppt>`_,
+   `exercises <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios-exercises.html>`_.
+-  Monitoring server performance and capacity with Munin
+-  Build a VoIP network with Asterisk
+-  Measure effects of cross-traffic on call quality
+
 What do we want to monitor?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1303,29 +1493,14 @@ Round Robin Databases
    -  Automatically overwrite old ones
    -  Automatically maintain aggregates (minimum, maximum, average) over
       different time periods
+   -  Draws pretty graphs
       
-   
+Smokeping example graph
+~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO: plan this unit in more detail, with activities and timings
+.. image:: http://oss.oetiker.ch/smokeping/doc/reading_detail.png
 
-Monitor and manage the network quality of service
-
--  Monitoring network connection quality with Smokeping:
-   `PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.pdf>`_,
-   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.odp>`_ or
-   `PowerPoint <https://nsrc.org/workshops/2009/summer/presentations/day5/smokeping.ppt>`_,
-   `exercises <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios-exercises.html>`_.
--  Install and configure Nagios to alert you of network problems:
-   `PDF <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.pdf>`_,
-   `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.odp>`_
-   or `Powerpoint <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.ppt>`_.
--  Monitoring service availability, connectivity, bandwidth, latency,
-   packet loss
--  Configure Nagios to send SMS alerts
--  Monitoring Nagios on your desktop and phone
--  Monitoring server performance and capacity with Munin
--  Build a VoIP network with Asterisk
--  Measure effects of cross-traffic on call quality
+`How to read it <http://oss.oetiker.ch/smokeping/doc/reading.en.html>`_.
 
 Maximise uptime by fault mitigation
 -----------------------------------
@@ -1471,7 +1646,7 @@ as prompts if necessary.
 -  Who needs to be involved in making policy? (5 mins)
 -  What encourages people to actively support the policy and
    follow it?
--  **Purpose:**Linked to a wider objective (e.g. What is the
+-  **Purpose**: Linked to a wider objective (e.g. What is the
    institutional objective? How does the policy support it? Why is
    this the best way to support it?)
 -  **Consultation**: Developed by a good process (everyone is
@@ -1587,6 +1762,7 @@ TODO: plan this unit in more detail, with activities and timings
 
 -  What is the configuration? How big is it?
 -  Practical: set up RANCID to download and version configurations
+   -  `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/config-management-rancid.pdf>`_
 -  Practical: make a change to another group's router, then swap and
    they have to identify what it was and reverse it
 -  Practical: set up network topology monitoring, swap with another
