@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="pfsense-install-freeradius2-2.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2225989"
+     inkscape:cx="525.71429"
+     inkscape:cy="385.71426"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1215"
+     inkscape:window-height="752"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <image
+       y="492.36218"
+       x="83"
+       id="image3060"
+       xlink:href="file:///home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2.png"
+       height="350"
+       width="885"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3069"
+       sodipodi:cx="236.3817"
+       sodipodi:cy="337.5834"
+       sodipodi:rx="44.168205"
+       sodipodi:ry="18.812384"
+       d="m 280.5499,337.5834 a 44.168205,18.812384 0 1 1 -88.33641,0 44.168205,18.812384 0 1 1 88.33641,0 z"
+       transform="translate(-0.21429443,308.98196)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3071"
+       sodipodi:cx="245.37892"
+       sodipodi:cy="432.05429"
+       sodipodi:rx="48.257854"
+       sodipodi:ry="14.313771"
+       d="m 293.63678,432.05429 a 48.257854,14.313771 0 1 1 -96.51571,0 48.257854,14.313771 0 1 1 96.51571,0 z"
+       transform="translate(-0.21429443,308.98196)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3073"
+       sodipodi:cx="942.66406"
+       sodipodi:cy="475.40457"
+       sodipodi:rx="15.949631"
+       sodipodi:ry="15.949631"
+       d="m 958.61369,475.40457 a 15.949631,15.949631 0 1 1 -31.89926,0 15.949631,15.949631 0 1 1 31.89926,0 z"
+       transform="translate(-1.8501539,310.61782)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="268.06668"
+       y="485.61218"
+       id="text3075"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3077"
+         x="268.06668"
+         y="485.61218"
+         style="font-size:24px;fill:#ff0000">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="180.63258"
+       y="652.73651"
+       id="text3075-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3077-3"
+         x="180.63258"
+         y="652.73651"
+         style="font-size:24px;fill:#ff0000">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="291.05313"
+       y="772.97223"
+       id="text3075-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3077-5"
+         x="291.05313"
+         y="772.97223"
+         style="font-size:24px;fill:#ff0000">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="939.67145"
+       y="825.3197"
+       id="text3075-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3077-9"
+         x="939.67145"
+         y="825.3197"
+         style="font-size:24px;fill:#ff0000">4</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3118"
+       sodipodi:cx="237.6086"
+       sodipodi:cy="190.765"
+       sodipodi:rx="29.036507"
+       sodipodi:ry="15.949631"
+       d="m 266.6451,190.765 a 29.036507,15.949631 0 1 1 -58.07301,0 29.036507,15.949631 0 1 1 58.07301,0 z"
+       transform="translate(4.0896488,312.35735)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-install-freeradius2-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

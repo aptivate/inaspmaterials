@@ -857,25 +857,336 @@ Automatically Detect Settings:
 .. image:: images/internet-explorer-enable-wpad.png
 	:width: 50%
 
-
-
-*	Click on the pfSense "add rule" button
-*	Add a rule to **reject** TCP traffic on the LAN interface to destination
-	port HTTP (80).
-*	Add another rule before this one, to **pass** TCP traffic on the LAN
-	interface to destination port 80 **from the proxy server VM**
-	(Under *Source*, choose *Single host or alias*, and enter the IP address
-	of the proxy server VM)
-*	Repeat the same rules for HTTPS (port 443).
-
-*	
-	
-To enable 
-
 Proxy Authentication
+--------------------
+
+The aim of proxy authentication is to:
+
+*	Ensure that unauthorised clients don't use your proxy servers
+	(to carry out illegal activity on your behalf, or waste your bandwidth);
+	and
+*	Ensure that each request is accountable to a particular user.
+
+About RADIUS
+~~~~~~~~~~~~
+
+What is RADIUS?
+
+*	Remote Authentication Dial-In User Service.
+*	Provides authentication: checking usernames and passwords against
+	a database.
+*	Provides authorization: details about which services a user is
+	allowed to access.
+*	Commonly used by network switches and access points to authenticate
+	users for the 802.1x protocol.
+*	RADIUS service can be linked to an Active Directory server.
+
+.. class:: handout
+
+For more details on RADIUS, see
+`this presentation <http://www.ws.afnog.org/afnog2013/sse/index.html#radius>`_
+or the `Wikipedia page <https://en.wikipedia.org/wiki/RADIUS>`_.
+
+Setting up a RADIUS Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RADIUS is a client-server protocol, so we need a server. It's easy to
+install and manage the FreeRADIUS software on pfSense, so we'll use that.
+
+More detailed instructions on installing and using FreeRADIUS on pfSense
+can be found in the
+`pfSense Documentation <https://doc.pfsense.org/index.php/FreeRADIUS_2.x_package>`_.
+
+Installing FreeRADIUS
+~~~~~~~~~~~~~~~~~~~~~
+
+To quickly install a RADIUS server (FreeRADIUS):
+
+.. image:: images/pfsense-install-freeradius2-2.png
+	:width: 70%
+
+*	Open the pfSense webConfigurator and log in.
+*	From the menu choose *System/Packages*.
+*	Scroll down to *freeradius2*.
+*	Click on the ``+`` icon to right of the package details.
+
+Configuring FreeRADIUS
+~~~~~~~~~~~~~~~~~~~~~~
+
+Having installed FreeRADIUS, we have to configure it.
+
+.. image:: pfsense-freeradius-add-interface.png
+	:width: 50%
+
+*	In the pfSense webConfigurator menu, choose *Services/FreeRADIUS*.
+*	Click on the *Interfaces* tab, and click on the *Add a new item*
+	icon on the right.
+*	Leave all the setting unchanged, and click on the *Save* button.
+*	Now click on the *NAS/Clients* tab, and click on the *Add a new item*
+	icon on the right.
+*	For *Client IP Address* enter the IP address of the Squid server
+	(which might be 192.168.1.100).
+*	For the *Client Shortname* enter ``squid``.
+*	For the *Client Shared Secret* enter a long random password, that will
+	also be entered on the Squid server. For testing purposes, set it to
+	``testing123``. Please be sure to change this password if you move to
+	production!
+*	For *Description* enter ``Squid Proxy Server``.
+
+Adding Users
+~~~~~~~~~~~~
+
+*	In the pfSense webConfigurator menu, choose *Services/FreeRADIUS*.
+*	Click on the *Users* tab, and click on the *Add a new item*
+	icon on the right.
+*	Enter a *Username* and *Password* for the new user. Clients will have
+	to log in as one of these users, to use the proxy server. For testing
+	purposes, you can create a user called ``john`` with password ``smith``.
+	Please be sure to delete this user if you move to production!
+*	Leave the other settings unchanged and click on the *Save* button.
+
+Testing RADIUS Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On the Squid proxy server, install the ``radtest`` application::
+
+	$ sudo apt-get install freeradius-utils
+	
+And run a test against the server::
+
+	$ radtest john smith 192.168.1.1 1812 testing123
+	
+You should see an ``Access-Accept`` response if everything is OK::
+
+	Sending Access-Request of id 92 to 192.168.1.1 port 1812
+		User-Name = "john"
+		User-Password = "smith"
+		NAS-IP-Address = 127.0.1.1
+		NAS-Port = 1812
+	rad_recv: Access-Accept packet from host 192.168.1.1 port 1812, id=92, length=20
+
+Otherwise please check:
+
+*	the IP address and shared secret for the server on the	``radtest``
+	command line;
+*	the username and password that you used, which must match a
+	FreeRADIUS user on the pfSense firewall;
+*	the IP address of the Squid server and the shared secret, in the
+	FreeRADIUS configuration of the pfSense firewall.
+
+Squid RADIUS Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+You need to configured the Squid proxy server with the details of the
+RADIUS server to connect to.
+
+On the Squid server, create the file ``/etc/squid3/radius_config`` with the
+editor of your choice, for example::
+
+	$ sudo vi /etc/squid3/radius_config
+
+Place the IP address of the RADIUS server (the pfSense firewall's
+LAN address) and the shared secret in this file. For example::
+
+	server 192.168.1.1
+	secret testing123
+
+Test it by running ``squid_radius_auth`` on the command line::
+
+	$ /usr/lib/squid3/squid_radius_auth -f /etc/squid3/radius_config
+	
+Enter a RADIUS username and password, separated by a space, for example::
+
+	john smith
+
+You should see the output ``OK``. Press Ctrl+C to stop the authenticator
+process.
+	
+Now edit your Squid configuration and add the following lines, to require
+all Squid users to authenticate themselves, just before the existing line
+``http_access deny all`` (which you don't need to duplicate)::
+
+	auth_param basic program /usr/lib/squid3/squid_radius_auth -f /etc/squid3/radius_config
+	auth_param basic children 5
+	auth_param basic realm Web Proxy
+	auth_param basic credentialsttl 5 minute
+	auth_param basic casesensitive off
+
+	acl radius-auth proxy_auth REQUIRED
+	http_access allow radius-auth
+	http_access deny all
+
+Remember to remove or comment out any ``http_access allow`` lines that
+give access to all users without authentication. Tell Squid to reload
+its configuration and test it.
+
+Squid tends to kill itself if it has problems accessing an authenticator.
+So if it's not working, and you can't access any web pages, check that Squid
+is still running::
+
+	$ status squid3
+
+If not (if it says ``stop/waiting``) then check the cache log file to
+find out why it died::
+
+	$ sudo tail -30 /var/log/squid3/cache.log
+
+For example, it might say this::
+
+	FATAL: auth_param basic program /usr/local/squid/libexec/squid_radius_auth: (2) No such file or directory
+	Squid Cache (Version 3.1.19): Terminated abnormally.
+
+Which means that the path to the ``squid_radius_auth`` program is wrong
+in the Squid configuration file.
+
+Squid Delay Pools
+-----------------
+
+Squid has a feature called *delay pools* that can throttle users' bandwidth
+usage for web downloads to a certain amount.
+
+Each pool behaves like a coffee pot:
+
+*	People remove large chunks of bandwidth (coffee) when they make a
+	request.
+*	Requests are satisfied immediately while the pool is not empty
+	(while coffee remains in the pot).
+*	When the pool (coffee pot) is empty, all requests must wait for it
+	to refill.
+*	The pool refills at a fixed rate.
+
+Technically this is known as a Token Bucket Filter (TBF).
+
+.. image:: images/delay-pools-coffee-pots.png
+	:width: 50%
+
+Classes of delay pools
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can have any number of pools. You can configure each pool's type (class)
+to one of the five built-in classes:
+
+class 1
+	a single unified bucket which is used for all requests from hosts subject
+	to the pool.
+class 2
+	one unified bucket and 255 buckets, one for each host on an 8-bit
+	network (IPv4 class C).
+class 3
+	contains 255 buckets for the subnets in a 16-bit network, and
+	individual buckets for every host on these networks (IPv4 class B).
+class 4
+	as class 3 but in addition have per authenticated user buckets, one per
+	user.
+class 5
+	custom class based on tag values returned by external_acl_type helpers
+	in http_access. One bucket per used tag value.
+
+Request routing
+~~~~~~~~~~~~~~~
+
+.. image:: images/squid-delay-pools.png
+	:width: 50%
+
+The ``delay_access`` rules determine which pool is used for each request.
+
+The type (class) of the pool, and the current state of its buckets,
+determine how much bandwidth is available for that request.
+
+Limitations of pools
 ~~~~~~~~~~~~~~~~~~~~
 
-delay pools
-~~~~~~~~~~~
-	
+Each pool is completely independent of all other pools.
 
+The number of buckets in a pool determines who shares bandwidth within
+the pool:
+
+class 1 pool
+	All users share the same bucket, and so they share bandwidth with
+	each other.
+class 2 pool
+	All users share a bucket, but each has their own bucket (one per
+	IP address) as well.
+class 3 pool
+	All users share a global bucket, and one bucket with their subnet.
+	So all 192.168.1.x users share a bucket, and all 192.168.2.x share a
+	different bucket.
+class 4 pool
+	In addition to class 3, each authenticated user gets their own bucket
+	as well.
+class 5 pool
+	Only works if you use an ``external_acl_type`` ACL to assign a tag
+	to each request. Each unique tag value gets its own bucket. You can
+	use this to assign users to buckets in any custom scheme that you like.
+
+Simple example
+~~~~~~~~~~~~~~
+
+To have all users share a single pool with 256 kbps bandwidth, add the
+following to your Squid configuration::
+
+	delay_pools 1
+	delay_class 1 1
+	delay_parameters 1 32000/64000
+	delay_access 1 allow all
+
+How can we test it? Using wget::
+
+	$ export http_proxy=http://john:smith@localhost:3128
+	wget http://www.mirrorservice.org/sites/mirror.centos.org/6/isos/x86_64/CentOS-6.4-x86_64-bin-DVD1.iso
+
+Questions:
+
+*	What does this Squid configuration do?
+*	What speed do we expect to see?
+*	What happens at the beginning of the download?
+*	What happens if you run two downloads at the same time?
+
+.. class:: handout
+
+Answers:
+
+delay_pools 1
+	There is only one pool: number 1.
+delay_class 1 1
+	Pool 1 is a class-1 pool.
+delay_parameters 1 32000/32000
+	Pool 1 refills at 32 kilobytes per second, up to a maximum level of
+	64000 bytes.
+delay_access 1 allow all
+	All requests are routed into pool 1.
+
+We should see an initial high speed burst for 1-2 seconds, and then
+the download should slow down to 32 kilobytes per second (K/s).
+
+If more users download at the same time, they will share bandwidth equally
+between them (16 K/s each).
+
+More advanced configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+How would you give each authenticated user 512 kbps, and limit all users
+to 4 Mbps at the same time?
+
+What class of delay pool do you want to use?
+
+Hint: the delay_parameters line for this class has the following format::
+
+	delay_parameters <pool> <aggregate> <network> <individual> <user>
+	
+And you can use ``-1/-1`` as the value to have unlimited capacity in a
+certain set of buckets.
+
+.. class:: handout
+
+Answer::
+
+	delay_pools 1
+	delay_class 1 4
+	delay_parameters 1 64000/64000 -1/-1 -1/-1 /512000
+	delay_access 1 allow all
+
+FIN
+---
+
+Any questions?
