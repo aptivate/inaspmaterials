@@ -207,7 +207,8 @@ Workshop Units
 
 	* `Download all <https://github.com/aptivate/inaspmaterials/archive/master.zip>`__ (look in the ``PDW`` subdirectory)
 
-	* `Pre-workshop instructions (DOCX) <https://github.com/aptivate/inaspmaterials/raw/master/pdw/Pre-workshop/Pre-workshop-Instructions_Facilitator.docx>`__
+	* Pre-workshop instructions 
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Pre-workshop>`__)
 	* Unit 0 - Introduction
 	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%200%20-%20Introduction>`__)
 	* Unit 1 - Overview of Challenges and Solutions
