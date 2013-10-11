@@ -171,6 +171,8 @@ $(PRESO_PDF_INTERMEDS): $(DST_DIR)/%/$(NOTES_INTERMED):
 # input files, although it's working in a different directory.
 	$(CREATE_DESTDIR)
 	$(SILENT) cat $(SRC_DIR_FOR_CURRENT_TARGET)/Unit_*_Presentation*.rst > $@
+# replace PNGs with SVGs for high-res graphics in PDFs
+# $(SILENT) for png in `grep 'images/.*png' $@ | sed -e 's/.*:: //' | sort | uniq`; do svg=`echo $$png | sed -e 's/\.png$$/.svg/'`; if test -r $(@D)/$$svg; then sed -i -e "s|$$png|$$svg|" $@; fi; done
 # create symlinks for images and includes directories in output dirs
 	$(RM_V)   $(DST_DIR_FOR_CURRENT_TARGET)/images
 	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR_FOR_CURRENT_TARGET)/images $(DST_DIR_FOR_CURRENT_TARGET)/images
