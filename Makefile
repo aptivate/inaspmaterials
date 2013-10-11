@@ -37,7 +37,8 @@ RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 
 # Automatically find all the presentation and guide input files.
 PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
-GUIDES = $(wildcard $(SRC_DIR)/*/*.rst)
+GUIDES = $(wildcard $(SRC_DIR)/*/*.rst) \
+         $(wildcard $(SRC_DIR)/Network_Management/One_Week_Training_Course/*.rst)
 EXERS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Exercises.rst)
 MANUALS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Manual.rst)
 SOURCE_DIRS = $(wildcard $(SRC_DIR)/*/Unit_*)
@@ -130,6 +131,9 @@ FILES_PATTERN = $(call ONE_TARGET_FILE_PER_SOURCE_FILE,$2,$(SRC_DIR),,$(DST_DIR)
 # added to the source files or directories.
 MAKE_PATTERN = $(DST_DIR)/%$1: $(SRC_DIR)/%$2
 
+SRC_DIR_FOR_CURRENT_TARGET = $(@D:$(DST_DIR)/%=$(SRC_DIR)/%)
+DST_DIR_FOR_CURRENT_TARGET = $(@D)
+
 debug:
 	@echo PRESO_ODP_FILES = $(PRESO_ODP_FILES)
 	@echo PRESOS = $(PRESOS)
@@ -146,24 +150,33 @@ $(PRESO_ODP_FILES): $(DST_DIR)/%.odp: $(SRC_DIR)/% $(TEMPLATES_DIR)/presentation
 presos_odp_clean:
 	$(RM_V) $(PRESO_ODP_FILES)
 
-PRESO_PDF_FILES = $(call FILES_PATTERN,.pdf,$(SOURCE_DIRS))
+NOTES_FILE = Facilitators_Notes.pdf
+NOTES_INTERMED = $(NOTES_FILE).src.rst
+PRESO_PDF_FILES = $(call FILES_PATTERN,/$(NOTES_FILE),$(SOURCE_DIRS))
+
 presos_pdf: $(PRESO_PDF_FILES)
-$(PRESO_PDF_FILES): %.pdf: %/pdf.src.rst
+$(PRESO_PDF_FILES): %/$(NOTES_FILE): %/$(NOTES_INTERMED)
 	$(CREATE_DESTDIR)
 	$(RST2PDF_V) -o $@ $^
+
 # rst2pdf only supports one input file, so we must combine them first
-PRESO_PDF_INTERMEDS = $(call FILES_PATTERN,/pdf.src.rst,$(SOURCE_DIRS))
-$(PRESO_PDF_INTERMEDS): %/pdf.src.rst:
+PRESO_PDF_INTERMEDS = $(call FILES_PATTERN,/$(NOTES_INTERMED),$(SOURCE_DIRS))
+# can't tell if a file has been deleted, so always rebuild the pdfs
+
+.PHONY: $(PRESO_PDF_INTERMEDS)
+$(PRESO_PDF_INTERMEDS): $(DST_DIR)/%/$(NOTES_INTERMED):
 # Create the intermediate files, output/Network_Management/Unit_XX/pdf.src.rst
 # by catting the source files together; and also symlinks to the includes and
 # images directory, so that rst2pdf can find images and files referenced by the
 # input files, although it's working in a different directory.
 	$(CREATE_DESTDIR)
-	$(SILENT) cat $(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/Unit_*_Presentation*.rst) > $@
-	$(RM_V)   $(@:%/pdf.src.rst=%/images)
-	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(@:$(DST_DIR)/%/pdf.src.rst=$(SRC_DIR)/%/images) $(@:%/pdf.src.rst=%/images)
+	$(SILENT) cat $(SRC_DIR_FOR_CURRENT_TARGET)/Unit_*_Presentation*.rst > $@
+# create symlinks for images and includes directories in output dirs
+	$(RM_V)   $(DST_DIR_FOR_CURRENT_TARGET)/images
+	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR_FOR_CURRENT_TARGET)/images $(DST_DIR_FOR_CURRENT_TARGET)/images
 	$(RM_V)   $(DST_DIR)/Network_Management/includes
-	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR)/Network_Management/includes $(DST_DIR)/Network_Management/includes
+	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR)/Network_Management/includes 	$(DST_DIR)/Network_Management/includes
+
 presos_pdf_clean:
 	$(RM_V) $(PRESO_PDF_FILES) $(PRESO_PDF_INTERMEDS)
 
