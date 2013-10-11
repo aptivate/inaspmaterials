@@ -576,6 +576,9 @@ Feedback (15 mins, 17:45-18:00)
 Wednesday
 =========
 
+13.30: Troubleshoot network problems (continued)
+------------------------------------------------
+
 Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -587,6 +590,8 @@ Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
    `Editing Exercises <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.pdf>`_
    -  Source can be `downloaded <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.doc>`_
       in MS Word format if you need to modify this exercise. (1 hr?)
+-  `Network Performance Definitions & Metrics: <http://www.ws.afnog.org/afnog2013/unix-intro/presos/network-performance-definitions.pdf>`_ (presentation, also covers common unix tools,
+   try to fit this in if you can)
       
 Break (30 mins, 10:00-10:30)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -594,6 +599,10 @@ Break (30 mins, 10:00-10:30)
 IP addresses, subnets and routing: (35 mins, 10:30-11:05)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+-  Useful materials about
+   `IP addresses <http://www.ws.afnog.org/afnog2013/unix-intro/references/golden-rules-ip-allocation.html>`_
+   and
+   `network masks <http://www.ws.afnog.org/afnog2013/unix-intro/references/netmask-table.html>`_.
 -  What is an IP address? How long is it? (2 mins)
 -  What is a subnet? What is a network mask? How does the binary
    representation work? (10 mins)
@@ -882,6 +891,9 @@ Feedback (15 mins, 17:40-17:55)
 Thursday
 ========
 
+Troubleshoot network problems (continued)
+-----------------------------------------
+
 Competition with other users (15 mins, 08:30-08:45)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1069,6 +1081,8 @@ And on what?
 Network Monitoring
 ------------------
 
+TODO finish and time this section
+
 .. figure:: images/test-network-design.png
    :caption: Example network diagram, repeated for easy reference
    
@@ -1081,8 +1095,7 @@ Network Monitoring
    `OpenOffice <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.odp>`_
    or `Powerpoint <https://nsrc.org/workshops/2009/summer/presentations/day5/nagios.ppt>`_)
    -  Basic exercise: Install Nagios, add a host and a service, email notification
-   -  Medium exercise: Define host and service groups and check commands,
-      SMS notification
+   -  Medium exercise: Define host and service groups and check commands, SMS notification
    -  Advanced exercise: Writing your own checks, bandwidth check, NRPE
 -  Monitoring Nagios on your desktop and phone
 -  Install and configure Cacti to monitor switch ports and routers
@@ -1152,6 +1165,8 @@ Network Monitoring
 Network Management
 ------------------
 
+TODO finish and time this section.
+
    -  Network access control
 
       -  Enabling port security and tracking users by MAC address
@@ -1209,6 +1224,8 @@ Network Management
 17.00: Understand traffic on an Internet connection
 ---------------------------------------------------
 
+TODO finish this section
+
 Theoretical and actual capacity (35 mins, 17:00-17:35)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1262,15 +1279,6 @@ Theoretical and actual capacity (35 mins, 17:00-17:35)
 
       -  Pretty much nothing you can do, except complain, negotiate
          or switch ISP!
-
-Feedback (15 mins, 17:35-17:50)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Wednesday
-=========
-
-08.30: Understand traffic on an Internet connection, continued
---------------------------------------------------------------
 
 How much bandwidth do you need? (5 mins, 08:30-08:35)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1482,18 +1490,18 @@ Round Robin Databases
 ~~~~~~~~~~~~~~~~~~~~~
 
 -  How would you collect this?
-   -  Ping every 5 minutes?
-   -  Store for a year?
+	-  Ping every 5 minutes?
+	-  Store for a year?
 -  How much data do you need to store?
-   -  20 samples x (60/5) per hour x 24 hrs x 365 days? (2.1 million samples)
-   -  How are you going to display it?
-   -  How will you discard old data from the database?
+	-  20 samples x (60/5) per hour x 24 hrs x 365 days? (2.1 million samples)
+	-  How are you going to display it?
+	-  How will you discard old data from the database?
 -  Solution: Round Robin Database (RRD)
-   -  Keep a certain number of data points
-   -  Automatically overwrite old ones
-   -  Automatically maintain aggregates (minimum, maximum, average) over
-      different time periods
-   -  Draws pretty graphs
+	-  Keep a certain number of data points
+	-  Automatically overwrite old ones
+	-  Automatically maintain aggregates (minimum, maximum, average) over
+		different time periods
+	-  Draws pretty graphs
       
 Smokeping example graph
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1525,6 +1533,25 @@ TODO: plan this unit in more detail, with activities and timings
 -  How can we prevent them from happening again? (belt and braces
    approach)
 -  Scheduling downtime, keeping users informed
+
+Web Proxies and Caches
+----------------------
+
+*	What is a web proxy? (2 mins)
+*	Forward, reverse and open proxies (3 mins)
+*	Why use web proxies? (5 mins)
+*	What is a web cache? (3 mins)
+*	Why use web caches? (2 mins)
+*	Why not to use web caches?
+	*	Not transparent (2 mins)
+	*	Effectiveness is falling (2 mins)
+	*	Hardware requirements (2 mins)
+	*	Single point of failure (2 mins)
+*	Getting started with Squid
+	*	Basic installation (2 mins)
+	*	Configuring your browser (2 mins)
+	
+
 
 Friday
 ======
