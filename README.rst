@@ -61,7 +61,7 @@ A one-week training course with timetable, drawing on and extracting parts of
 the individual workshop units, can be found here:
 
 *	`Online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/One_Week_Training_Course/One_Week_Training_Course.rst>`__
-*	`Download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/One_Week_Training_Course/One_Week_Training_Course.rst.pdf`__
+*	`Download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/One_Week_Training_Course/One_Week_Training_Course.rst.pdf>`__
 
 Workshop Units
 --------------
