@@ -38,7 +38,7 @@ Open proxy
 Why use web proxies?
 ~~~~~~~~~~~~~~~~~~~~
 
-This allows the proxy to:
+Web proxies can:
 
 * Require you to log in and authenticate yourself to the proxy.
 * Log the web page that you requested.
@@ -49,6 +49,9 @@ This allows the proxy to:
 
 All of these things can be desirable in an institutional environment,
 depending on how strict you want to be in denying or logging web accesses.
+
+Benefits of using a web proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For users
 	They can filter out viruses and other dangeous content. Users may also
@@ -300,7 +303,7 @@ POST
 	more details.
 http://safebrowsing.clients.google.com/safebrowsing/downloads?
 	The URL requested by the client.
--
+``-``
 	The *ident lookup* result. Usually this is useless and turned off.
 NONE/-
 	The *hierarchy code*, which consists of three items: the optional
@@ -629,60 +632,73 @@ SSL, such as ``www.google.com`` or ``www.duckduckgo.com``, as this will
 bypass the cache without you realising! You can test with ``www.bing.com``
 as it doesn't do that at the time of writing (2013-10-09).
 
-Solutions to block:
+Solutions
+~~~~~~~~~
 
-*	a particular client IP address::
+Block a particular client IP address::
+
 	acl bad_boy src 10.0.156.126
 	http_access deny bad_boy
-*	the subnet that your client is on::
+	
+Block the subnet that your client is on::
+
 	acl bad_boys src 10.0.156.0/24
 	http_access deny bad_boys
-*	a subnet that your client is NOT on::
+
+Block a subnet that your client is NOT on::
+
 	acl bad_boys src 10.0.157.0/24
 	http_access deny bad_boys
-*	www.facebook.com::
+
+Block ``www.facebook.com``::
+
 	acl facebook dstdomain www.facebook.com
 	http_access deny facebook
-*	except for one client IP address::
+
+Allow Facebook only for a single client IP address::
+
 	acl facebook dstdomain www.facebook.com
 	acl good_boy src 10.0.156.126
 	http_access allow good_boy
 	http_access deny facebook
-*	and try to evade the ban:
-	*  go to ``http://m.facebook.com`` instead
-	*  go to ``https://www.facebook.com`` instead
-*	did you just block ``http://www.bing.com/search?q=facebook`` as well?
-*	any website with ``sex`` in the URL::
+
+Try to evade the ban:
+
+*  go to ``http://m.facebook.com`` instead
+*  go to ``https://www.facebook.com`` instead
+
+Did you just block ``http://www.bing.com/search?q=facebook`` as well?
+
+Block any website with ``sex`` in the URL::
+
 	acl sex url_regex sex
 	http_access deny sex
-*	more than 2 connections per client IP address
+	
+Prevent more than 2 connections per client IP address::
 
-	* implementation::
-	
-		acl too_many_connections maxconn 2
-		http_access deny too_many_connections
-	
-	* testing:
-	
-		*	``ab -X localhost:3128 -n 10 -c 2 http://www.mirrorservice.org/``
-			(2 concurrent requests) should show no errors:
-			``Non-2xx responses: 0``
-		*	``ab -X localhost:3128 -n 10 -c 3 http://www.mirrorservice.org/``
-			(3 concurrent requests) should show some errors, e.g.
-			``Non-2xx responses: 8``
+	acl too_many_connections maxconn 2
+	http_access deny too_many_connections
+
+Testing that it worked:
+
+*	``ab -X localhost:3128 -n 10 -c 2 http://www.mirrorservice.org/``
+	(2 concurrent requests) should show no errors:
+	``Non-2xx responses: 0``
+
+*	``ab -X localhost:3128 -n 10 -c 3 http://www.mirrorservice.org/``
+	(3 concurrent requests) should show some errors, e.g.
+	``Non-2xx responses: 8``
 		
-*	FTP downloads from ``ftp://www.mirrorservice.org/``:
+Block all FTP downloads::
 
-	*	implementation::
-
-		acl ftp proto ftp
-		http_access deny ftp
+	acl ftp proto ftp
+	http_access deny ftp
 		
-	*	note: you will need to configure your browser to use the proxy
-		for FTP as well as HTTP requests.
+Note: you will need to configure your browser to use the proxy
+for FTP as well as HTTP requests.
 
-Blocking SSL websites
----------------------
+Web Proxies and SSL
+-------------------
 
 Web proxies can't intercept SSL connections, because:
 
@@ -694,6 +710,7 @@ Web proxies can't intercept SSL connections, because:
 *	this is exactly what SSL security is supposed to do!
 
 What can we do about it?
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 *	Put a fake Certificate Authority (CA) in all the browsers
 	and have the proxy sign responses with that certificate
@@ -762,9 +779,11 @@ Then configure pfSense to block ports 80 and 443 outbound from LAN:
 	:width: 70%
 
 *	Open the pfSense webConfigurator and log in
+
 	*	This is probably at http://192.168.1.1/ from your laptop or VM,
 		connected to the internal interface *em1* of the pfSense VM,
 		unless you've reconfigured pfSense to change the LAN subnet.
+		
 *	From the menu choose Firewall/Rules
 *	Click on the LAN tab
 *	Click on the pfSense "add rule" button
@@ -786,7 +805,7 @@ proxy server VM, and not from other clients. Other traffic such as *ping*
 should still work from all clients.
 
 Proxy auto configuration
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is how Web Proxy Auto Detection works:
 
@@ -915,7 +934,7 @@ Configuring FreeRADIUS
 
 Having installed FreeRADIUS, we have to configure it.
 
-.. image:: pfsense-freeradius-add-interface.png
+.. image:: images/pfsense-freeradius-add-interface.png
 	:width: 50%
 
 *	In the pfSense webConfigurator menu, choose *Services/FreeRADIUS*.
@@ -1086,7 +1105,7 @@ Request routing
 ~~~~~~~~~~~~~~~
 
 .. image:: images/squid-delay-pools.png
-	:width: 50%
+	:width: 70%
 
 The ``delay_access`` rules determine which pool is used for each request.
 
@@ -1183,7 +1202,7 @@ Answer::
 
 	delay_pools 1
 	delay_class 1 4
-	delay_parameters 1 64000/64000 -1/-1 -1/-1 /512000
+	delay_parameters 1 64000/64000 -1/-1 -1/-1 512000/512000
 	delay_access 1 allow all
 
 FIN

@@ -7,6 +7,10 @@ Unit 11: Technical Measures
 
 .. include:: ../includes/Authors.rst
 
+.. class:: handout
+
+.. contents:: Table of Contents
+
 Objectives
 ----------
 
@@ -21,3 +25,4 @@ If you are the facilitator, please tell the group:
 
    At the end of session I will ask if we have met the objectives – if not,
    we will discuss again.
+
