@@ -54,11 +54,21 @@ please try searching the Internet or asking a question on the Server Fault
 website, a free "question and answer site for professional system and network
 administrators".
 
+One Week Training Course
+------------------------
+
+A one-week training course with timetable, drawing on and extracting parts of
+the individual workshop units, can be found here:
+
+*	`Online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/One_Week_Training_Course/One_Week_Training_Course.rst>`__
+*	`Download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/One_Week_Training_Course/One_Week_Training_Course.rst.pdf`__
+
 Workshop Units
 --------------
 
 #.	Introductions
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst#unit-1-introductions>`__ 
+	| `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_1_Introduction/Facilitators_Notes.pdf>`__
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_1_Introduction/Unit_1_Presentation.rst.odp>`__)
 
 	* Introduce yourself to the participants
@@ -68,6 +78,7 @@ Workshop Units
 
 #.	Why network management 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management>`__ 
+	| `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_2_Why_Network_Management/Facilitators_Notes.pdf>`__
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst.odp>`__)
 
 	* What do you want to get from this course?
@@ -90,6 +101,8 @@ Workshop Units
 	* Switching and security considerations (e.g. Rogue DHCP server and ARP spoofing prevention)
 	
 #.	Network management basics
+
+	* `Download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_4_Network_Management/Facilitators_Notes.pdf>`__
 
 	* Introduction
 	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_4_Network_Management/Unit_4_Presentation_Part_01_Cover.rst>`__
@@ -145,6 +158,7 @@ Workshop Units
 	
 #.	The bandwidth challenge 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst#unit-5-the-bandwidth-challenge>`__ 
+	| `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_5_The_Bandwidth_Challenge/Facilitators_Notes.pdf>`__
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_5_The_Bandwidth_Challenge/Unit_5_Presentation.rst.odp>`__)
 
 	* Importance of Internet in network management
@@ -155,6 +169,7 @@ Workshop Units
 
 #.	Solving network problems 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst#unit-6-solving-network-problems>`__ 
+	| `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_6_Solving_Network_Problems/Facilitators_Notes.pdf>`__
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_6_Solving_Network_Problems/Unit_6_Presentation.rst.odp>`__)
 
 	* Importance of troubleshooting in network management
@@ -164,6 +179,7 @@ Workshop Units
 
 #.	Network monitoring 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst#unit-7-network-monitoring>`__
+	| `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_7_Network_Monitoring/Facilitators_Notes.pdf>`__
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst.odp>`__)
 
 	* Importance of monitoring in network management
@@ -189,20 +205,34 @@ Workshop Units
 	
 #.	Policy development
 
-	* Importance of policies in network management
-	* Policy development framework
-	* Examples of good and bad policy documents
-	* Creating a policy development action plan
+	* `Download all <https://github.com/aptivate/inaspmaterials/archive/master.zip>`__ (look in the ``PDW`` subdirectory)
 
-#.	Technical measures
+	* `Pre-workshop instructions (DOCX) <https://github.com/aptivate/inaspmaterials/raw/master/pdw/Pre-workshop/Pre-workshop-Instructions_Facilitator.docx>`__
+	* Unit 0 - Introduction
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%200%20-%20Introduction>`__)
+	* Unit 1 - Overview of Challenges and Solutions
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%201>`__)
+	* Unit 2 - Characteristics of Good Policy
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%202>`__)
+	* Unit 3 - Creating the Policy
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%203>`__)
+	* Unit 4 - Action Planning and Post-workshop activities
+	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%204%20-%20Introducing%20post-workshop%20activities>`__)
+
+#.	Technical measures (`download PDF <generated/Network_Management/Unit_11_Technical_Measures/Facilitators_Notes.pdf>`__)
 
 	* Importance of technical measures in network management
 	* Network monitoring
 	* Firewalls
 	* Antivirus
-	* Proxy caches
+	* Proxy caches 
+	  (
+	  `online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst>`__ | 
+	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst.odp>`__
+	  )
 	* Intrusion Detection
 	* Penetration/scanning (Nessus, Inprotect, NMap)
+	* Bandwidth Management
 	
 #.	Making it happen
 
