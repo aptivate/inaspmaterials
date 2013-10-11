@@ -205,8 +205,8 @@ Workshop Units
 	
 #.	Policy development
 
-	* `Download all <https://github.com/aptivate/inaspmaterials/archive/master.zip>`__ (look in the ``PDW`` subdirectory)
-
+	* `Download all <https://github.com/aptivate/inaspmaterials/archive/master.zip>`__
+	  (look in the ``PDW`` subdirectory inside the ZIP file)
 	* Pre-workshop instructions 
 	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Pre-workshop>`__)
 	* Unit 0 - Introduction
@@ -220,7 +220,7 @@ Workshop Units
 	* Unit 4 - Action Planning and Post-workshop activities
 	  (`browse <https://github.com/aptivate/inaspmaterials/tree/master/pdw/Unit%204%20-%20Introducing%20post-workshop%20activities>`__)
 
-#.	Technical measures (`download PDF <generated/Network_Management/Unit_11_Technical_Measures/Facilitators_Notes.pdf>`__)
+#.	Technical measures (`download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Facilitators_Notes.pdf>`__)
 
 	* Importance of technical measures in network management
 	* Network monitoring
