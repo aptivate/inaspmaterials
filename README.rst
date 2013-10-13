@@ -232,6 +232,8 @@ Workshop Units
 	* Intrusion Detection
 	* Penetration/scanning (Nessus, Inprotect, NMap)
 	* Bandwidth Management
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst>`__ |
+	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst.odp>`__)
 	
 #.	Making it happen
 
