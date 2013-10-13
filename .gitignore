@@ -1,0 +1,2 @@
+# Ignore generated RST source for PDFs
+*.pdf.src.rst
