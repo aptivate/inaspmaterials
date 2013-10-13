@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg3154"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="pfsense-traffic-shaper-wan-interface-2.svg">
+  <defs
+     id="defs3156" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.396129"
+     inkscape:cx="508.5"
+     inkscape:cy="356.5"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1215"
+     inkscape:window-height="752"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3159">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <image
+       y="533.36218"
+       x="121"
+       id="image3256"
+       xlink:href="file:///home/installuser/Dropbox/projects/2013/inaspmaterials/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface.png"
+       height="325"
+       width="775"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3259"
+       sodipodi:cx="465.93115"
+       sodipodi:cy="276.37268"
+       sodipodi:rx="15.399723"
+       sodipodi:ry="15.04159"
+       d="m 481.33088,276.37268 a 15.399723,15.04159 0 1 1 -30.79945,0 15.399723,15.04159 0 1 1 30.79945,0 z"
+       transform="translate(-1.3304991e-5,307.55143)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3261"
+       sodipodi:cx="485.27032"
+       sodipodi:cy="331.52518"
+       sodipodi:rx="37.603973"
+       sodipodi:ry="15.757855"
+       d="m 522.8743,331.52518 a 37.603973,15.757855 0 1 1 -75.20795,0 37.603973,15.757855 0 1 1 75.20795,0 z"
+       transform="translate(2.8650647,309.70023)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3263"
+       sodipodi:cx="468.7962"
+       sodipodi:cy="377.72433"
+       sodipodi:rx="22.562384"
+       sodipodi:ry="15.399723"
+       d="m 491.35859,377.72433 a 22.562384,15.399723 0 1 1 -45.12477,0 22.562384,15.399723 0 1 1 45.12477,0 z"
+       transform="translate(4.2975961,311.13276)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3265"
+       sodipodi:cx="482.04715"
+       sodipodi:cy="515.96368"
+       sodipodi:rx="30.799446"
+       sodipodi:ry="17.548521"
+       d="m 512.8466,515.96368 a 30.799446,17.548521 0 1 1 -61.5989,0 30.799446,17.548521 0 1 1 61.5989,0 z"
+       transform="translate(-0.7162875,309.70023)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="488.49353"
+       y="263.47989"
+       id="text3267"
+       sodipodi:linespacing="125%"
+       transform="translate(0,308.2677)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3269"
+         x="488.49353"
+         y="263.47989">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="537.91589"
+       y="648.38806"
+       id="text3271"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3273"
+         x="537.91589"
+         y="648.38806">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="635.32812"
+       y="695.66162"
+       id="text3275"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3277"
+         x="635.32812"
+         y="695.66162">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="446.23386"
+       y="814.56183"
+       id="text3279"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3281"
+         x="446.23386"
+         y="814.56183">4</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:1.51658201;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3265-4"
+       sodipodi:cx="482.04715"
+       sodipodi:cy="515.96368"
+       sodipodi:rx="30.799446"
+       sodipodi:ry="17.548521"
+       d="m 512.8466,515.96368 a 30.799446,17.548521 0 1 1 -61.5989,0 30.799446,17.548521 0 1 1 61.5989,0 z"
+       transform="matrix(1.9651163,0,0,1,-367.89298,308.44712)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="640.62653"
+       y="813.30872"
+       id="text3279-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-wan-interface-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3281-3"
+         x="640.62653"
+         y="813.30872">5</tspan></text>
+  </g>
+</svg>

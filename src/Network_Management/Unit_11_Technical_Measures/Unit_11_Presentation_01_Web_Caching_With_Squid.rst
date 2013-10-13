@@ -1,6 +1,23 @@
 Web Proxies and Caches
 ----------------------
 
+Objectives
+~~~~~~~~~~
+
+On completion of this session, we hope you will be able to:
+
+* Install and configure a Squid web cache
+
+.. class:: handout
+
+If you are the facilitator, please tell the group: 
+
+   At the end of session I will ask if we have met the objectives – if not,
+   we will discuss again.
+
+License
+~~~~~~~
+
 Some materials reused under the Creative Commons
 `Attribution-NonCommercial-ShareAlike 2.5 <http://creativecommons.org/licenses/by-nc-sa/2.5/>`_
 license:
@@ -9,6 +26,9 @@ license:
 *	the `BMO Book <http://bwmo.net/>`_, by various authors;
 *	the `Squid Cache Wiki <http://wiki.squid-cache.org/>`_, by Amos Jeffries
 	and other.
+
+Introduction
+------------
 
 What is a web proxy?
 ~~~~~~~~~~~~~~~~~~~~
@@ -32,7 +52,7 @@ Reverse proxy
 	Operated by the server's organisation, used by (usually) all clients to
 	connect to specific web sites (servers).
 Open proxy
-	Usually operated by a third parts, used by any client to connect to
+	Usually operated by a third party, used by any client to connect to
 	any web server, potentially dangerous/exploitable.
 
 Why use web proxies?
@@ -768,11 +788,34 @@ What can you do about it?
 First, we need to block direct access to HTTP and HTTPS ports (80 and 443)
 for all clients **except the proxy server**.
 
-To do this using pfSense, configure your virtual network as follows:
+Configure pfSense as your router
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To do these exercises using pfSense, configure your virtual network as
+follows:
 
 .. image:: images/proxy-firewall-network-diagram.png
 	:width: 70%
-	
+
+In other words:
+
+*	The **external** interface of the pfSense virtual machine
+	(*Network Adapter 1*) is Bridged with the external interface of your
+	server (probably *eth0*).
+*	If your server has two network interfaces, then the **internal**
+	interface of the pfSense virtual machine (*Network Adapter 2*) is
+	Bridged with the internal interface of your server (probably *eth1*),
+	and so is the only network interface (*Network Adapter 1*) of your
+	client Virtual Machine. This allows you to connect laptops to *eth1*
+	and use them to test your connection, as well as the client Virtual
+	Machine.
+*	If your server has only one network interface, then the **internal**
+	interface of the pfSense virtual machine (*Network Adapter 2*) is
+	connected to the *Internal Network pfsense*, and so is the only
+	network interface (*Network Adapter 1*) of your client Virtual Machine.
+	This only allows you to test your connection from the client Virtual
+	Machine.
+
 Then configure pfSense to block ports 80 and 443 outbound from LAN:
 
 .. image:: images/pfsense-lan-rules-page-2.png
@@ -916,8 +959,8 @@ More detailed instructions on installing and using FreeRADIUS on pfSense
 can be found in the
 `pfSense Documentation <https://doc.pfsense.org/index.php/FreeRADIUS_2.x_package>`_.
 
-Installing FreeRADIUS
-~~~~~~~~~~~~~~~~~~~~~
+Installing FreeRADIUS on pfSense
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To quickly install a RADIUS server (FreeRADIUS):
 
@@ -993,6 +1036,9 @@ Otherwise please check:
 *	the IP address of the Squid server and the shared secret, in the
 	FreeRADIUS configuration of the pfSense firewall.
 
+Can you	access the RADIUS server from any other computer? Why, or why not?
+What's the benefit of this configuration?
+	
 Squid RADIUS Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
@@ -1117,8 +1163,11 @@ Limitations of pools
 
 Each pool is completely independent of all other pools.
 
-The number of buckets in a pool determines who shares bandwidth within
-the pool:
+Each pool contains one or more buckets, which are completely independent
+of all other buckets.
+
+The allocation of requests to buckets within a pool determines who shares
+bandwidth within the pool:
 
 class 1 pool
 	All users share the same bucket, and so they share bandwidth with
