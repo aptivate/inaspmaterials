@@ -1084,7 +1084,8 @@ Network Monitoring
 TODO finish and time this section
 
 .. figure:: images/test-network-design.png
-   :caption: Example network diagram, repeated for easy reference
+
+	Example network diagram, repeated for easy reference
    
 -  What can we monitor?
    -  use slides from `Unit 7 Presentation <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_7_Network_Monitoring/Unit_7_Presentation.rst>`_
@@ -1453,7 +1454,10 @@ Further study
 ~~~~~~~~~~~~~
 
 Look at the other alternatives above.
-         
+
+Break (30 mins, 10:15-10:45)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Network quality of service
 --------------------------
 
@@ -1506,7 +1510,7 @@ Round Robin Databases
 Smokeping example graph
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: http://oss.oetiker.ch/smokeping/doc/reading_detail.png
+http://oss.oetiker.ch/smokeping/doc/reading_detail.png
 
 `How to read it <http://oss.oetiker.ch/smokeping/doc/reading.en.html>`_.
 
@@ -1534,22 +1538,128 @@ TODO: plan this unit in more detail, with activities and timings
    approach)
 -  Scheduling downtime, keeping users informed
 
-Web Proxies and Caches
+Web Proxies and Caches (30 mins, 10:15-10:45)
+
 ----------------------
+
+Introduction (25 mins, 10:45-11:10)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *	What is a web proxy? (2 mins)
 *	Forward, reverse and open proxies (3 mins)
 *	Why use web proxies? (5 mins)
 *	What is a web cache? (3 mins)
 *	Why use web caches? (2 mins)
-*	Why not to use web caches?
-	*	Not transparent (2 mins)
-	*	Effectiveness is falling (2 mins)
-	*	Hardware requirements (2 mins)
-	*	Single point of failure (2 mins)
-*	Getting started with Squid
-	*	Basic installation (2 mins)
-	*	Configuring your browser (2 mins)
+*	Why not to use web caches? (1 min)
+*	Not transparent (2 mins)
+*	Effectiveness is falling (2 mins)
+*	Hardware requirements (2 mins)
+*	Single point of failure (2 mins)
+
+Getting started with Squid (40 mins, 11:10-11:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Basic installation (10 mins)
+*	Configuring your browser (2 mins)
+*	Testing the installation (5 mins)
+*	Access control by IP address (5 mins)
+*	Why do you deny me? (2 mins)
+*	Reading the logs (5 mins)
+*	Don't deny me! (5 mins)
+*	Reloading and restarting Squid (3 mins)
+*	Reverse proxies and open proxies (2 mins)
+
+Cache Size (6 mins, 11:50-11:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Introduction (2 mins)
+*	Disk cache size (2 mins)
+*	Memory usage (2 mins)
+
+Squid Access Control (1 hr, 11:55-12:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Introduction (2 mins)
+*	Access control elements (5 mins)
+*	ACE types (5 mins)
+*	The ``srcdomain`` ACE: a special case (2 mins)
+*	ACEs with multiple values (3 mins)
+*	Access control rules (3 mins)
+*	Rules with multiple ACEs (3 mins)
+*	Rule processing examples (5 mins)
+*	Access control practice (30 mins)
+
+Lunch Break (1hr, 12:55-13:55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Web Proxies and SSL (10 mins, 13:155-14:05)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	The Problem (5 mins)
+*	What can we do about it? (3 mins)
+*	HTTP and CONNECT requests (2 mins)
+*	Results of blocking SSL requests (5 mins)
+
+Forcing people to use the proxy (45 mins, 14:05-14:50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Network setup to enable pfSense (10 mins)
+*	Firewalling with pfSense (10 mins)
+*	Proxy auto configuration (3 mins)
+*	Creating a PAC file (10 mins)
+*	DHCP server settings in pfSense (5 mins)
+*	Testing Proxy Auto Configuration (5 mins)
+
+Proxy Authentication (50 mins, 15:50-15:40)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Introduction (2 mins)
+*	About RADIUS (5 mins)
+*	Setting up a RADIUS Server (2 mins)
+*	Installing FreeRADIUS on pfSense (5 mins)
+*	Configuring FreeRADIUS (10 mins)
+*	Adding Users (5 mins)
+*	Testing RADIUS Authentication (10 mins)
+*	Squid RADIUS Authentication (10 mins)
+
+Break (30 mins, 15:40-16:10)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Squid Delay Pools (50 mins, 16:10-17:00)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	Introduction (10 mins)
+*	Classes of delay pools (10 mins)
+*	Request routing (5 mins)
+*	Limitations of pools (5 mins)
+*	Simple example (10 mins)
+*	More advanced configuration (10 mins)
+
+
+
+*	Questions (10 mins)
+
+
+
+
+
+
+
+ 
+
+
+
+
+	
+
+
+
+ 
+
+
+
+
+
 	
 
 
