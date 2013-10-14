@@ -636,10 +636,12 @@ Try blocking the following, and get someone else to check your work:
 *	the subnet that your client is on
 *	a subnet that your client is NOT on
 *	www.facebook.com
-	*  except for one client IP address
-	*  and try to evade the ban
-	*  did you just block ``http://www.bing.com/search?q=facebook`` as well?
-	*  how would you do that?
+
+	*	except for one client IP address
+	*	and try to evade the ban
+	*	did you just block ``http://www.bing.com/search?q=facebook`` as well?
+	*	how would you do that?
+	
 *	any website with ``sex`` in the URL
 *	did you just block ``http://www.essex.ac.uk/``?
 *	more than 2 connections per client IP address (how would you test it?)
@@ -1237,10 +1239,10 @@ delay_access 1 allow all
 	All requests are routed into pool 1.
 
 We should see an initial high speed burst for 1-2 seconds, and then
-the download should slow down to 32 kilobytes per second (K/s).
+the download should slow down to 32 kiloBytes per second (kBps).
 
 If more users download at the same time, they will share bandwidth equally
-between them (16 K/s each).
+between them (kBps each).
 
 More advanced configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
