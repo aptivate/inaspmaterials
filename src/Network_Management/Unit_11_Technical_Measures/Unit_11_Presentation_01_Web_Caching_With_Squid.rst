@@ -503,10 +503,17 @@ Access Control Element (ACE). These are reusable sets of conditions:
 *	and combine them with each other in rules.
 
 Every ACE must be *defined*, which gives it a unique *name*. The 
-definition looks like this:
+definition looks like this::
 
-	``acl`` <name> <type> <values>
+	acl <name> <type> <values>
 
+For example, the ACL we created earlier::
+
+	acl localnet1 src 10.0.156.0/24
+	
+Has the name **localnet1**, type **src** (source IP address) and value
+(which is specific to the *src* type) **10.0.156.0/24**.
+	
 ACE types
 ~~~~~~~~~
 

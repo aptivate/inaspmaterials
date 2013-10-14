@@ -27,7 +27,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98901497"
      inkscape:cx="508.5"
-     inkscape:cy="605.79837"
+     inkscape:cy="438.27022"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -59,7 +59,10 @@
        id="image3442"
        xlink:href="file:///home/installuser/Dropbox/projects/2013/inaspmaterials/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue.png"
        height="623"
-       width="775" />
+       width="775"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#ff0000;stroke-width:2.02253604;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -69,7 +72,10 @@
        sodipodi:rx="17.18882"
        sodipodi:ry="17.18882"
        d="m 494.43134,69.686089 a 17.18882,17.18882 0 1 1 -34.37764,0 17.18882,17.18882 0 1 1 34.37764,0 z"
-       transform="matrix(1.0588235,0,0,1.0435276,-30.600867,304.64283)" />
+       transform="matrix(1.0588235,0,0,1.0435276,-30.600867,304.64283)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#ff0000;stroke-width:1.97918355;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -79,7 +85,10 @@
        sodipodi:rx="32.860977"
        sodipodi:ry="11.627731"
        d="m 531.8423,103.55817 a 32.860977,11.627731 0 1 1 -65.72195,0 32.860977,11.627731 0 1 1 65.72195,0 z"
-       transform="matrix(1.1538462,0,0,1,-81.316354,306.24549)" />
+       transform="matrix(1.1538462,0,0,1,-81.316354,306.24549)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        transform="matrix(0.76470588,0,0,0.76470588,104.70905,491.49708)"
        sodipodi:type="arc"
@@ -89,7 +98,10 @@
        sodipodi:cy="69.686089"
        sodipodi:rx="17.18882"
        sodipodi:ry="17.18882"
-       d="m 494.43134,69.686089 a 17.18882,17.18882 0 1 1 -34.37764,0 17.18882,17.18882 0 1 1 34.37764,0 z" />
+       d="m 494.43134,69.686089 a 17.18882,17.18882 0 1 1 -34.37764,0 17.18882,17.18882 0 1 1 34.37764,0 z"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#ff0000;stroke-width:2.12598419;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -99,7 +111,10 @@
        sodipodi:rx="73.30526"
        sodipodi:ry="22.749908"
        d="m 602.61977,367.45712 a 73.30526,22.749908 0 1 1 -146.61052,0 73.30526,22.749908 0 1 1 146.61052,0 z"
-       transform="translate(0.50556394,308.2677)" />
+       transform="translate(0.50556394,308.2677)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        transform="matrix(1.7241379,0,0,1,-329.70802,341.12867)"
        sodipodi:type="arc"
@@ -109,7 +124,10 @@
        sodipodi:cy="367.45712"
        sodipodi:rx="73.30526"
        sodipodi:ry="22.749908"
-       d="m 602.61977,367.45712 a 73.30526,22.749908 0 1 1 -146.61052,0 73.30526,22.749908 0 1 1 146.61052,0 z" />
+       d="m 602.61977,367.45712 a 73.30526,22.749908 0 1 1 -146.61052,0 73.30526,22.749908 0 1 1 146.61052,0 z"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#ff0000;stroke-width:2.02434182;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -119,14 +137,20 @@
        sodipodi:rx="34.37764"
        sodipodi:ry="21.738802"
        d="m 528.80898,643.48932 a 34.37764,21.738802 0 1 1 -68.75528,0 34.37764,21.738802 0 1 1 68.75528,0 z"
-       transform="matrix(1.1029412,0,0,1,-50.897345,308.2677)" />
+       transform="matrix(1.1029412,0,0,1,-50.897345,308.2677)"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="438.82047"
        y="385.56769"
        id="text3489"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491"
          x="438.82047"
@@ -138,7 +162,10 @@
        x="437.70059"
        y="418.42865"
        id="text3489-9"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491-8"
          x="437.70059"
@@ -150,7 +177,10 @@
        x="441.74503"
        y="553.25909"
        id="text3489-2"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491-1"
          x="441.74503"
@@ -162,7 +192,10 @@
        x="438.7117"
        y="684.31464"
        id="text3489-7"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491-7"
          x="438.7117"
@@ -174,7 +207,10 @@
        x="439.72281"
        y="716.91199"
        id="text3489-24"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491-3"
          x="439.72281"
@@ -186,7 +222,10 @@
        x="437.70059"
        y="960.23553"
        id="text3489-92"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/installuser/projects/inaspmaterials/github/master/src/Network_Management/Unit_11_Technical_Measures/images/pfsense-traffic-shaper-other-queue-2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3491-2"
          x="437.70059"
