@@ -562,6 +562,11 @@ What happens if you specify overlapping domains? For example::
 	
 .. class:: handout
 
+The Squid FAQ `says <http://wiki.squid-cache.org/SquidFaq/SquidAcl#Squid_doesn.27t_match_my_subdomains>`_:
+
+	You can't have one entry that is a subdomain of another. Squid will
+	warn you if it detects this condition.
+
 Access control rules
 ~~~~~~~~~~~~~~~~~~~~
 
