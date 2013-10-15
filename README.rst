@@ -75,6 +75,9 @@ Workshop Units
 	* Introduce them to each other
 	* Set some ground rules
 	* Review the timetable
+	* Familiarisation with the Linux command line 
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/One_Week_Training_Course/Linux_Familiarization_and_Commands_Exercises.rst>`__
+          | `download PDF <http://aptivate.github.io/inaspmaterials/generated/Network_Management/One_Week_Training_Course/Linux_Familiarization_and_Commands_Exercises.rst.pdf>`__)
 
 #.	Why network management 
 	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_2_Why_Network_Management/Unit_2_Presentation.rst#unit-2-why-network-management>`__ 
@@ -193,7 +196,6 @@ Workshop Units
 	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_8_Hands_on_Practical_Experience/Unit_8_Presentation.rst.odp>`__)
 
 	* Use common inbuilt network monitoring tools for simple network checks
-	* Install / use the ‘ethereal’ software packet probe on PC and Linux systems
 	* Install / use a typical more complex monitoring tool on a Linux system.
 	* Explore the facilities available on a Linux-based self-contained monitoring toolkit.
 
@@ -232,8 +234,8 @@ Workshop Units
 	* Intrusion Detection
 	* Penetration/scanning (Nessus, Inprotect, NMap)
 	* Bandwidth Management
-	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst>`__ |
-	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_01_Web_Caching_With_Squid.rst.odp>`__)
+	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_02_Bandwidth_Management_With_pfSense.rst>`__ |
+	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_02_Bandwidth_Management_With_pfSense.rst.odp>`__)
 	
 #.	Making it happen
 
