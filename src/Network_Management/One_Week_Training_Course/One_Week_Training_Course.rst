@@ -1479,13 +1479,16 @@ What do we want to monitor?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Statistics
+
    -  Packet Loss
    -  Latency
    -  Bandwidth
    -  Errors
    -  Web page loading speed
    -  DNS speed
+
 -  What do you want to know?
+
    -  How are they right now? (is something wrong?)
    -  How do they compare to last week/month/year? (is it getting better/worse?)
    -  Were they bad this morning/yesterday? (why did I get so many complains)
@@ -1494,14 +1497,19 @@ What do we want to monitor?
 Round Robin Databases
 ~~~~~~~~~~~~~~~~~~~~~
 
--  How would you collect this?
+-  How would you collect this
+
 	-  Ping every 5 minutes?
 	-  Store for a year?
+
 -  How much data do you need to store?
+
 	-  20 samples x (60/5) per hour x 24 hrs x 365 days? (2.1 million samples)
 	-  How are you going to display it?
 	-  How will you discard old data from the database?
+
 -  Solution: Round Robin Database (RRD)
+
 	-  Keep a certain number of data points
 	-  Automatically overwrite old ones
 	-  Automatically maintain aggregates (minimum, maximum, average) over
@@ -1626,7 +1634,7 @@ Proxy Authentication (50 mins, 15:50-15:40)
 Break (30 mins, 15:40-16:10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Squid Delay Pools (50 mins, 16:10-17:00)
+Squid Delay Pools (60 mins, 16:10-17:10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *	Introduction (10 mins)
@@ -1635,33 +1643,7 @@ Squid Delay Pools (50 mins, 16:10-17:00)
 *	Limitations of pools (5 mins)
 *	Simple example (10 mins)
 *	More advanced configuration (10 mins)
-
-
-
 *	Questions (10 mins)
-
-
-
-
-
-
-
- 
-
-
-
-
-	
-
-
-
- 
-
-
-
-
-
-	
 
 
 Friday
