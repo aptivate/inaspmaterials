@@ -589,7 +589,7 @@ Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
 -  Ask participants to work through the
    `Editing Exercises <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.pdf>`_
    -  Source can be `downloaded <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.doc>`_
-      in MS Word format if you need to modify this exercise. (1 hr?)
+   in MS Word format if you need to modify this exercise. (1 hr?)
 -  `Network Performance Definitions & Metrics: <http://www.ws.afnog.org/afnog2013/unix-intro/presos/network-performance-definitions.pdf>`_ (presentation, also covers common unix tools,
    try to fit this in if you can)
       
