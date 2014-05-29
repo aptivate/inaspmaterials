@@ -1023,6 +1023,7 @@ Wireless capacity planning (30 min, 11:20-11:50)
       cause the most interference to other APs!
 
 -  How many separate frequency bands available at 2.4 GHz (5 min)
+
    -  3 channels: 1, 6 and 11
    -  Interference and 802.11n make this worse
    -  Ensure that clients can't see multiple APs on the same
