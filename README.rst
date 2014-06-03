@@ -236,6 +236,7 @@ Workshop Units
 	* Bandwidth Management
 	  (`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_02_Bandwidth_Management_With_pfSense.rst>`__ |
 	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_02_Bandwidth_Management_With_pfSense.rst.odp>`__)
+	* Helpdesk Management: setting up an internal ticket system and Q&A forum, `troubleshooting tools <http://go6.si/ipv6-troubleshooting-for-helpdesks>`__
 	
 #.	Making it happen
 
