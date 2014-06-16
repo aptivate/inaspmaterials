@@ -570,10 +570,10 @@ VoIP bandwidth is not being used, and therefore shared between the other
 classes in the ratio of their bandwidth allowance.
 
 Protocol  Realtime/Minimum  Linkshare  Total (%)  Total (kbps)
-========= ================= ========== ========== =============
+========  ================  =========  =========  ============
 HTTP      70%               10%        80%        819
 FTP       17.5%             2.5%       20%        205
-========= ================= ========== ========== =============
+========  ================  =========  =========  ============
 
 Unfortunately the allocations are not very accurate, probably because
 the queues are sometimes empty, so there's no packet to send
