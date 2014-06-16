@@ -578,7 +578,7 @@ Feedback (15 mins, 17:45-18:00)
 Wednesday
 =========
 
-13.30: Troubleshoot network problems (continued)
+08.30: Troubleshoot network problems (continued)
 ------------------------------------------------
 
 Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
@@ -767,8 +767,8 @@ Good troubleshooting technique (25 mins, 13:30-13:55)
    -  Do no harm (make sure you can quickly undo whatever you've
       done, and it won't cause bigger problems later)
 
-Troubleshoot network problems
------------------------------
+13:55: Troubleshoot network problems
+------------------------------------
 
 Simulating Problems (30 mins, 13:55-14:25)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -893,8 +893,8 @@ Feedback (15 mins, 17:40-17:55)
 Thursday
 ========
 
-Troubleshoot network problems (continued)
------------------------------------------
+08:30: Troubleshoot network problems (continued)
+------------------------------------------------
 
 Competition with other users (15 mins, 08:30-08:45)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -941,7 +941,7 @@ Further study
 
 -  Add DNS performance testing, flood pings, ssh.
 
-14.45: Network capacity planning
+09.45: Network capacity planning
 --------------------------------
 
 Why do we need to plan capacity? (10 min, 09:45-09:55)
