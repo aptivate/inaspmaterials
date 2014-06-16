@@ -507,8 +507,10 @@ Further study
    devices (1 hour; instruction sheet)
 -  Practical: set up netdot, document our network, locate a given end
    device
+
    -  NSRC materials: `text <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.txt>`_
-   or `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.pdf>`_.
+      or `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.pdf>`_.
+
 -  Practical: implement a RADIUS server and wired and wireless NAC
 
 Lunch (1hr, 12:30-13:30)
