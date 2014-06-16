@@ -508,7 +508,7 @@ Further study
 -  Practical: set up netdot, document our network, locate a given end
    device
    -  NSRC materials: `text <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.txt>`_
-      or `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.pdf>`_.
+   or `PDF <http://www.ws.afnog.org/afnog2013/nme/presos/exercises-netdot.pdf>`_.
 -  Practical: implement a RADIUS server and wired and wireless NAC
 
 Lunch (1hr, 12:30-13:30)
@@ -589,7 +589,7 @@ Introduction to Unix 2 (1.5 hrs, 08:30-10:00)
 -  Ask participants to work through the
    `Editing Exercises <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.pdf>`_
    -  Source can be `downloaded <http://www.ws.afnog.org/afnog2013/unix-intro/presos/editing-exercises.doc>`_
-      in MS Word format if you need to modify this exercise. (1 hr?)
+   in MS Word format if you need to modify this exercise. (1 hr?)
 -  `Network Performance Definitions & Metrics: <http://www.ws.afnog.org/afnog2013/unix-intro/presos/network-performance-definitions.pdf>`_ (presentation, also covers common unix tools,
    try to fit this in if you can)
       
@@ -1023,6 +1023,7 @@ Wireless capacity planning (30 min, 11:20-11:50)
       cause the most interference to other APs!
 
 -  How many separate frequency bands available at 2.4 GHz (5 min)
+
    -  3 channels: 1, 6 and 11
    -  Interference and 802.11n make this worse
    -  Ensure that clients can't see multiple APs on the same
@@ -1478,13 +1479,16 @@ What do we want to monitor?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Statistics
+
    -  Packet Loss
    -  Latency
    -  Bandwidth
    -  Errors
    -  Web page loading speed
    -  DNS speed
+
 -  What do you want to know?
+
    -  How are they right now? (is something wrong?)
    -  How do they compare to last week/month/year? (is it getting better/worse?)
    -  Were they bad this morning/yesterday? (why did I get so many complains)
@@ -1493,14 +1497,19 @@ What do we want to monitor?
 Round Robin Databases
 ~~~~~~~~~~~~~~~~~~~~~
 
--  How would you collect this?
+-  How would you collect this
+
 	-  Ping every 5 minutes?
 	-  Store for a year?
+
 -  How much data do you need to store?
+
 	-  20 samples x (60/5) per hour x 24 hrs x 365 days? (2.1 million samples)
 	-  How are you going to display it?
 	-  How will you discard old data from the database?
+
 -  Solution: Round Robin Database (RRD)
+
 	-  Keep a certain number of data points
 	-  Automatically overwrite old ones
 	-  Automatically maintain aggregates (minimum, maximum, average) over
@@ -1625,7 +1634,7 @@ Proxy Authentication (50 mins, 15:50-15:40)
 Break (30 mins, 15:40-16:10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Squid Delay Pools (50 mins, 16:10-17:00)
+Squid Delay Pools (60 mins, 16:10-17:10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *	Introduction (10 mins)
@@ -1634,33 +1643,7 @@ Squid Delay Pools (50 mins, 16:10-17:00)
 *	Limitations of pools (5 mins)
 *	Simple example (10 mins)
 *	More advanced configuration (10 mins)
-
-
-
 *	Questions (10 mins)
-
-
-
-
-
-
-
- 
-
-
-
-
-	
-
-
-
- 
-
-
-
-
-
-	
 
 
 Friday

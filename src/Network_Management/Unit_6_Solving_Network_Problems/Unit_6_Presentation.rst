@@ -294,7 +294,10 @@ possibilities. Either your machine is using the wrong settings, or there is a
 rogue DHCP server on the local network. Either change your local settings or
 track down the bad DHCP server.
 
-If you do have a valid IP address, try pinging the gateway's IP address::
+If you do have a valid IP address, try pinging the gateway's IP address. You need
+to work out what that is, which you can do with the ``ipconfig`` command on Windows,
+or ``/sbin/route -n`` on Linux. For example, if you find that your gateway is
+``192.168.0.1``, then try pinging that address::
 
 	$ ping 192.168.0.1
 	PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
@@ -319,6 +322,15 @@ into your gateway router and try to ping the gateway at your ISP:
 * If you can ping your ISP's gateway but no other Internet hosts, then the
   problem may exist beyond your ISP. It's probably a good idea to phone your
   ISP and check if they have a problem, or can help you with troubleshooting.
+
+If you can ping the gateway but not every packet receives a response, or you
+see varying latency instead of steady, even responses like the example above,
+then you may have a problem such as overloading on your local network. Wireless
+networks are particularly prone to this, and interference (from other access
+points or sources of radio noise) can also cause it.
+
+Large variations in latency can also be caused by
+`multi-path routing <http://perso.uclouvain.be/olivier.bonaventure/blog/html/2013/05/22/don_t_use_ping_for_delay_measurements.html>`_.
 
 Is everything still not working? Then it's time to roll up your sleeves and
 get to work. You should reread the `Responding to a problem`_ section and
