@@ -1341,12 +1341,26 @@ Further study
 Tracking down an IP address (30 mins, 08:50-09:20)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
--  everyone writes up their used IP addresses on the board (10 mins)
--  choose an IP address used by another group
--  track down the physical machine (20 mins)
--  if they struggle, explain how they can log into switches and look
-   at the forwarding tables to see which MAC addresses are on which port
-   
+-  Everyone writes up their used IP addresses on the board (10 mins)
+-  Choose an IP address used by another group
+-  Track down the physical machine (20 mins)
+
+.. class:: handout
+
+If you have difficulty, try logging into switches, looking at the
+forwarding tables to see which MAC addresses are on which port, and
+use that to follow the chain from one network to another. 
+
+When you start, and whenever you cross a broadcast domain boundary such as
+a router, you'll need to find a new MAC address for the IP. How you do that
+depends on how the current device will reach that target IP address:
+
+*	If it has a direct route to the target, use the ARP commands to
+	check which MAC address responds to requests for that IP address;
+*	If it has an indirect route, via a gateway, use the ARP command to
+	look up the MAC address of the gateway, locate the gateway physically,
+	and repeat the process.
+
 Bandwidth/traffic management (10 mins, 09:20-09:30)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
