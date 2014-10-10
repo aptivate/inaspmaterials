@@ -200,6 +200,8 @@ Workshop Units
 	* Explore the facilities available on a Linux-based self-contained monitoring toolkit.
 
 #.	Making a difference
+	(`online HTML <https://github.com/aptivate/inaspmaterials/blob/master/src/Network_Management/Unit_9_Making_a_Difference/Unit_9_Presentation.rst#unit-8-making-a-difference>`__
+	| `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_9_Making_a_Difference/Unit_9_Presentation.rst.odp>`__)
 
 	* Importance of user behaviour in network management
 	* Changing user behaviour
@@ -238,7 +240,7 @@ Workshop Units
 	  `presentation <http://aptivate.github.io/inaspmaterials/generated/Network_Management/Unit_11_Technical_Measures/Unit_11_Presentation_02_Bandwidth_Management_With_pfSense.rst.odp>`__)
 	* Helpdesk Management: setting up an internal ticket system and Q&A forum, `troubleshooting tools <http://go6.si/ipv6-troubleshooting-for-helpdesks>`__
 	
-#.	Making it happen
+#.	Making it happen (not written yet)
 
 	* Why does it not happen already?
 	* Aligning incentives
