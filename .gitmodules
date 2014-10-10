@@ -1,12 +1,9 @@
 [submodule "pandoc"]
 	path = pandoc
-	url = git://github.com/jgm/pandoc.git
-[submodule "odp/rst2odp"]
-	path = odp/rst2odp
-	url = git://github.com/mattharrison/rst2odp.git
+	url = https://github.com/jgm/pandoc.git
 [submodule "tools/rst2odp"]
 	path = tools/rst2odp
-	url = git://github.com/aptivate/rst2odp.git
+	url = https://github.com/aptivate/rst2odp.git
 [submodule "tools/fontspec"]
 	path = tools/fontspec
-	url = git://github.com/wspr/fontspec.git
+	url = https://github.com/wspr/fontspec.git
