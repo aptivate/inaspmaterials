@@ -11,7 +11,7 @@ gh-pages: generated index.html
 .PHONY: generated
 generated:
 	make -C master all
-	rsync -a --delete master/output/ generated/
+	rsync -a --delete --no-links master/output/ generated/
 
 index.html: master/README.rst
 	rst2html master/README.rst > index.html \
