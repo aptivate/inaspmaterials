@@ -397,14 +397,17 @@ Jeff Mason provided a good list of possible causes to consider and eliminate:
   * Devices that do not auto-negotiate properly. So, instead of setting some Gigabit Ethernet port for  Auto-negotiate, try
     setting it for 100 Mb/sec, Full Duplex or 1000 Mb/sec, Full Duplex
   * Incorrect network mask, default gateway, subnetting
+  * L2 loops (could be prevented by using Spanning Tree Protocol)
+  * Large broadcast/collision domains, heavy broadcast traffic (segment the network with routers)
 * Throttling at your ISP. Your provider may be limiting your network bandwidth, without letting you know, or your
   ISP installed a "limiting filter" that limits your speed
-* Bad network routers, switches, access points, etc. (or bad ports/motherboards on those devices)
-* Bad network/wireless interface cards
-* Bad CSU/DSU devices terminating a leased line
-* Bad TDM (Time-division Multiplexers) or bad Stat Muxes
-* Bad satellite equipment
-* Bad cables and/or wiring (including cables over 100 metres long, using inferior quality cable such as CAT5 for gigabit networks, cable damage and corrosion)
+* Faulty network equipment:
+  * Routers, switches, access points, etc. (or bad ports/motherboards on those devices)
+  * Network/wireless interface cards
+  * CSU/DSU devices terminating a leased line
+  * TDM (Time-division Multiplexers) or bad Stat Muxes
+  * Satellite equipment
+  * Cables or wiring (including cables over 100 metres long, using inferior quality cable such as CAT5 for gigabit networks, cable damage and corrosion)
 * Congestion - too many users for some limited amount of bandwidth, especially wireless and Internet connections
 * Improperly grounded equipment causing noisy signals and errors
 * Interference and/or Bad/flaky/unreliable wi-fi equipment. If you use any wi-fi repeaters or routers, be aware
@@ -413,6 +416,7 @@ Jeff Mason provided a good list of possible causes to consider and eliminate:
 * Device incompatibilities (devices supposed to be compatible but actually experience high error rates when communicating)
 * DNS speed (including failed or unreachable DNS servers)
 * proxy server slow/overloaded
+* remote server, website or connection slow/overloaded
 * packet loss
 * ping times/latency
 
@@ -632,8 +636,19 @@ Available bandwidth
 The TCP protocol contains a backoff mechanism, which causes it to reduce
 its bandwidth use when it detects packet loss.
 
-Packet loss is caused by congestion, and randomly affects all flows, so
-TCP streams tend to share all bandwidth quite fairly between them.
+Packet loss which is random and caused by congestion (packets dropping off the end
+of queues) randomly affects all flows. TCP flows will respond by backing off randomly,
+so they tend to share all bandwidth quite fairly between them. Random Early Drop (RED)
+(a feature of some Cisco routers) drops packets before the queue becomes full, also
+reducing congestion and latency, but more fairly and evenly.
+
+(Packet loss can also be caused by devices which try to alleviate
+congestion by creating more packet loss for some flows preferentially, often called
+traffic shapers or packet shapers. This is hard to detect and can result in inaccurate
+measurements of available bandwidth. When such devices are in use, different flows
+have different available bandwidths depending on the configuration of the device,
+which you may not know or be able to discover. Also you may not be able to work
+around this except by switching to a different provider.)
 
 When a new stream (such as a download test) enters the race, it jostles
 with existing streams, pushing them all to reduce their bandwidth use to
