@@ -390,11 +390,31 @@ Example: Slow Internet connection
 
 What do you need to check?
 
-* DNS speed
-* proxy server
+Jeff Mason provided a good list of possible causes to consider and eliminate:
+
+* Misconfigurations (wrong or bad configurations), such as: 
+  * Some devices inadvertently being set for half duplex, when they should be full duplex
+  * Devices that do not auto-negotiate properly. So, instead of setting some Gigabit Ethernet port for  Auto-negotiate, try
+    setting it for 100 Mb/sec, Full Duplex or 1000 Mb/sec, Full Duplex
+  * Incorrect network mask, default gateway, subnetting
+* Throttling at your ISP. Your provider may be limiting your network bandwidth, without letting you know, or your
+  ISP installed a "limiting filter" that limits your speed
+* Bad network routers, switches, access points, etc. (or bad ports/motherboards on those devices)
+* Bad network/wireless interface cards
+* Bad CSU/DSU devices terminating a leased line
+* Bad TDM (Time-division Multiplexers) or bad Stat Muxes
+* Bad satellite equipment
+* Bad cables and/or wiring (including cables over 100 metres long, using inferior quality cable such as CAT5 for gigabit networks, cable damage and corrosion)
+* Congestion - too many users for some limited amount of bandwidth, especially wireless and Internet connections
+* Improperly grounded equipment causing noisy signals and errors
+* Interference and/or Bad/flaky/unreliable wi-fi equipment. If you use any wi-fi repeaters or routers, be aware
+  of interference on 900 Mhz, 2.4GHz and 5Ghz bands.
+  * Wireless link fade due to weather conditions, trees, reflections, obstacles in Fresnel zone, wind blowing antennas, corrosion.
+* Device incompatibilities (devices supposed to be compatible but actually experience high error rates when communicating)
+* DNS speed (including failed or unreachable DNS servers)
+* proxy server slow/overloaded
+* packet loss
 * ping times/latency
-* available bandwidth
-* free bandwidth
 
 How slow is it?
 ---------------
